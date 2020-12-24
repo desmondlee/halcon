@@ -12,12 +12,57 @@
     
     
     <item>
+      <title>connection</title>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/connection/</link>
+      <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/connection/</guid>
+      <description>connection #  </description>
+    </item>
+    
+    <item>
+      <title>list_files</title>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/list_files/</link>
+      <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/list_files/</guid>
+      <description>列举文件 #  </description>
+    </item>
+    
+    <item>
+      <title>orientation</title>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/orientation/</link>
+      <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/orientation/</guid>
+      <description>orientation #  </description>
+    </item>
+    
+    <item>
       <title>read_image</title>
       <link>http://halcon.lizhenguo.cn/docs/image/operators/read_image/</link>
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/image/operators/read_image/</guid>
       <description>read_image #  加载图像到halcon</description>
+    </item>
+    
+    <item>
+      <title>select_shape</title>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/select_shape/</link>
+      <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/select_shape/</guid>
+      <description>select_shape #  </description>
+    </item>
+    
+    <item>
+      <title>threshold</title>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/threshold/</link>
+      <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/threshold/</guid>
+      <description>threshold #  </description>
     </item>
     
   </channel>
