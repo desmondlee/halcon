@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/docs/image/</loc>
+    <lastmod>2020-12-24T22:59:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/docs/image/%E6%B5%81%E7%A8%8B/</loc>
+    <lastmod>2020-12-24T22:59:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/docs/image/operators/</loc>
+    <lastmod>2020-12-24T22:59:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/docs/</loc>
+    <lastmod>2020-12-24T22:59:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/</loc>
+    <lastmod>2020-12-24T22:59:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/docs/image/operators/read_image/</loc>
+    <lastmod>2020-12-24T22:59:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/posts/about/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/posts/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>halcon.lizhenguo.cn/tags/</loc>
+  </url>
+  
+</urlset>
