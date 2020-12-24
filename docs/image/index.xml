@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>图像处理 on Halcon学习</title>
-    <link>halcon.lizhenguo.cn/docs/image/</link>
+    <link>http://halcon.lizhenguo.cn/docs/image/</link>
     <description>Recent content in 图像处理 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Dec 2020 22:59:03 +0800</lastBuildDate>
     
-	<atom:link href="halcon.lizhenguo.cn/docs/image/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://halcon.lizhenguo.cn/docs/image/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>流程</title>
-      <link>halcon.lizhenguo.cn/docs/image/%E6%B5%81%E7%A8%8B/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
       
-      <guid>halcon.lizhenguo.cn/docs/image/%E6%B5%81%E7%A8%8B/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/%E6%B5%81%E7%A8%8B/</guid>
       <description>流程 #   a b  </description>
     </item>
     

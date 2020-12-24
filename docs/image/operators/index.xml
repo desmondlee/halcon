@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>相关算子 on Halcon学习</title>
-    <link>halcon.lizhenguo.cn/docs/image/operators/</link>
+    <link>http://halcon.lizhenguo.cn/docs/image/operators/</link>
     <description>Recent content in 相关算子 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Dec 2020 22:59:03 +0800</lastBuildDate>
     
-	<atom:link href="halcon.lizhenguo.cn/docs/image/operators/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://halcon.lizhenguo.cn/docs/image/operators/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>read_image</title>
-      <link>halcon.lizhenguo.cn/docs/image/operators/read_image/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/read_image/</link>
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
       
-      <guid>halcon.lizhenguo.cn/docs/image/operators/read_image/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/read_image/</guid>
       <description>read_image #   a b  </description>
     </item>
     

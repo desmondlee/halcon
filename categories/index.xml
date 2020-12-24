@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Halcon学习</title>
-    <link>halcon.lizhenguo.cn/categories/</link>
+    <link>http://halcon.lizhenguo.cn/categories/</link>
     <description>Recent content in Categories on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="halcon.lizhenguo.cn/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://halcon.lizhenguo.cn/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on Halcon学习</title>
-    <link>halcon.lizhenguo.cn/docs/</link>
+    <link>http://halcon.lizhenguo.cn/docs/</link>
     <description>Recent content in Docs on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Dec 2020 22:59:03 +0800</lastBuildDate>
     
-	<atom:link href="halcon.lizhenguo.cn/docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://halcon.lizhenguo.cn/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
