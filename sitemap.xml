@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://halcon.lizhenguo.cn/</loc>
+    <lastmod>2020-12-24T22:59:03+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://halcon.lizhenguo.cn/docs/image/</loc>
     <lastmod>2020-12-24T22:59:03+08:00</lastmod>
   </url>
@@ -23,11 +28,6 @@
   </url>
   
   <url>
-    <loc>http://halcon.lizhenguo.cn/</loc>
-    <lastmod>2020-12-24T22:59:03+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://halcon.lizhenguo.cn/docs/image/operators/read_image/</loc>
     <lastmod>2020-12-24T22:59:03+08:00</lastmod>
   </url>
@@ -38,16 +38,43 @@
   </url>
   
   <url>
+    <loc>http://halcon.lizhenguo.cn/categories/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/categories/development/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/tags/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/categories/tips/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/tags/windows/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/posts/hotkeys/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://halcon.lizhenguo.cn/posts/</loc>
     <lastmod>2020-12-24T22:32:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://halcon.lizhenguo.cn/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>http://halcon.lizhenguo.cn/tags/</loc>
+    <loc>http://halcon.lizhenguo.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
   </url>
   
 </urlset>

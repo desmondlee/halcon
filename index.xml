@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Halcon学习</title>
+    <title>图像处理 on Halcon学习</title>
     <link>http://halcon.lizhenguo.cn/</link>
-    <description>Recent content on Halcon学习</description>
+    <description>Recent content in 图像处理 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Dec 2020 22:59:03 +0800</lastBuildDate>
@@ -26,7 +26,7 @@
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/image/operators/read_image/</guid>
-      <description>read_image #   a b  </description>
+      <description>read_image #  加载图像到halcon</description>
     </item>
     
     <item>
@@ -36,6 +36,15 @@
       
       <guid>http://halcon.lizhenguo.cn/posts/about/</guid>
       <description>Hello Hugo #   a b c  </description>
+    </item>
+    
+    <item>
+      <title>Windows下的快捷键</title>
+      <link>http://halcon.lizhenguo.cn/posts/hotkeys/</link>
+      <pubDate>Thu, 24 Dec 2020 22:32:06 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/hotkeys/</guid>
+      <description>快捷键 #   F2: 重置程序执行，停止执行程序，清零所有变量； F3: 取消所在行的注释；  </description>
     </item>
     
   </channel>

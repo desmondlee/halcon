@@ -5,7 +5,7 @@
   <meta name="generator" content="Hugo 0.74.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
+<meta name="description" content="通用流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TD A[采集图像] -- B{有无判定, Blob/定位} B -- |有| C[获得位置,角度信息] B -- |无| A C -- D[仿射变换, 求变换句柄, ROI变换] D -- E[图像预处理] E -- F[图像处理] F -- G[结果输出] 常用标定 #   像素变换(原型、矩形、像素单量)； 透视投影及光学畸变校正； 不同坐标系之间的标定(三点确定一个坐标系)，如九点定标(机械手)； 多个相机通过标定统一到同一个坐标系。  ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="图像处理" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
@@ -15,7 +15,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
-<script defer src="/en.search.min.a77157795e54f2c60fd47a26940b4c72ac0fcbba4e5e1ba310b377f639eb85ab.js" integrity="sha256-p3FXeV5U8sYP1HomlAtMcqwPy7pOXhujELN39jnrhas="></script>
+<script defer src="/en.search.min.2e961a88957bc2c364e9cf56fd5f60db3ed3abb28e5c271c2e5de740ce5f097f.js" integrity="sha256-LpYaiJV7wsNk6c9W/V9g2z7Tq7KOXCccLl3nQM5fCX8="></script>
 <link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/docs/image/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
@@ -68,7 +68,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <span>图像处理</span>
+    <a href="http://halcon.lizhenguo.cn/docs/image/" class=" active">图像处理</a>
   
 
           
@@ -187,7 +187,16 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#通用流程">通用流程</a></li>
+        <li><a href="#常用标定">常用标定</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
 
   </aside>
@@ -197,7 +206,48 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"></article>
+  <article class="markdown"><h3 id="通用流程">
+  通用流程
+  <a class="anchor" href="#%e9%80%9a%e7%94%a8%e6%b5%81%e7%a8%8b">#</a>
+</h3>
+
+
+<script src="/mermaid.min.js"></script>
+
+  <script>mermaid.initialize({
+  "flowchart": {
+    "useMaxWidth":true
+  },
+  "theme": "default"
+}
+)</script>
+
+
+
+
+<p class="mermaid">
+graph TD
+
+A[采集图像] --> B{有无判定, Blob/定位}
+B --> |有| C[获得位置,角度信息]
+B --> |无| A
+C --> D[仿射变换, 求变换句柄, ROI变换]
+D --> E[图像预处理]
+E --> F[图像处理]
+F --> G[结果输出]
+</p>
+
+<h3 id="常用标定">
+  常用标定
+  <a class="anchor" href="#%e5%b8%b8%e7%94%a8%e6%a0%87%e5%ae%9a">#</a>
+</h3>
+<ol>
+<li>像素变换(原型、矩形、像素单量)；</li>
+<li>透视投影及光学畸变校正；</li>
+<li>不同坐标系之间的标定(三点确定一个坐标系)，如九点定标(机械手)；</li>
+<li>多个相机通过标定统一到同一个坐标系。</li>
+</ol>
+</article>
  
       
 
@@ -217,6 +267,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -225,7 +279,16 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav id="TableOfContents"></nav>
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#通用流程">通用流程</a></li>
+        <li><a href="#常用标定">常用标定</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
  
     </aside>
