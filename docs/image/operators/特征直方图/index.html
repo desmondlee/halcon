@@ -5,18 +5,20 @@
   <meta name="generator" content="Hugo 0.74.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Windows" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/tags/windows/" />
-<meta property="og:updated_time" content="2020-12-24T22:32:06+08:00" />
-<title>Windows | Halcon学习</title>
+<meta name="description" content="借助特征直方图创建select_shape代码 #  前提 #  先使用 connection 算子将图像上的一整个特征目标，拆分成多个特征目标。
+使用方式 #   将connection 拆分出来的图像用同一种颜色标注(如用灰色)； 打开特征直方图，勾选area选项； 通过拖拽特征直方图上的绿线和红线，使只关注的目标被标注(着色)； 点击插入代码，即可在代码窗口得到对应的代码。如select_shape (ConnectedRegions, SelectedRegions1, &#39;area&#39;, &#39;and&#39;, 28077.7, 50000)  参考图 #  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="特征直方图" />
+<meta property="og:description" content="借助特征直方图创建select_shape代码 #  前提 #  先使用 connection 算子将图像上的一整个特征目标，拆分成多个特征目标。
+使用方式 #   将connection 拆分出来的图像用同一种颜色标注(如用灰色)； 打开特征直方图，勾选area选项； 通过拖拽特征直方图上的绿线和红线，使只关注的目标被标注(着色)； 点击插入代码，即可在代码窗口得到对应的代码。如select_shape (ConnectedRegions, SelectedRegions1, &#39;area&#39;, &#39;and&#39;, 28077.7, 50000)  参考图 #  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/" />
+<meta property="article:published_time" content="2020-12-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-27T00:00:00+00:00" />
+<title>特征直方图 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
 <script defer src="/en.search.min.d0bedef337deb75949d888e7a050dd8e79b850f5291bd9ed5406adf782fa3c62.js" integrity="sha256-0L7e8zfet1lJ2IjnoFDdjnm4UPUpG9ntVAat94L6PGI="></script>
-<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/tags/windows/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -68,7 +70,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-077e40a4208d81995b650752b8ffc1ab" class="toggle"  />
+    <input type="checkbox" id="section-077e40a4208d81995b650752b8ffc1ab" class="toggle" checked />
     <label for="section-077e40a4208d81995b650752b8ffc1ab" class="flex justify-between">
       <a href="http://halcon.lizhenguo.cn/docs/image/" class="">图像处理</a>
       <span>▾</span>
@@ -98,7 +100,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-72c48fc215782e74a55f6b66f6577dcc" class="toggle"  />
+    <input type="checkbox" id="section-72c48fc215782e74a55f6b66f6577dcc" class="toggle" checked />
     <label for="section-72c48fc215782e74a55f6b66f6577dcc" class="flex justify-between">
       <a  class="">相关算子</a>
       <span>▾</span>
@@ -154,7 +156,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/" class="">特征直方图</a>
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/" class=" active">特征直方图</a>
   
 
         </li>
@@ -347,7 +349,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Windows</strong>
+  <strong>特征直方图</strong>
 
   <label for="toc-control">
     
@@ -360,52 +362,15 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#前提">前提</a></li>
+        <li><a href="#使用方式">使用方式</a></li>
+        <li><a href="#参考图">参考图</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
   </ul>
 </nav>
 
@@ -417,41 +382,31 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/hotkeys/">Windows下的快捷键</a>
-    </h2>
-    
-  <h5>December 24, 2020</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/development/">Development</a>, 
-      <a href="/categories/tips/">tips</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>, 
-      <a href="/tags/windows/">Windows</a>
-  </div>
-  
-
-
-    <p>快捷键 #   F2: 重置程序执行，停止执行程序，清零所有变量； F3: 取消注释所在行； F4: 注释所在行； F5: 运行程序(遇到断点会暂停)； F6: 单步步过执行(不进入自定义函数内部)； F7: 单步步入执行，会进入自定义函数内部(内置函数除外)； F8: 步过执行完成当前函数，到前一个函数后面； F9: 停止执行； F10: 给当前行加断点。 使用灰度直方图时，按ctrl键，鼠标放在图像上可以到看灰度值。  
-    </p>
-  </article>
-  
-
-  
-
-
+  <article class="markdown"><h1 id="借助特征直方图创建select_shape代码">
+  借助特征直方图创建select_shape代码
+  <a class="anchor" href="#%e5%80%9f%e5%8a%a9%e7%89%b9%e5%be%81%e7%9b%b4%e6%96%b9%e5%9b%be%e5%88%9b%e5%bb%baselect_shape%e4%bb%a3%e7%a0%81">#</a>
+</h1>
+<h3 id="前提">
+  前提
+  <a class="anchor" href="#%e5%89%8d%e6%8f%90">#</a>
+</h3>
+<p>先使用 connection 算子将图像上的一整个特征目标，拆分成多个特征目标。</p>
+<h3 id="使用方式">
+  使用方式
+  <a class="anchor" href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f">#</a>
+</h3>
+<ol>
+<li>将connection 拆分出来的图像用同一种颜色标注(如用灰色)；</li>
+<li>打开特征直方图，勾选<strong>area</strong>选项；</li>
+<li>通过拖拽特征直方图上的绿线和红线，使只关注的目标被标注(着色)；</li>
+<li>点击<strong>插入代码</strong>，即可在代码窗口得到对应的代码。如<code>select_shape (ConnectedRegions, SelectedRegions1, 'area', 'and', 28077.7, 50000)</code></li>
+</ol>
+<h3 id="参考图">
+  参考图
+  <a class="anchor" href="#%e5%8f%82%e8%80%83%e5%9b%be">#</a>
+</h3>
+<p><img src="http://qn.halcon.lizhenguo.cn/image/%e7%81%b0%e5%ba%a6%e7%9b%b4%e6%96%b9%e5%9b%be.png" alt="灰度直方图使用" /></p>
+</article>
  
       
 
@@ -471,6 +426,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -479,52 +438,15 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#前提">前提</a></li>
+        <li><a href="#使用方式">使用方式</a></li>
+        <li><a href="#参考图">参考图</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
   </ul>
 </nav>
 

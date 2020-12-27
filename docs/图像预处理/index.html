@@ -5,18 +5,24 @@
   <meta name="generator" content="Hugo 0.74.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Windows" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/tags/windows/" />
-<meta property="og:updated_time" content="2020-12-24T22:32:06+08:00" />
-<title>Windows | Halcon学习</title>
+<meta name="description" content="图像预处理 #     对噪声的处理效果 对边缘的处理效果 效率     平滑滤波 弱化噪声 模糊边缘   中值滤波 去除噪声 保持边缘    滤波 #  针对有早点的图像进行平滑，可以减弱或消除噪点 read_image media_image
+锐化 #  对图像边缘进行对比度提升使用，可以让图像轮廓更清晰 sobel_amp frei_amp
+增强 #  emphasize
+形态学 #   腐蚀, erosion 膨胀, dilation  骨架 #  skeleton">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="图像预处理" />
+<meta property="og:description" content="图像预处理 #     对噪声的处理效果 对边缘的处理效果 效率     平滑滤波 弱化噪声 模糊边缘   中值滤波 去除噪声 保持边缘    滤波 #  针对有早点的图像进行平滑，可以减弱或消除噪点 read_image media_image
+锐化 #  对图像边缘进行对比度提升使用，可以让图像轮廓更清晰 sobel_amp frei_amp
+增强 #  emphasize
+形态学 #   腐蚀, erosion 膨胀, dilation  骨架 #  skeleton" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/" />
+<meta property="article:published_time" content="2020-12-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-27T00:00:00+00:00" />
+<title>图像预处理 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
 <script defer src="/en.search.min.d0bedef337deb75949d888e7a050dd8e79b850f5291bd9ed5406adf782fa3c62.js" integrity="sha256-0L7e8zfet1lJ2IjnoFDdjnm4UPUpG9ntVAat94L6PGI="></script>
-<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/tags/windows/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -281,7 +287,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/" class="">图像预处理</a>
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/" class=" active">图像预处理</a>
   
 
         </li>
@@ -347,7 +353,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Windows</strong>
+  <strong>图像预处理</strong>
 
   <label for="toc-control">
     
@@ -360,52 +366,13 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
+    <li><a href="#滤波">滤波</a></li>
+    <li><a href="#锐化">锐化</a></li>
+    <li><a href="#增强">增强</a></li>
+    <li><a href="#形态学">形态学</a></li>
+    <li><a href="#骨架">骨架</a></li>
   </ul>
 </nav>
 
@@ -417,41 +384,64 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/hotkeys/">Windows下的快捷键</a>
-    </h2>
-    
-  <h5>December 24, 2020</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/development/">Development</a>, 
-      <a href="/categories/tips/">tips</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>, 
-      <a href="/tags/windows/">Windows</a>
-  </div>
-  
-
-
-    <p>快捷键 #   F2: 重置程序执行，停止执行程序，清零所有变量； F3: 取消注释所在行； F4: 注释所在行； F5: 运行程序(遇到断点会暂停)； F6: 单步步过执行(不进入自定义函数内部)； F7: 单步步入执行，会进入自定义函数内部(内置函数除外)； F8: 步过执行完成当前函数，到前一个函数后面； F9: 停止执行； F10: 给当前行加断点。 使用灰度直方图时，按ctrl键，鼠标放在图像上可以到看灰度值。  
-    </p>
-  </article>
-  
-
-  
-
-
+  <article class="markdown"><h1 id="图像预处理">
+  图像预处理
+  <a class="anchor" href="#%e5%9b%be%e5%83%8f%e9%a2%84%e5%a4%84%e7%90%86">#</a>
+</h1>
+<table>
+<thead>
+<tr>
+<th>对噪声的处理效果</th>
+<th>对边缘的处理效果</th>
+<th>效率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平滑滤波</td>
+<td>弱化噪声</td>
+<td>模糊边缘</td>
+</tr>
+<tr>
+<td>中值滤波</td>
+<td>去除噪声</td>
+<td>保持边缘</td>
+</tr>
+</tbody>
+</table>
+<h2 id="滤波">
+  滤波
+  <a class="anchor" href="#%e6%bb%a4%e6%b3%a2">#</a>
+</h2>
+<p>针对有早点的图像进行平滑，可以减弱或消除噪点
+read_image
+media_image</p>
+<h2 id="锐化">
+  锐化
+  <a class="anchor" href="#%e9%94%90%e5%8c%96">#</a>
+</h2>
+<p>对图像边缘进行对比度提升使用，可以让图像轮廓更清晰
+sobel_amp
+frei_amp</p>
+<h2 id="增强">
+  增强
+  <a class="anchor" href="#%e5%a2%9e%e5%bc%ba">#</a>
+</h2>
+<p>emphasize</p>
+<h2 id="形态学">
+  形态学
+  <a class="anchor" href="#%e5%bd%a2%e6%80%81%e5%ad%a6">#</a>
+</h2>
+<ul>
+<li>腐蚀, erosion</li>
+<li>膨胀, dilation</li>
+</ul>
+<h2 id="骨架">
+  骨架
+  <a class="anchor" href="#%e9%aa%a8%e6%9e%b6">#</a>
+</h2>
+<p>skeleton</p>
+</article>
  
       
 
@@ -471,6 +461,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -479,52 +473,13 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
+    <li><a href="#滤波">滤波</a></li>
+    <li><a href="#锐化">锐化</a></li>
+    <li><a href="#增强">增强</a></li>
+    <li><a href="#形态学">形态学</a></li>
+    <li><a href="#骨架">骨架</a></li>
   </ul>
 </nav>
 

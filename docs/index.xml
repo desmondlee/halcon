@@ -6,10 +6,101 @@
     <description>Recent content in Docs on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Dec 2020 22:59:03 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://halcon.lizhenguo.cn/docs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>基础算子(方法函数)</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/</guid>
+      <description>基础算子(方法函数) #  图片 #   read_image write_image dump_window dump_window_image draw_rectangle   draw 和 gen 的区别 draw 绘制 产生的点位 是控制类型变量 方便存储和读写 gen 生产 产生是图像 是图像控制变量 方便查看
+ 数组 #   tuple_concat tuple_find tuple_regexp_select  资源句柄 #   dev_get_window  区域计算 #   union different intersection complement  字体 #   query_font get_font set_font  </description>
+    </item>
+    
+    <item>
+      <title>重要算子</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E9%87%8D%E8%A6%81%E7%AE%97%E5%AD%90/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E9%87%8D%E8%A6%81%E7%AE%97%E5%AD%90/</guid>
+      <description>重要算子 #   get_region_xxx: 获取区域点组； get_contour_xld: 获取xld点组； area_center: 求区域面积 intensity: shape_trans: 区域形状变换 smallest_xxx: 求区域或xld的最小外接圆  </description>
+    </item>
+    
+    <item>
+      <title>图像分割</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/</guid>
+      <description>图像分割 #  threshold #  直接阈值分割。适用于环境稳定，目标和背景存在明显的灰度差的场合。阈值一般可以通过灰度直方图来确定。
+binary_threshold #  自动全局阈值分割。适用于目标物体和背景之间存在明显的灰度差的场合。
+在直方图中会有明显的两个波峰：一个是目标物体，另一个是背景。如果有多个波峰，算子通过平滑灰度直方图，自动找到两个波峰之间的最小值，输出灰度值在0到最小值之间的像素点构成暗的区域。
+auto_threshold #  多阈值分割。根据多个波峰分割出多个独立的区域。
+dyn_threshold #  基于参考图像(由原图进行滤波得到)的动态阈值分割。
+var_threshold #  基于结构元素，使用局部均值和标准偏差分析分割图像。
+ dyn_threshold 和 var_threshold的适用场合：
+1）对于一些应用来说，无法通过一个全局阈值进行分割：图像的背景是非均匀的；
+2）物体在局部范围内通常比背景亮些或暗些。
+ </description>
+    </item>
+    
+    <item>
+      <title>Blob</title>
+      <link>http://halcon.lizhenguo.cn/docs/blob/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/blob/</guid>
+      <description>Blob #  流程 #   采集图像(1. 本地图像；2.相机接口)(read_image) 图像分割(threshold) 形态学处理(closing_circle, medium_image, erosion, dilation) 连通性分析(region, connection) 填充(fill_up, fill_up_shape) 特征提取(直方图, 检测)(select_shape) 获取结果  描述 #    read_image
+读取图片
+  threshold
+给目标物(如回形针)着色，从背景图中区分出
+  closing_circle
+给threhold着色时，没有着色的部分补充着色。(根据调整参数，尽可能让需要着色的空洞能着色，不需要着色的部分不会被着色)
+  connection:
+  ​	将多个目标物(如回形针)组成的一个整体切割成多个(数组)，得到回形针数组
+  fill_up_shape
+根据自定义的特征进行填充
+  select_shape
+缩小目标范围，去除不相干内容
+  area_center
+  dev_desplay
+展示指定的图像
+  备注 #   图像类型数组，下标从1开始，且只能通过算子(select_obj)一个个读取  </description>
+    </item>
+    
+    <item>
+      <title>几何定位</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/</guid>
+      <description>几何定位 #  灰度定位(Blob)与几何(轮廓)定位对比 #      对非线性光照变化，对物体灰度非线性变化的适应性 对缩放的适应性 对旋转的适应性 对物体遮挡、缺失的适应性 时间     灰度定位 差 差 差 差 短   几何(轮廓)定位 好 好 好 好 长    </description>
+    </item>
+    
+    <item>
+      <title>图像预处理</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/</guid>
+      <description>图像预处理 #     对噪声的处理效果 对边缘的处理效果 效率     平滑滤波 弱化噪声 模糊边缘   中值滤波 去除噪声 保持边缘    滤波 #  针对有早点的图像进行平滑，可以减弱或消除噪点 read_image media_image
+锐化 #  对图像边缘进行对比度提升使用，可以让图像轮廓更清晰 sobel_amp frei_amp
+增强 #  emphasize
+形态学 #   腐蚀, erosion 膨胀, dilation  骨架 #  skeleton</description>
+    </item>
+    
+    <item>
+      <title>常用标定</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/</link>
+      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/</guid>
+      <description>常用标定 #   像素变换(圆、矩形、像素单量)； 透视投影及光学畸变校正； 不同坐标系之间的标定(三点确定一个坐标系)：如九点标定(机械手) 多个相机通过标定统一到同一个坐标系  </description>
+    </item>
     
   </channel>
 </rss>

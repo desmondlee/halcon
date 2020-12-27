@@ -5,18 +5,20 @@
   <meta name="generator" content="Hugo 0.74.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Windows" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/tags/windows/" />
-<meta property="og:updated_time" content="2020-12-24T22:32:06+08:00" />
-<title>Windows | Halcon学习</title>
+<meta name="description" content="基础算子(方法函数) #  图片 #   read_image write_image dump_window dump_window_image draw_rectangle   draw 和 gen 的区别 draw 绘制 产生的点位 是控制类型变量 方便存储和读写 gen 生产 产生是图像 是图像控制变量 方便查看
+ 数组 #   tuple_concat tuple_find tuple_regexp_select  资源句柄 #   dev_get_window  区域计算 #   union different intersection complement  字体 #   query_font get_font set_font  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="基础算子(方法函数)" />
+<meta property="og:description" content="基础算子(方法函数) #  图片 #   read_image write_image dump_window dump_window_image draw_rectangle   draw 和 gen 的区别 draw 绘制 产生的点位 是控制类型变量 方便存储和读写 gen 生产 产生是图像 是图像控制变量 方便查看
+ 数组 #   tuple_concat tuple_find tuple_regexp_select  资源句柄 #   dev_get_window  区域计算 #   union different intersection complement  字体 #   query_font get_font set_font  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/" />
+<meta property="article:published_time" content="2020-12-27T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-12-27T00:00:00+00:00" />
+<title>基础算子(方法函数) | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
 <script defer src="/en.search.min.d0bedef337deb75949d888e7a050dd8e79b850f5291bd9ed5406adf782fa3c62.js" integrity="sha256-0L7e8zfet1lJ2IjnoFDdjnm4UPUpG9ntVAat94L6PGI="></script>
-<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/tags/windows/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -216,7 +218,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/" class="">基础算子(方法函数)</a>
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/" class=" active">基础算子(方法函数)</a>
   
 
         </li>
@@ -347,7 +349,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Windows</strong>
+  <strong>基础算子(方法函数)</strong>
 
   <label for="toc-control">
     
@@ -360,52 +362,13 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
+    <li><a href="#图片">图片</a></li>
+    <li><a href="#数组">数组</a></li>
+    <li><a href="#资源句柄">资源句柄</a></li>
+    <li><a href="#区域计算">区域计算</a></li>
+    <li><a href="#字体">字体</a></li>
   </ul>
 </nav>
 
@@ -417,41 +380,62 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/hotkeys/">Windows下的快捷键</a>
-    </h2>
-    
-  <h5>December 24, 2020</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/development/">Development</a>, 
-      <a href="/categories/tips/">tips</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>, 
-      <a href="/tags/windows/">Windows</a>
-  </div>
-  
-
-
-    <p>快捷键 #   F2: 重置程序执行，停止执行程序，清零所有变量； F3: 取消注释所在行； F4: 注释所在行； F5: 运行程序(遇到断点会暂停)； F6: 单步步过执行(不进入自定义函数内部)； F7: 单步步入执行，会进入自定义函数内部(内置函数除外)； F8: 步过执行完成当前函数，到前一个函数后面； F9: 停止执行； F10: 给当前行加断点。 使用灰度直方图时，按ctrl键，鼠标放在图像上可以到看灰度值。  
-    </p>
-  </article>
-  
-
-  
-
-
+  <article class="markdown"><h1 id="基础算子方法函数">
+  基础算子(方法函数)
+  <a class="anchor" href="#%e5%9f%ba%e7%a1%80%e7%ae%97%e5%ad%90%e6%96%b9%e6%b3%95%e5%87%bd%e6%95%b0">#</a>
+</h1>
+<h2 id="图片">
+  图片
+  <a class="anchor" href="#%e5%9b%be%e7%89%87">#</a>
+</h2>
+<ol>
+<li>read_image</li>
+<li>write_image</li>
+<li>dump_window</li>
+<li>dump_window_image</li>
+<li>draw_rectangle</li>
+</ol>
+<blockquote>
+<p><code>draw</code> 和 <code>gen</code> 的区别
+draw 绘制 产生的点位 是控制类型变量 方便存储和读写
+gen 生产 产生是图像 是图像控制变量 方便查看</p>
+</blockquote>
+<h2 id="数组">
+  数组
+  <a class="anchor" href="#%e6%95%b0%e7%bb%84">#</a>
+</h2>
+<ol>
+<li>tuple_concat</li>
+<li>tuple_find</li>
+<li>tuple_regexp_select</li>
+</ol>
+<h2 id="资源句柄">
+  资源句柄
+  <a class="anchor" href="#%e8%b5%84%e6%ba%90%e5%8f%a5%e6%9f%84">#</a>
+</h2>
+<ol>
+<li>dev_get_window</li>
+</ol>
+<h2 id="区域计算">
+  区域计算
+  <a class="anchor" href="#%e5%8c%ba%e5%9f%9f%e8%ae%a1%e7%ae%97">#</a>
+</h2>
+<ol>
+<li>union</li>
+<li>different</li>
+<li>intersection</li>
+<li>complement</li>
+</ol>
+<h2 id="字体">
+  字体
+  <a class="anchor" href="#%e5%ad%97%e4%bd%93">#</a>
+</h2>
+<ol>
+<li>query_font</li>
+<li>get_font</li>
+<li>set_font</li>
+</ol>
+</article>
  
       
 
@@ -471,6 +455,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -479,52 +467,13 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
+    <li><a href="#图片">图片</a></li>
+    <li><a href="#数组">数组</a></li>
+    <li><a href="#资源句柄">资源句柄</a></li>
+    <li><a href="#区域计算">区域计算</a></li>
+    <li><a href="#字体">字体</a></li>
   </ul>
 </nav>
 
