@@ -5,24 +5,21 @@
   <meta name="generator" content="Hugo 0.74.3" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="连通性操作connection #  作用 #  将整体目标拆分成多个独立目标。
-前提 #  需要通过threshold标注出目标。
-使用方式 #  命令connection (Regions, ConnectedRegions)。
-其中，第一个参数 Regions是通过threshold得到的变量，第二个变量ConnectedRegions是connection算子的输出变量。
-执行该命令后，包含在整张图像中的多个目标就被拆分成多个独立目标。(如果右键单击图像，彩色数量选择12，会发现每个独立的目标都被着上了不同的颜色)
-参考图 #  ">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="连通性操作connection" />
-<meta property="og:description" content="连通性操作connection #  作用 #  将整体目标拆分成多个独立目标。
-前提 #  需要通过threshold标注出目标。
-使用方式 #  命令connection (Regions, ConnectedRegions)。
-其中，第一个参数 Regions是通过threshold得到的变量，第二个变量ConnectedRegions是connection算子的输出变量。
-执行该命令后，包含在整张图像中的多个目标就被拆分成多个独立目标。(如果右键单击图像，彩色数量选择12，会发现每个独立的目标都被着上了不同的颜色)
-参考图 #  " />
+<meta name="description" content="Halcon的数据类型 #  命名规范 #  Halcon导出的图像变量类型是HObject，简称 ho；导出的控制变量类型是HTuple，简称 hv。
+图像类型的使用步骤 #   用GenEmptyObj初始化图像变量，或产生一个非空的图像变量； 在更新图像变量的内容前，用Dispose释放资源； 使用图像变量； 图像变量生命周期结束时，用Dispose释放资源。(C#中有GC垃圾回收机制，不强制Dispose；但C&#43;&#43;中必须)   如果不及时用Dispose释放资源，可能会导致内存泄漏。
+ C#与Halcon数据间转换 #    tuple变量赋值给C#变量：
+csharp_int = halcon_int[0].I (英文字母i 的大写，表示int)csharp_real = halcon_real[0].D (英文字母d的大写，表示double)csharp_string = halcon_string[0].S (英文字母s的大写，表示string)  C#变量赋值给tuple变量：
+halcon_int = csharp_int * 2; (隐式转换)halcon_int = (HTuple)(csharp_int * 2) (显示强制转换)halcon_int = new HTuple(csharp_int * 2)  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Halcon数据类型" />
+<meta property="og:description" content="Halcon的数据类型 #  命名规范 #  Halcon导出的图像变量类型是HObject，简称 ho；导出的控制变量类型是HTuple，简称 hv。
+图像类型的使用步骤 #   用GenEmptyObj初始化图像变量，或产生一个非空的图像变量； 在更新图像变量的内容前，用Dispose释放资源； 使用图像变量； 图像变量生命周期结束时，用Dispose释放资源。(C#中有GC垃圾回收机制，不强制Dispose；但C&#43;&#43;中必须)   如果不及时用Dispose释放资源，可能会导致内存泄漏。
+ C#与Halcon数据间转换 #    tuple变量赋值给C#变量：
+csharp_int = halcon_int[0].I (英文字母i 的大写，表示int)csharp_real = halcon_real[0].D (英文字母d的大写，表示double)csharp_string = halcon_string[0].S (英文字母s的大写，表示string)  C#变量赋值给tuple变量：
+halcon_int = csharp_int * 2; (隐式转换)halcon_int = (HTuple)(csharp_int * 2) (显示强制转换)halcon_int = new HTuple(csharp_int * 2)  " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/" />
-<meta property="article:published_time" content="2020-12-27T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-12-27T00:00:00+00:00" />
-<title>连通性操作connection | Halcon学习</title>
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" />
+
+<title>Halcon数据类型 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
@@ -78,7 +75,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-077e40a4208d81995b650752b8ffc1ab" class="toggle" checked />
+    <input type="checkbox" id="section-077e40a4208d81995b650752b8ffc1ab" class="toggle"  />
     <label for="section-077e40a4208d81995b650752b8ffc1ab" class="flex justify-between">
       <a href="http://halcon.lizhenguo.cn/docs/image/" class="">图像处理</a>
       <span>▾</span>
@@ -108,7 +105,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-72c48fc215782e74a55f6b66f6577dcc" class="toggle" checked />
+    <input type="checkbox" id="section-72c48fc215782e74a55f6b66f6577dcc" class="toggle"  />
     <label for="section-72c48fc215782e74a55f6b66f6577dcc" class="flex justify-between">
       <a  class="">相关算子</a>
       <span>▾</span>
@@ -138,7 +135,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/" class=" active">连通性操作connection</a>
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/" class="">连通性操作connection</a>
   
 
         </li>
@@ -317,7 +314,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-831861fa2ffa638ce1dfd6df02d79595" class="toggle"  />
+    <input type="checkbox" id="section-831861fa2ffa638ce1dfd6df02d79595" class="toggle" checked />
     <label for="section-831861fa2ffa638ce1dfd6df02d79595" class="flex justify-between">
       <a  class="">C#联合编程</a>
       <span>▾</span>
@@ -334,7 +331,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="">Halcon数据类型</a>
+    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class=" active">Halcon数据类型</a>
   
 
         </li>
@@ -431,7 +428,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>连通性操作connection</strong>
+  <strong>Halcon数据类型</strong>
 
   <label for="toc-control">
     
@@ -446,17 +443,12 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#命名规范">命名规范</a>
       <ul>
-        <li><a href="#作用">作用</a></li>
-        <li><a href="#前提">前提</a></li>
+        <li><a href="#图像类型的使用步骤">图像类型的使用步骤</a></li>
       </ul>
     </li>
-    <li><a href="#使用方式">使用方式</a>
-      <ul>
-        <li><a href="#参考图">参考图</a></li>
-      </ul>
-    </li>
+    <li><a href="#c与halcon数据间转换">C#与Halcon数据间转换</a></li>
   </ul>
 </nav>
 
@@ -468,32 +460,48 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="连通性操作connection">
-  连通性操作connection
-  <a class="anchor" href="#%e8%bf%9e%e9%80%9a%e6%80%a7%e6%93%8d%e4%bd%9cconnection">#</a>
+  <article class="markdown"><h1 id="halcon的数据类型">
+  Halcon的数据类型
+  <a class="anchor" href="#halcon%e7%9a%84%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b">#</a>
 </h1>
-<h3 id="作用">
-  作用
-  <a class="anchor" href="#%e4%bd%9c%e7%94%a8">#</a>
-</h3>
-<p>将整体目标拆分成多个独立目标。</p>
-<h3 id="前提">
-  前提
-  <a class="anchor" href="#%e5%89%8d%e6%8f%90">#</a>
-</h3>
-<p>需要通过<code>threshold</code>标注出目标。</p>
-<h2 id="使用方式">
-  使用方式
-  <a class="anchor" href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f">#</a>
+<h2 id="命名规范">
+  命名规范
+  <a class="anchor" href="#%e5%91%bd%e5%90%8d%e8%a7%84%e8%8c%83">#</a>
 </h2>
-<p>命令<code>connection (Regions, ConnectedRegions)</code>。</p>
-<p>其中，第一个参数 <code>Regions</code>是通过<code>threshold</code>得到的变量，第二个变量<code>ConnectedRegions</code>是connection算子的输出变量。</p>
-<p>执行该命令后，包含在整张图像中的多个目标就被拆分成多个独立目标。(如果右键单击图像，彩色数量选择12，会发现每个独立的目标都被着上了不同的颜色)</p>
-<h3 id="参考图">
-  参考图
-  <a class="anchor" href="#%e5%8f%82%e8%80%83%e5%9b%be">#</a>
+<p>Halcon导出的图像变量类型是HObject，简称 ho；导出的控制变量类型是HTuple，简称 hv。</p>
+<h3 id="图像类型的使用步骤">
+  图像类型的使用步骤
+  <a class="anchor" href="#%e5%9b%be%e5%83%8f%e7%b1%bb%e5%9e%8b%e7%9a%84%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4">#</a>
 </h3>
-<p><img src="http://qn.halcon.lizhenguo.cn/image/connection1.png" alt="连通性操作" /></p>
+<ol>
+<li>用GenEmptyObj初始化图像变量，或产生一个非空的图像变量；</li>
+<li>在更新图像变量的内容前，用Dispose释放资源；</li>
+<li>使用图像变量；</li>
+<li>图像变量生命周期结束时，用Dispose释放资源。(C#中有GC垃圾回收机制，不强制Dispose；但C++中必须)</li>
+</ol>
+<blockquote>
+<p>如果不及时用Dispose释放资源，可能会导致内存泄漏。</p>
+</blockquote>
+<h2 id="c与halcon数据间转换">
+  C#与Halcon数据间转换
+  <a class="anchor" href="#c%e4%b8%8ehalcon%e6%95%b0%e6%8d%ae%e9%97%b4%e8%bd%ac%e6%8d%a2">#</a>
+</h2>
+<ol>
+<li>
+<p>tuple变量赋值给C#变量：</p>
+<pre><code>csharp_int = halcon_int[0].I   (英文字母i 的大写，表示int)
+   
+csharp_real = halcon_real[0].D (英文字母d的大写，表示double)
+   
+csharp_string = halcon_string[0].S (英文字母s的大写，表示string)
+</code></pre></li>
+<li>
+<p>C#变量赋值给tuple变量：</p>
+<pre><code>halcon_int = csharp_int * 2;  (隐式转换)
+halcon_int = (HTuple)(csharp_int * 2) (显示强制转换)
+halcon_int = new HTuple(csharp_int * 2)
+</code></pre></li>
+</ol>
 </article>
  
       
@@ -528,17 +536,12 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#命名规范">命名规范</a>
       <ul>
-        <li><a href="#作用">作用</a></li>
-        <li><a href="#前提">前提</a></li>
+        <li><a href="#图像类型的使用步骤">图像类型的使用步骤</a></li>
       </ul>
     </li>
-    <li><a href="#使用方式">使用方式</a>
-      <ul>
-        <li><a href="#参考图">参考图</a></li>
-      </ul>
-    </li>
+    <li><a href="#c与halcon数据间转换">C#与Halcon数据间转换</a></li>
   </ul>
 </nav>
 

@@ -28,8 +28,19 @@
   </url>
   
   <url>
-    <loc>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</loc>
-    <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+    <loc>http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</loc>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/csharp_combine/hsmartwindow/</loc>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/csharp_combine/visualstudio%E9%85%8D%E7%BD%AE/</loc>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/csharp_combine/functions/</loc>
   </url>
   
   <url>
@@ -75,6 +86,10 @@
   <url>
     <loc>http://halcon.lizhenguo.cn/docs/image/operators/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/csharp_combine/</loc>
   </url>
   
   <url>
@@ -145,6 +160,10 @@
   <url>
     <loc>http://halcon.lizhenguo.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2020-12-24T22:32:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</loc>
   </url>
   
 </urlset>

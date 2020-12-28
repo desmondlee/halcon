@@ -21,18 +21,6 @@
     </item>
     
     <item>
-      <title>灰度直方图</title>
-      <link>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</link>
-      <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</guid>
-      <description>借助灰度直方图创建threshold代码 #  发音：ˈθreʃhəʊld
-阈值 (不是_阀值_)又叫临界值，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括建筑学、生物学、飞行、化学、电信、电学、心理学等，如生态阈值。（摘自百度百科）
-前提 #  需要将通过read_image读取图像得到的Image类型变量作为参数。
-使用方式 #   通过read_image 读取图像； 打开灰度直方图，并勾选 阈值选项； 调整绿线和红线，勾勒出目标物； 点击插入代码。  参考图 #  </description>
-    </item>
-    
-    <item>
       <title>连通性操作connection</title>
       <link>http://halcon.lizhenguo.cn/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
@@ -81,6 +69,19 @@
       
       <guid>http://halcon.lizhenguo.cn/docs/image/operators/select_shape/</guid>
       <description>select_shape #  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</guid>
+      <description>借助特征直方图创建threshold代码 #  发音：ˈθreʃhəʊld
+阈值 (不是_阀值_)又叫临界值，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括建筑学、生物学、飞行、化学、电信、电学、心理学等，如生态阈值。（摘自百度百科）
+前提 #  需要将通过read_image读取图像得到的Image类型变量作为参数。
+使用方式 #   通过read_image 读取图像； 打开灰度直方图，并勾选 阈值选项； 调整绿线和红线，勾勒出目标物； 点击插入代码。  提醒 #  若无法勾选阈值选项，看下阈值行的通道 是不是RGB，若是，选择某一具体值，这时阈值选项即可勾选了。
+参考图 #  </description>
     </item>
     
   </channel>

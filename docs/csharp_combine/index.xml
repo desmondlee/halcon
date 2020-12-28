@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C#联合编程 on Halcon学习</title>
+    <link>http://halcon.lizhenguo.cn/docs/csharp_combine/</link>
+    <description>Recent content in C#联合编程 on Halcon学习</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://halcon.lizhenguo.cn/docs/csharp_combine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Halcon数据类型</title>
+      <link>http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+      <description>Halcon的数据类型 #  命名规范 #  Halcon导出的图像变量类型是HObject，简称 ho；导出的控制变量类型是HTuple，简称 hv。
+图像类型的使用步骤 #   用GenEmptyObj初始化图像变量，或产生一个非空的图像变量； 在更新图像变量的内容前，用Dispose释放资源； 使用图像变量； 图像变量生命周期结束时，用Dispose释放资源。(C#中有GC垃圾回收机制，不强制Dispose；但C++中必须)   如果不及时用Dispose释放资源，可能会导致内存泄漏。
+ C#与Halcon数据间转换 #    tuple变量赋值给C#变量：
+csharp_int = halcon_int[0].I (英文字母i 的大写，表示int)csharp_real = halcon_real[0].D (英文字母d的大写，表示double)csharp_string = halcon_string[0].S (英文字母s的大写，表示string)  C#变量赋值给tuple变量：
+halcon_int = csharp_int * 2; (隐式转换)halcon_int = (HTuple)(csharp_int * 2) (显示强制转换)halcon_int = new HTuple(csharp_int * 2)  </description>
+    </item>
+    
+    <item>
+      <title>hSmartWindow使用</title>
+      <link>http://halcon.lizhenguo.cn/docs/csharp_combine/hsmartwindow/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/csharp_combine/hsmartwindow/</guid>
+      <description>hSmartWindow使用 #  提醒 #  若将halcon的dll文件拷贝到项目的bin-debug目录，需要同时拷贝以下三个文件，
+halcon.dll, hcanvas.dll(在halcon安装目录bin下的x64-win64目录)
+halcondotnet.dll(在halcon安装目录bin下的dotnet35目录)
+原因 #  项目的bin-debug目录下有halcon.dll文件时，其优先级高于halcon在系统中的安装路径下的halcon.dll，
+该halcon.dll会引用同目录的其他dll文件，若缺失，则会报错(提示缺失某dll)。
+排查技巧 #   将halcon安装目录bin-[x64-win64]下的所有dll文件都拷贝到项目的bin-debug目录； 运行c#项目，使其能正常执行； 在c#项目运行状态下，删除拷贝的所有dll文件，同时忽略无法删除部分； 最终剩下的无法删除的dll文件，即是可能需要的dll文件； 再一个个删除剩下的dll文件，运行目录下的exe文件，若报错，说明刚删除的dll文件是必要文件。  </description>
+    </item>
+    
+    <item>
+      <title>使用VisualStudio开发halcon的配置</title>
+      <link>http://halcon.lizhenguo.cn/docs/csharp_combine/visualstudio%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/csharp_combine/visualstudio%E9%85%8D%E7%BD%AE/</guid>
+      <description>使用VisualStudio开发halcon的配置 #  步骤 #   在项目属性中，生成代码选项不勾选[首选32位]； 在Form设计界面，打开工具箱， 右键选择选择项， 点击浏览，勾选halcon安装目录下的bin目录下的dotnet35目录下的halcondotnet.dll文件；（此时可以在工具箱中拖拽使用hWindowControl控件了) 添加项目引用，选择halcondotnet.dll文件；（后缀是xl.dll的文件，用于大分辨率相机，如2000万像素以上） (可选项)，若想不依赖系统中的安装程序halcon，需要将相关dll文件放入c#项目的bin-debug目录下。(exe文件目录)  实例 #  项目代码文件下载
+ ps, vs版本为2017社区版
+ 切换版本 #   更换C#项目资源管理器，引用列表中的halcondotnet引用文件； 在工具箱、项目中，都重新引入最新的halcondotnet.dll动态库文件； 重新拖拽生成hWindowControl窗口控件。  快捷键 #    格式化代码
+ctrl+k+f  </description>
+    </item>
+    
+    <item>
+      <title>常用函数</title>
+      <link>http://halcon.lizhenguo.cn/docs/csharp_combine/functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/csharp_combine/functions/</guid>
+      <description>常用函数 #   设置内部图像处理buffer的宽度和高度  HoperatorSet.SetSystem(&amp;quot;width&amp;quot;, 512);HoperatorSet.SetSystem(&amp;quot;height&amp;quot;, 512);</description>
+    </item>
+    
+  </channel>
+</rss>
