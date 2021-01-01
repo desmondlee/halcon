@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图像处理 on My New Hugo Site</title>
+    <link>http://example.org/docs/image/</link>
+    <description>Recent content in 图像处理 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/docs/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>流程</title>
+      <link>http://example.org/docs/image/procedure/</link>
+      <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
+      
+      <guid>http://example.org/docs/image/procedure/</guid>
+      <description>流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[采集图像] -- B{有无判定, Blob/定位}B -- |有| C[获得位置,角度信息]B -- |无| AC -- D[仿射变换, 求变换句柄, ROI变换]D -- E[图像预处理]E -- F[图像处理]F -- G[结果输出]</description>
+    </item>
+    
+  </channel>
+</rss>

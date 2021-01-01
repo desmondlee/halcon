@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.79.1" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="借助灰度直方图创建threshold代码 #  发音：ˈθreʃhəʊld
+阈值 (不是_阀值_)又叫临界值，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括建筑学、生物学、飞行、化学、电信、电学、心理学等，如生态阈值。（摘自百度百科）
+前提 #  需要将通过read_image读取图像得到的Image类型变量作为参数。
+使用方式 #   通过read_image 读取图像； 打开灰度直方图，并勾选 阈值选项； 调整绿线和红线，勾勒出目标物； 点击插入代码。  提醒 #  若无法勾选阈值选项，看下阈值行的通道 是不是RGB，若是，选择某一具体值，这时阈值选项即可勾选了。
+参考图 #  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="借助灰度直方图创建threshold代码 #  发音：ˈθreʃhəʊld
+阈值 (不是_阀值_)又叫临界值，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括建筑学、生物学、飞行、化学、电信、电学、心理学等，如生态阈值。（摘自百度百科）
+前提 #  需要将通过read_image读取图像得到的Image类型变量作为参数。
+使用方式 #   通过read_image 读取图像； 打开灰度直方图，并勾选 阈值选项； 调整绿线和红线，勾勒出目标物； 点击插入代码。  提醒 #  若无法勾选阈值选项，看下阈值行的通道 是不是RGB，若是，选择某一具体值，这时阈值选项即可勾选了。
+参考图 #  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/" />
+
+<title>灰度直方图 | My New Hugo Site</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
+<script defer src="/en.search.min.8a1f7a828f667f86f7d1100fb95023bcd1d90018fbced294441690087290a63a.js" integrity="sha256-ih96go9mf4b30RAPuVAjvNHZABj7ztKURBaQCHKQpjo="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-077e40a4208d81995b650752b8ffc1ab" class="toggle" checked />
+    <label for="section-077e40a4208d81995b650752b8ffc1ab" class="flex justify-between">
+      <a href="http://example.org/docs/image/" class="">图像处理</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/image/procedure/" class="">流程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-72c48fc215782e74a55f6b66f6577dcc" class="toggle" checked />
+    <label for="section-72c48fc215782e74a55f6b66f6577dcc" class="flex justify-between">
+      <a  class="">相关算子</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/image/operators/read_image/" class="">read_image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/" class="">连通性操作connection</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/" class="">特征直方图</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/image/operators/list_files/" class="">list_files</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/image/operators/orientation/" class="">orientation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/image/operators/select_shape/" class="">select_shape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/" class=" active">灰度直方图</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/" class="">基础算子(方法函数)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/%E9%87%8D%E8%A6%81%E7%AE%97%E5%AD%90/" class="">重要算子</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/" class="">图像分割</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/blob/" class="">Blob</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/" class="">几何定位</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/" class="">图像预处理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/%E5%88%9B%E5%BB%BA%E4%BF%9D%E5%AD%98%E6%A8%A1%E6%9D%BF/" class="">创建&amp;保存模板</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/" class="">常用标定</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-831861fa2ffa638ce1dfd6df02d79595" class="toggle"  />
+    <label for="section-831861fa2ffa638ce1dfd6df02d79595" class="flex justify-between">
+      <a  class="">C#联合编程</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="">Halcon数据类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/csharp_combine/hsmartwindow/" class="">hSmartWindow使用</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/csharp_combine/visualstudio%E9%85%8D%E7%BD%AE/" class="">使用VisualStudio开发halcon的配置</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://example.org/docs/csharp_combine/functions/" class="">常用函数</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        常见问题
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>灰度直方图</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前提">前提</a></li>
+        <li><a href="#使用方式">使用方式</a></li>
+      </ul>
+    </li>
+    <li><a href="#提醒">提醒</a>
+      <ul>
+        <li><a href="#参考图">参考图</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="借助灰度直方图创建threshold代码">
+  借助灰度直方图创建threshold代码
+  <a class="anchor" href="#%e5%80%9f%e5%8a%a9%e7%81%b0%e5%ba%a6%e7%9b%b4%e6%96%b9%e5%9b%be%e5%88%9b%e5%bb%bathreshold%e4%bb%a3%e7%a0%81">#</a>
+</h1>
+<p>发音：<code>ˈθreʃhəʊld</code></p>
+<p><strong>阈值</strong> (不是_阀值_)又叫<a href="https://baike.baidu.com/item/%e4%b8%b4%e7%95%8c%e5%80%bc/9322537">临界值</a>，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括<a href="https://baike.baidu.com/item/%e5%bb%ba%e7%ad%91%e5%ad%a6/228287">建筑学</a>、生物学、飞行、化学、电信、电学、心理学等，如<a href="https://baike.baidu.com/item/%e7%94%9f%e6%80%81%e9%98%88%e5%80%bc/10986797">生态阈值</a>。（<a href="https://baike.baidu.com/item/%E9%98%88%E5%80%BC/7442398">摘自百度百科</a>）</p>
+<h3 id="前提">
+  前提
+  <a class="anchor" href="#%e5%89%8d%e6%8f%90">#</a>
+</h3>
+<p>需要将通过read_image读取图像得到的Image类型变量作为参数。</p>
+<h3 id="使用方式">
+  使用方式
+  <a class="anchor" href="#%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f">#</a>
+</h3>
+<ol>
+<li>通过read_image 读取图像；</li>
+<li>打开灰度直方图，并勾选 <strong>阈值</strong>选项；</li>
+<li>调整绿线和红线，勾勒出目标物；</li>
+<li>点击<strong>插入代码</strong>。</li>
+</ol>
+<h2 id="提醒">
+  提醒
+  <a class="anchor" href="#%e6%8f%90%e9%86%92">#</a>
+</h2>
+<p>若无法勾选<strong>阈值</strong>选项，看下阈值行的<strong>通道</strong> 是不是RGB，若是，选择某一具体值，这时<strong>阈值</strong>选项即可勾选了。</p>
+<h3 id="参考图">
+  参考图
+  <a class="anchor" href="#%e5%8f%82%e8%80%83%e5%9b%be">#</a>
+</h3>
+<p><img src="http://qn.halcon.lizhenguo.cn/image/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE1.png" alt="灰度直方图" /></p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#前提">前提</a></li>
+        <li><a href="#使用方式">使用方式</a></li>
+      </ul>
+    </li>
+    <li><a href="#提醒">提醒</a>
+      <ul>
+        <li><a href="#参考图">参考图</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
