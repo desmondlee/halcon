@@ -6,7 +6,19 @@
     <description>Recent content in 常见问题 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Dec 2020 22:32:06 +0800</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jan 2021 01:25:15 +0800</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>几何定位&amp;Blob分析</title>
+      <link>http://halcon.lizhenguo.cn/posts/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8Dblob%E5%88%86%E6%9E%90/</link>
+      <pubDate>Sat, 02 Jan 2021 01:25:15 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8Dblob%E5%88%86%E6%9E%90/</guid>
+      <description>都是“判定有无” （判断图像中是否存在目标区域）的方法。
+  几何定位是通过(模板)轮廓等几何特征匹配，来判断图像中是否存在目标区域；
+  Blob分析是通过灰度值、特征值(如面积)等方式筛选，来判断图像中是否存在目标区域。
+  </description>
+    </item>
+    
     <item>
       <title>Windows下的快捷键</title>
       <link>http://halcon.lizhenguo.cn/posts/hotkeys/</link>

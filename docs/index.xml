@@ -90,12 +90,12 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
     </item>
     
     <item>
-      <title>创建&amp;保存模板</title>
-      <link>http://halcon.lizhenguo.cn/docs/%E5%88%9B%E5%BB%BA%E4%BF%9D%E5%AD%98%E6%A8%A1%E6%9D%BF/</link>
+      <title>模板</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E6%A8%A1%E6%9D%BF/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>http://halcon.lizhenguo.cn/docs/%E5%88%9B%E5%BB%BA%E4%BF%9D%E5%AD%98%E6%A8%A1%E6%9D%BF/</guid>
-      <description>创建&amp;amp;保存模板 #  创建模板(HDevelop代码) #  dev_get_window (WindowHandle1)dev_set_draw (&#39;margin&#39;) //区域展示样式：边框read_image (Image, &#39;printer_chip/printer_chip_01&#39;)//加载图像draw_rectangle2 (WindowHandle1, Row2, Column, Phi, Length1, Length2)//绘制模板区域gen_rectangle2 (Rectangle, Row2, Column, Phi, Length1, Length2)//展示区域reduce_domain (Image, Rectangle, ImageReduced)//获取图像在区域内的部分内容图像create_shape_model (ImageReduced, &#39;auto&#39;, 0, rad(45), &#39;auto&#39;, &#39;auto&#39;, &#39;use_polarity&#39;, &#39;auto&#39;, &#39;auto&#39;, ModelID)//将区域内的部分图像作为模板内容，制作模板保存模板(HDevelop代码) #  write_shape_model (ModelID, &#39;C:/Users/lee/Desktop/model.shm&#39;)</description>
+      <guid>http://halcon.lizhenguo.cn/docs/%E6%A8%A1%E6%9D%BF/</guid>
+      <description>创建&amp;amp;保存&amp;amp;读取&amp;amp;使用模板 #  创建模板 #  dev_get_window (WindowHandle1)dev_set_draw (&#39;margin&#39;) //区域展示样式：边框read_image (Image, &#39;printer_chip/printer_chip_01&#39;)//加载图像draw_rectangle2 (WindowHandle1, Row2, Column, Phi, Length1, Length2)//绘制模板区域gen_rectangle2 (Rectangle, Row2, Column, Phi, Length1, Length2)//展示区域reduce_domain (Image, Rectangle, ImageReduced)//获取图像在区域内的部分内容图像create_shape_model (ImageReduced, &#39;auto&#39;, 0, rad(45), &#39;auto&#39;, &#39;auto&#39;, &#39;use_polarity&#39;, &#39;auto&#39;, &#39;auto&#39;, ModelID)//将区域内的部分图像作为模板内容，制作模板保存模板 #  write_shape_model (ModelID, &#39;C:/Users/lee/Desktop/model.shm&#39;)读取模板 #  read_shape_model (&#39;C:/Users/lee/Desktop/model.shm&#39;, ModelID)使用(查找)模板 #  find_shape_model (Image, ModelID, rad(-45), rad(180), 0.5, 1, 0.5, &#39;least_squares&#39;, 0, 0.9, Row3, Column2, Angle, Score)//判定有无，此处是几何定位法if (|Row3| &amp;gt; 0)vector_angle_to_rigid (0,0,0, Row3, Column2, Angle, HomMat2D)//获得变换矩阵HomMat2Dget_shape_model_contours (ModelContours1, ModelID, 1)//会将模板轮廓显示在图像左上角，模板中心在图像坐标0，0的位置affine_trans_contour_xld (ModelContours1, ContoursAffineTrans1, HomMat2D)//根据变换矩阵，将模板轮廓仿射变换到对应的位置else disp_message (WindowHandle1, &#39;未找到模板&#39;, &#39;window&#39;, 20, 20, &#39;red&#39;, &#39;false&#39;)endif参考图 #  </description>
     </item>
     
     <item>
