@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on My New Hugo Site</title>
-    <link>http://example.org/categories/</link>
-    <description>Recent content in Categories on My New Hugo Site</description>
+    <title>Categories on Halcon学习</title>
+    <link>http://halcon.lizhenguo.cn/categories/</link>
+    <description>Recent content in Categories on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Dec 2020 22:32:06 +0800</lastBuildDate><atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2020 22:32:06 +0800</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development</title>
-      <link>http://example.org/categories/development/</link>
+      <link>http://halcon.lizhenguo.cn/categories/development/</link>
       <pubDate>Thu, 24 Dec 2020 22:32:06 +0800</pubDate>
       
-      <guid>http://example.org/categories/development/</guid>
+      <guid>http://halcon.lizhenguo.cn/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tips</title>
-      <link>http://example.org/categories/tips/</link>
+      <link>http://halcon.lizhenguo.cn/categories/tips/</link>
       <pubDate>Thu, 24 Dec 2020 22:32:06 +0800</pubDate>
       
-      <guid>http://example.org/categories/tips/</guid>
+      <guid>http://halcon.lizhenguo.cn/categories/tips/</guid>
       <description></description>
     </item>
     

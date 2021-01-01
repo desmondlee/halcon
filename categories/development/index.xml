@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Development on My New Hugo Site</title>
-    <link>http://example.org/categories/development/</link>
-    <description>Recent content in Development on My New Hugo Site</description>
+    <title>Development on Halcon学习</title>
+    <link>http://halcon.lizhenguo.cn/categories/development/</link>
+    <description>Recent content in Development on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Dec 2020 22:32:06 +0800</lastBuildDate><atom:link href="http://example.org/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2020 22:32:06 +0800</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/categories/development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows下的快捷键</title>
-      <link>http://example.org/posts/hotkeys/</link>
+      <link>http://halcon.lizhenguo.cn/posts/hotkeys/</link>
       <pubDate>Thu, 24 Dec 2020 22:32:06 +0800</pubDate>
       
-      <guid>http://example.org/posts/hotkeys/</guid>
+      <guid>http://halcon.lizhenguo.cn/posts/hotkeys/</guid>
       <description>快捷键 #   F2: 重置程序执行，停止执行程序，清零所有变量； F3: 取消注释所在行； F4: 注释所在行； F5: 运行程序(遇到断点会暂停)； F6: 单步步过执行(不进入自定义函数内部)； F7: 单步步入执行，会进入自定义函数内部(内置函数除外)； F8: 步过执行完成当前函数，到前一个函数后面； F9: 停止执行； F10: 给当前行加断点。 使用灰度直方图时，按ctrl键，鼠标放在图像上可以到看灰度值。  </description>
     </item>
     
     <item>
       <title>使用相对路径加载图像</title>
-      <link>http://example.org/posts/relative_path/</link>
+      <link>http://halcon.lizhenguo.cn/posts/relative_path/</link>
       <pubDate>Thu, 24 Dec 2020 22:32:06 +0800</pubDate>
       
-      <guid>http://example.org/posts/relative_path/</guid>
+      <guid>http://halcon.lizhenguo.cn/posts/relative_path/</guid>
       <description>好处 #  共享程序文件给他人时，不用严格按照原有的绝对路径存储图像，方便使用。
 位置 #  read_image可以将hdev文件所在目录，作为相对路径起始位置。</description>
     </item>

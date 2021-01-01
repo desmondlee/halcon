@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>相关算子 on My New Hugo Site</title>
-    <link>http://example.org/docs/image/operators/</link>
-    <description>Recent content in 相关算子 on My New Hugo Site</description>
+    <title>相关算子 on Halcon学习</title>
+    <link>http://halcon.lizhenguo.cn/docs/image/operators/</link>
+    <description>Recent content in 相关算子 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://example.org/docs/image/operators/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/docs/image/operators/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>read_image</title>
-      <link>http://example.org/docs/image/operators/read_image/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/read_image/</link>
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
       
-      <guid>http://example.org/docs/image/operators/read_image/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/read_image/</guid>
       <description>read_image #  加载图像到halcon</description>
     </item>
     
     <item>
       <title>连通性操作connection</title>
-      <link>http://example.org/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/</guid>
       <description>连通性操作connection #  作用 #  将整体目标拆分成多个独立目标。
 前提 #  需要通过threshold标注出目标。
 使用方式 #  命令connection (Regions, ConnectedRegions)。
@@ -32,47 +32,47 @@
     
     <item>
       <title>特征直方图</title>
-      <link>http://example.org/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/</guid>
       <description>借助特征直方图创建select_shape代码 #  前提 #  先使用 connection 算子将图像上的一整个特征目标，拆分成多个特征目标。
 使用方式 #   将connection 拆分出来的图像用同一种颜色标注(如用灰色)； 打开特征直方图，勾选area选项； 通过拖拽特征直方图上的绿线和红线，使只关注的目标被标注(着色)； 点击插入代码，即可在代码窗口得到对应的代码。如select_shape (ConnectedRegions, SelectedRegions1, &#39;area&#39;, &#39;and&#39;, 28077.7, 50000)  参考图 #  </description>
     </item>
     
     <item>
       <title>list_files</title>
-      <link>http://example.org/docs/image/operators/list_files/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/list_files/</link>
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
       
-      <guid>http://example.org/docs/image/operators/list_files/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/list_files/</guid>
       <description>列举文件 #  </description>
     </item>
     
     <item>
       <title>orientation</title>
-      <link>http://example.org/docs/image/operators/orientation/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/orientation/</link>
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
       
-      <guid>http://example.org/docs/image/operators/orientation/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/orientation/</guid>
       <description>orientation #  </description>
     </item>
     
     <item>
       <title>select_shape</title>
-      <link>http://example.org/docs/image/operators/select_shape/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/select_shape/</link>
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
       
-      <guid>http://example.org/docs/image/operators/select_shape/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/select_shape/</guid>
       <description>select_shape #  </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</link>
+      <link>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</guid>
+      <guid>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</guid>
       <description>借助灰度直方图创建threshold代码 #  发音：ˈθreʃhəʊld
 阈值 (不是_阀值_)又叫临界值，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括建筑学、生物学、飞行、化学、电信、电学、心理学等，如生态阈值。（摘自百度百科）
 前提 #  需要将通过read_image读取图像得到的Image类型变量作为参数。
