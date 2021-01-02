@@ -76,7 +76,7 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/</guid>
-      <description>几何定位 #  灰度定位(Blob)与几何(轮廓)定位对比 #      对非线性光照变化，对物体灰度非线性变化的适应性 对缩放的适应性 对旋转的适应性 对物体遮挡、缺失的适应性 时间     灰度定位 差 差 差 差 短   几何(轮廓)定位 好 好 好 好 长    </description>
+      <description>几何定位 #  通过几何特征(如模板轮廓)，来判断图像中是否有目标区域。</description>
     </item>
     
     <item>

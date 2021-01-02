@@ -15,7 +15,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
-<script defer src="/en.search.min.da96af79a2ec8b675974568b64262939e1a072c46751d864b838c74516238727.js" integrity="sha256-2paveaLsi2dZdFaLZCYpOeGgcsRnUdhkuDjHRRYjhyc="></script>
+<script defer src="/en.search.min.5fa70f08330ebf9d312312330c9ae15f570722976bba933a174e0d681d250fcb.js" integrity="sha256-X6cPCDMOv50xIxIzDJrhX1cHIpdrupM6F04NaB0lD8s="></script>
 <link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/posts/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
@@ -555,7 +555,8 @@ https://github.com/alex-shpak/hugo-book
     <p>都是“判定有无” （判断图像中是否存在目标区域）的方法。
   几何定位是通过(模板)轮廓等几何特征匹配，来判断图像中是否存在目标区域；
   Blob分析是通过灰度值、特征值(如面积)等方式筛选，来判断图像中是否存在目标区域。
-  
+  灰度定位(Blob)与几何(轮廓)定位对比:
+      对非线性光照变化，对物体灰度非线性变化的适应性 对缩放的适应性 对旋转的适应性 对物体遮挡、缺失的适应性 时间     灰度定位 差 差 差 差 短   几何(轮廓)定位 好 好 好 好 长    
     </p>
   </article>
   
