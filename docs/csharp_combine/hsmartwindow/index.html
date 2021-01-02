@@ -5,19 +5,19 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="hSmartWindow使用 #  提醒 #  若将halcon的dll文件拷贝到项目的bin-debug目录，需要同时拷贝以下三个文件，
+<meta name="description" content="hSmartWindow使用 #  提醒 #  若将halcon的dll文件拷贝到项目的bin/debug目录，需要同时拷贝以下三个文件，
 halcon.dll, hcanvas.dll(在halcon安装目录bin下的x64-win64目录)
 halcondotnet.dll(在halcon安装目录bin下的dotnet35目录)
-原因 #  项目的bin-debug目录下有halcon.dll文件时，其优先级高于halcon在系统中的安装路径下的halcon.dll，
+原因 #  C#项目的bin/debug目录下有halcon.dll文件时，其优先级高于halcon在系统中的安装路径下的halcon.dll，
 该halcon.dll会引用同目录的其他dll文件，若缺失，则会报错(提示缺失某dll)。
-排查技巧 #   将halcon安装目录bin-[x64-win64]下的所有dll文件都拷贝到项目的bin-debug目录； 运行c#项目，使其能正常执行； 在c#项目运行状态下，删除拷贝的所有dll文件，同时忽略无法删除部分； 最终剩下的无法删除的dll文件，即是可能需要的dll文件； 再一个个删除剩下的dll文件，运行目录下的exe文件，若报错，说明刚删除的dll文件是必要文件。  ">
+排查技巧 #   将halcon安装目录bin/x64-win64下的所有dll文件都拷贝到C#项目的bin/debug目录； 运行c#项目，使其能正常执行； 在c#项目运行状态下，删除C#项目的bin/debug目录下拷贝的所有dll文件，同时忽略无法删除部分； 最终剩下的无法删除的dll文件，即是可能需要的dll文件； 再一个个删除剩下的dll文件，运行目录下的exe文件，若报错，说明刚删除的dll文件是必要文件。  ">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="hSmartWindow使用" />
-<meta property="og:description" content="hSmartWindow使用 #  提醒 #  若将halcon的dll文件拷贝到项目的bin-debug目录，需要同时拷贝以下三个文件，
+<meta property="og:description" content="hSmartWindow使用 #  提醒 #  若将halcon的dll文件拷贝到项目的bin/debug目录，需要同时拷贝以下三个文件，
 halcon.dll, hcanvas.dll(在halcon安装目录bin下的x64-win64目录)
 halcondotnet.dll(在halcon安装目录bin下的dotnet35目录)
-原因 #  项目的bin-debug目录下有halcon.dll文件时，其优先级高于halcon在系统中的安装路径下的halcon.dll，
+原因 #  C#项目的bin/debug目录下有halcon.dll文件时，其优先级高于halcon在系统中的安装路径下的halcon.dll，
 该halcon.dll会引用同目录的其他dll文件，若缺失，则会报错(提示缺失某dll)。
-排查技巧 #   将halcon安装目录bin-[x64-win64]下的所有dll文件都拷贝到项目的bin-debug目录； 运行c#项目，使其能正常执行； 在c#项目运行状态下，删除拷贝的所有dll文件，同时忽略无法删除部分； 最终剩下的无法删除的dll文件，即是可能需要的dll文件； 再一个个删除剩下的dll文件，运行目录下的exe文件，若报错，说明刚删除的dll文件是必要文件。  " />
+排查技巧 #   将halcon安装目录bin/x64-win64下的所有dll文件都拷贝到C#项目的bin/debug目录； 运行c#项目，使其能正常执行； 在c#项目运行状态下，删除C#项目的bin/debug目录下拷贝的所有dll文件，同时忽略无法删除部分； 最终剩下的无法删除的dll文件，即是可能需要的dll文件； 再一个个删除剩下的dll文件，运行目录下的exe文件，若报错，说明刚删除的dll文件是必要文件。  " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://halcon.lizhenguo.cn/docs/csharp_combine/hsmartwindow/" />
 
@@ -25,7 +25,7 @@ halcondotnet.dll(在halcon安装目录bin下的dotnet35目录)
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
-<script defer src="/en.search.min.6b4ba5a2d676ecd42dad7d6135c0cca1b33971562dd3f23ba37655583a7063e2.js" integrity="sha256-a0ulotZ27NQtrX1hNcDMobM5cVYt0/I7o3ZVWDpwY&#43;I="></script>
+<script defer src="/en.search.min.3300209f1004ca8a72fc18fe7d7d8f37cb72cbc2c49158282e4b4f027dbd35d3.js" integrity="sha256-MwAgnxAEyopy/Bj&#43;fX2PN8tyy8LEkVgoLktPAn29NdM="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -385,7 +385,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/functions/" class="">常用函数</a>
+    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/functions/" class="">常用设置</a>
   
 
         </li>
@@ -458,12 +458,8 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#提醒">提醒</a></li>
-        <li><a href="#原因">原因</a></li>
-      </ul>
-    </li>
+    <li><a href="#提醒">提醒</a></li>
+    <li><a href="#原因">原因</a></li>
     <li><a href="#排查技巧">排查技巧</a></li>
   </ul>
 </nav>
@@ -480,27 +476,27 @@ https://github.com/alex-shpak/hugo-book
   hSmartWindow使用
   <a class="anchor" href="#hsmartwindow%e4%bd%bf%e7%94%a8">#</a>
 </h1>
-<h3 id="提醒">
+<h2 id="提醒">
   提醒
   <a class="anchor" href="#%e6%8f%90%e9%86%92">#</a>
-</h3>
-<p>若将halcon的dll文件拷贝到项目的bin-debug目录，需要同时拷贝以下三个文件，</p>
+</h2>
+<p>若将halcon的dll文件拷贝到项目的<code>bin/debug</code>目录，需要同时拷贝以下三个文件，</p>
 <p><code>halcon.dll, hcanvas.dll</code>(在halcon安装目录bin下的x64-win64目录)</p>
 <p><code>halcondotnet.dll</code>(在halcon安装目录bin下的dotnet35目录)</p>
-<h3 id="原因">
+<h2 id="原因">
   原因
   <a class="anchor" href="#%e5%8e%9f%e5%9b%a0">#</a>
-</h3>
-<p>项目的bin-debug目录下有halcon.dll文件时，其优先级高于halcon在系统中的安装路径下的halcon.dll，</p>
+</h2>
+<p>C#项目的<code>bin/debug</code>目录下有halcon.dll文件时，其优先级高于halcon在系统中的安装路径下的halcon.dll，</p>
 <p>该halcon.dll会引用同目录的其他dll文件，若缺失，则会报错(提示缺失某dll)。</p>
 <h2 id="排查技巧">
   排查技巧
   <a class="anchor" href="#%e6%8e%92%e6%9f%a5%e6%8a%80%e5%b7%a7">#</a>
 </h2>
 <ol>
-<li>将halcon安装目录<strong>bin</strong>-[<strong>x64-win64</strong>]下的所有dll文件都拷贝到项目的bin-debug目录；</li>
+<li>将halcon安装目录<code>bin/x64-win64</code>下的所有dll文件都拷贝到C#项目的<code>bin/debug</code>目录；</li>
 <li>运行c#项目，使其能正常执行；</li>
-<li>在c#项目运行状态下，删除拷贝的所有dll文件，同时忽略无法删除部分；</li>
+<li>在c#项目运行状态下，删除C#项目的<code>bin/debug</code>目录下拷贝的所有dll文件，同时忽略无法删除部分；</li>
 <li>最终剩下的无法删除的dll文件，即是可能需要的dll文件；</li>
 <li>再一个个删除剩下的dll文件，运行目录下的exe文件，若报错，说明刚删除的dll文件是必要文件。</li>
 </ol>
@@ -538,12 +534,8 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#提醒">提醒</a></li>
-        <li><a href="#原因">原因</a></li>
-      </ul>
-    </li>
+    <li><a href="#提醒">提醒</a></li>
+    <li><a href="#原因">原因</a></li>
     <li><a href="#排查技巧">排查技巧</a></li>
   </ul>
 </nav>

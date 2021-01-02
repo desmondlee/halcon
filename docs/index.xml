@@ -84,9 +84,9 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/</guid>
-      <description>图像预处理 #     对噪声的处理效果 对边缘的处理效果 效率     平滑滤波 弱化噪声 模糊边缘   中值滤波 去除噪声 保持边缘    滤波 #  针对有早点的图像进行平滑，可以减弱或消除噪点 read_image media_image
-锐化 #  对图像边缘进行对比度提升使用，可以让图像轮廓更清晰 sobel_amp frei_amp
-增强 #  emphasize
+      <description>图像预处理 #     对噪声的处理效果 对边缘的处理效果 效率     平滑滤波 弱化噪声 模糊边缘   中值滤波 去除噪声 保持边缘    滤波 #  针对有噪点的图像进行平滑，可以减弱或消除噪点
+ mean_image median_image  锐化 #  对图像边缘进行对比度提升使用，可以让图像轮廓更清晰
+ sobel_amp frei_amp  增强 #  emphasize
 形态学 #   腐蚀, erosion 膨胀, dilation  骨架 #  skeleton</description>
     </item>
     
