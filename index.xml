@@ -13,8 +13,9 @@
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/</guid>
-      <description>基础算子(方法函数) #  图片 #   read_image write_image dump_window dump_window_image draw_rectangle   draw 和 gen 的区别 draw 绘制 产生的点位 是控制类型变量 方便存储和读写 gen 生产 产生是图像 是图像控制变量 方便查看
- 数组 #   tuple_concat tuple_find tuple_regexp_select  资源句柄 #   dev_get_window  区域计算 #   union different intersection complement  字体 #   query_font get_font set_font  </description>
+      <description>基础算子(方法函数) #  图片 #   read_image write_image dump_window dump_window_image draw_rectangle   draw 和 gen 的区别：
+ draw 产生的是点位信息， 是控制类型变量， 方便存储和读写； gen 产生的是图像， 是图像类型变量， 用于显示图形； draw 一般和 gen 联合使用，显示绘制的区域。   数组 #   tuple_concat tuple_find tuple_regexp_select  资源句柄 #   dev_get_window  区域计算 #   union1&amp;amp;union2 difference intersection complement   解释，
+ union1&amp;amp;union2，合并区域 difference，第一个区域减去其与第二个区域重合部分 intersection，两个区域的重合部分 complement，区域的补集(区域以外部分)   字体 #   query_font get_font set_font   解释,</description>
     </item>
     
     <item>
