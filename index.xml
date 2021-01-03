@@ -293,6 +293,23 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
     
     <item>
       <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/</guid>
+      <description>仿射变换 #  仿射变换可以理解为“跟随”， 即目标物体移动到哪里，相应轮廓、ROI等跟随到哪里。
+流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;获取特征点坐标，角度 &#34;] -- B[&#34;计算仿射变换矩阵&#34; ]B -- C[&#34;对图像，区域，轮廓进行仿射变换&#34;]三种常见类型 #    根据特征点、角度计算仿射变换矩阵。
+如， vector_angle_to_rigid，支持平移、旋转，参数：
+   &amp;mdash; 角度 位置(x,y)     对模板轮廓进行变换 0 (0, 0)   对ROI进行变换(包括模板区域) 0 模板区域中心(用area_center获得)    hom_mat2d_scale，支持缩放。
+  根据两个以上特征点计算仿射变换矩阵。
+如，	vector_to_rigid，支持平移、旋转；	vector_to_similarity，支持平移、旋转、缩放。
+  根据三个以上特征点获取仿射变换矩阵。
+如，vector_to_hom_mat2d，支持平移、旋转、缩放、斜切。
+适用于“手眼标定”（九点标定）、多相机标定到同一坐标系。</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://halcon.lizhenguo.cn/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       

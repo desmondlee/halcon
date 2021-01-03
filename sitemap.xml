@@ -187,6 +187,10 @@
   </url>
   
   <url>
+    <loc>http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/</loc>
+  </url>
+  
+  <url>
     <loc>http://halcon.lizhenguo.cn/readme/</loc>
     <priority>0</priority>
   </url>
