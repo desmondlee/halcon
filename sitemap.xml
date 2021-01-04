@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>http://halcon.lizhenguo.cn/docs/examples/</loc>
-    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://halcon.lizhenguo.cn/docs/examples/custom/</loc>
     <lastmod>2021-01-03T15:01:33+08:00</lastmod>
   </url>
@@ -101,6 +96,11 @@
   <url>
     <loc>http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/examples/</loc>
+    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
   </url>
   
   <url>
