@@ -14,7 +14,7 @@
       
       <guid>http://halcon.lizhenguo.cn/posts/%E5%9B%BE%E5%BD%A2%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84vs%E6%8E%A7%E5%88%B6%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
       <description>  图像类型数组，下标从1开始，且只能通过算子(select_obj)一个个读取；
-  控制类型数组，小标从0开始，可以通过数字下标 Arr[index] 形式来读取。
+  控制类型数组，下标从0开始，可以通过数字下标 Arr[index] 形式来读取。
   </description>
     </item>
     

@@ -4,7 +4,17 @@
   
   <url>
     <loc>http://halcon.lizhenguo.cn/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/examples/</loc>
+    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/examples/custom/</loc>
+    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
   </url>
   
   <url>
@@ -103,6 +113,26 @@
   </url>
   
   <url>
+    <loc>http://halcon.lizhenguo.cn/docs/</loc>
+    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/examples/custom/%E7%94%BB%E7%9B%B4%E7%BA%BF/</loc>
+    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/examples/%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F/</loc>
+    <lastmod>2021-01-03T14:30:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/examples/%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96/</loc>
+    <lastmod>2021-01-03T14:26:12+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://halcon.lizhenguo.cn/posts/%E5%9B%BE%E5%BD%A2%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84vs%E6%8E%A7%E5%88%B6%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
@@ -115,11 +145,6 @@
   <url>
     <loc>http://halcon.lizhenguo.cn/posts/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8Dblob%E5%88%86%E6%9E%90/</loc>
     <lastmod>2021-01-02T01:25:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://halcon.lizhenguo.cn/docs/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

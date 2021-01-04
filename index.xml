@@ -6,7 +6,7 @@
     <description>Recent content in 图像处理 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 15:01:33 +0800</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基础算子(方法函数)</title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/</link>
@@ -209,13 +209,45 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
     </item>
     
     <item>
+      <title>画直线</title>
+      <link>http://halcon.lizhenguo.cn/docs/examples/custom/%E7%94%BB%E7%9B%B4%E7%BA%BF/</link>
+      <pubDate>Sun, 03 Jan 2021 15:01:33 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/examples/custom/%E7%94%BB%E7%9B%B4%E7%BA%BF/</guid>
+      <description>函数名 #  custom_gen_line(:Line:Row, Col, Angle, Length, RegionOrXld:)
+ 注释，
+输出参数，Line
+输入参数，
+Row: 起始点Y坐标；Col: 七十点X坐标；Angle: 角度；Length: 直线的长度；RegionOrXld: 结果类型，可选值有region, xld
+ 函数体 #  dev_update_off () if(Length &amp;lt; 1) return () endif if(RegionOrXld == &#39;region&#39;) gen_region_line (LineTemp, 0, 0, 0, Length-1) else gen_contour_polygon_xld (LineTemp, [0,0], [0, Length-1]) endif * 求仿射变换矩阵 vector_angle_to_rigid (0,0,0, Row, Col, Angle, HomMat2D) if(RegionOrXld == &#39;region&#39;) affine_trans_region (LineTemp, Line, HomMat2D, &#39;false&#39;) else affine_trans_contour_xld (LineTemp, Line, HomMat2D) endif dev_update_on () return () 调用 #  read_image (Image, &#39;fabrik&#39;) custom_gen_line (Line, 100, 100, rad(-45), 100, &#39;region&#39;) custom_gen_line (Line1, 200, 200, rad(-45), 100, &#39;xld&#39;) 示例下载</description>
+    </item>
+    
+    <item>
+      <title>裁剪图像</title>
+      <link>http://halcon.lizhenguo.cn/docs/examples/%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F/</link>
+      <pubDate>Sun, 03 Jan 2021 14:30:27 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/examples/%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F/</guid>
+      <description>read_image (Image1, &#39;fabrik&#39;) gen_rectangle1 (Region, 181,288,305,350)//产生区域 reduce_domain (Image1, Region, ImageReduced)//减少定义域 crop_domain (ImageReduced, ImagePart)//裁剪图像 </description>
+    </item>
+    
+    <item>
+      <title>图像二值化</title>
+      <link>http://halcon.lizhenguo.cn/docs/examples/%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96/</link>
+      <pubDate>Sun, 03 Jan 2021 14:26:12 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/examples/%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96/</guid>
+      <description>*生成二值化图像 *方法一，region_to_bin read_image (Image, &#39;fabrik&#39;) threshold (Image, Region, 170, 255) get_image_size (Image, Width, Height) region_to_bin (Region, BinImage, 255, 0, Width, Height) //根据区域产生二值化图像 stop() * 方法二，paint_region read_image (Image, &#39;fabrik&#39;) gen_rectangle1 (Rectangle, 181,288,305,350)//产生区域 paint_region (Rectangle, Image, ImageResult, 255, &#39;fill&#39;)//把区域绘制为灰度值255 complement (Rectangle, RegionComplement)//获取区域的补集 paint_region (RegionComplement, ImageResult, BinImage, 0, &#39;fill&#39;) stop() </description>
+    </item>
+    
+    <item>
       <title>图形类型数组VS控制类型数组</title>
       <link>http://halcon.lizhenguo.cn/posts/%E5%9B%BE%E5%BD%A2%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84vs%E6%8E%A7%E5%88%B6%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/posts/%E5%9B%BE%E5%BD%A2%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84vs%E6%8E%A7%E5%88%B6%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
       <description>  图像类型数组，下标从1开始，且只能通过算子(select_obj)一个个读取；
-  控制类型数组，小标从0开始，可以通过数字下标 Arr[index] 形式来读取。
+  控制类型数组，下标从0开始，可以通过数字下标 Arr[index] 形式来读取。
   </description>
     </item>
     

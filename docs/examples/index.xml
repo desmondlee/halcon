@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>示例 on Halcon学习</title>
+    <link>http://halcon.lizhenguo.cn/docs/examples/</link>
+    <description>Recent content in 示例 on Halcon学习</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Jan 2021 15:01:33 +0800</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/docs/examples/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>裁剪图像</title>
+      <link>http://halcon.lizhenguo.cn/docs/examples/%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F/</link>
+      <pubDate>Sun, 03 Jan 2021 14:30:27 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/examples/%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F/</guid>
+      <description>read_image (Image1, &#39;fabrik&#39;) gen_rectangle1 (Region, 181,288,305,350)//产生区域 reduce_domain (Image1, Region, ImageReduced)//减少定义域 crop_domain (ImageReduced, ImagePart)//裁剪图像 </description>
+    </item>
+    
+    <item>
+      <title>图像二值化</title>
+      <link>http://halcon.lizhenguo.cn/docs/examples/%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96/</link>
+      <pubDate>Sun, 03 Jan 2021 14:26:12 +0800</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/examples/%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96/</guid>
+      <description>*生成二值化图像 *方法一，region_to_bin read_image (Image, &#39;fabrik&#39;) threshold (Image, Region, 170, 255) get_image_size (Image, Width, Height) region_to_bin (Region, BinImage, 255, 0, Width, Height) //根据区域产生二值化图像 stop() * 方法二，paint_region read_image (Image, &#39;fabrik&#39;) gen_rectangle1 (Rectangle, 181,288,305,350)//产生区域 paint_region (Rectangle, Image, ImageResult, 255, &#39;fill&#39;)//把区域绘制为灰度值255 complement (Rectangle, RegionComplement)//获取区域的补集 paint_region (RegionComplement, ImageResult, BinImage, 0, &#39;fill&#39;) stop() </description>
+    </item>
+    
+  </channel>
+</rss>
