@@ -77,7 +77,7 @@
 阈值 (不是_阀值_)又叫临界值，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括建筑学、生物学、飞行、化学、电信、电学、心理学等，如生态阈值。（摘自百度百科）
 前提 #  需要将通过read_image读取图像得到的Image类型变量作为参数。
 使用方式 #   通过read_image 读取图像； 打开灰度直方图，并勾选 阈值选项； 调整绿线和红线，勾勒出目标物； 点击插入代码。  提醒 #  若无法勾选阈值选项，看下阈值行的通道 是不是RGB，若是，选择某一具体值，这时阈值选项即可勾选了。
-参考图 #  </description>
+参考图 #  使用代码获取灰度直方图 #  * 读取图像read_image(Image, &#39;clip&#39;)* 产生直方图gray_histo (Image, Image, AbsoluteHisto, RelativeHisto)* 产生直方图区域gen_region_histo (Region, AbsoluteHisto, 255, 255, 1)* 根据直方图求分割阈值histo_to_thresh (AbsoluteHisto, 2, MinThresh, MaxThresh)* 阈值分割threshold (Image, Region1, MinThresh, MaxThresh)</description>
     </item>
     
   </channel>

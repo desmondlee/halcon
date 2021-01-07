@@ -5,21 +5,42 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Halcon的数据类型 #  命名规范 #  Halcon导出的图像变量类型是HObject，简称 ho；导出的控制变量类型是HTuple，简称 hv。
-图像类型的使用步骤 #   用GenEmptyObj初始化图像变量，或产生一个非空的图像变量； 在更新图像变量的内容前，用Dispose释放资源； 使用图像变量； 图像变量生命周期结束时，用Dispose释放资源。(C#中有GC垃圾回收机制，不强制Dispose；但C&#43;&#43;中最好Dispose)   注：如果不及时用Dispose释放资源，可能会导致内存泄漏。
- C#与Halcon数据间转换 #    tuple变量赋值给C#变量：
-csharp_int = halcon_int[0].I (英文字母i 的大写，表示int)csharp_real = halcon_real[0].D (英文字母d的大写，表示double)csharp_string = halcon_string[0].S (英文字母s的大写，表示string)  C#变量赋值给tuple变量：
-halcon_int = csharp_int * 2; (隐式转换)halcon_int = (HTuple)(csharp_int * 2) (显示强制转换)halcon_int = new HTuple(csharp_int * 2)  ">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Halcon数据类型" />
-<meta property="og:description" content="Halcon的数据类型 #  命名规范 #  Halcon导出的图像变量类型是HObject，简称 ho；导出的控制变量类型是HTuple，简称 hv。
-图像类型的使用步骤 #   用GenEmptyObj初始化图像变量，或产生一个非空的图像变量； 在更新图像变量的内容前，用Dispose释放资源； 使用图像变量； 图像变量生命周期结束时，用Dispose释放资源。(C#中有GC垃圾回收机制，不强制Dispose；但C&#43;&#43;中最好Dispose)   注：如果不及时用Dispose释放资源，可能会导致内存泄漏。
- C#与Halcon数据间转换 #    tuple变量赋值给C#变量：
-csharp_int = halcon_int[0].I (英文字母i 的大写，表示int)csharp_real = halcon_real[0].D (英文字母d的大写，表示double)csharp_string = halcon_string[0].S (英文字母s的大写，表示string)  C#变量赋值给tuple变量：
-halcon_int = csharp_int * 2; (隐式转换)halcon_int = (HTuple)(csharp_int * 2) (显示强制转换)halcon_int = new HTuple(csharp_int * 2)  " />
+<meta name="description" content="相机图像采集 #  最频繁调节的参数 #    曝光，exposure
+  增益，gain
+  触发， trigger
+ 注，exposure数值越大，拍照所需时间越长；gain数值越大，图像越亮，噪点越多越明显；trigger分为 硬触发、软触发;
+   相机采集代码流程示例 #    关闭相机所有图像采集设备
+close_all_framegrabbers()
+  打开并配置图像采集设备
+open_framegrabber(&lsquo;GigEVision&rsquo;, 0, 0, 0, 0, 0, 0, &lsquo;default&rsquo;, -1, &lsquo;default&rsquo;, -1, &lsquo;false&rsquo;, &lsquo;default&rsquo;, &lsquo;ccd1&rsquo;, 0, -1, AcqHandle)
+  设置触发
+set_framegrabber_param(AcqHandle, &lsquo;TriggerMode&rsquo;, &lsquo;Off&rsquo;)
+  设置快门
+set_framegrabber_param(AcqHandle, &lsquo;ExposureTime&rsquo;, 4693.0)
+  设置增益
+set_framegrabber_param(AcqHandle, &lsquo;Gain&rsquo;, 3.0156)
+  采集图像">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="相机图像采集" />
+<meta property="og:description" content="相机图像采集 #  最频繁调节的参数 #    曝光，exposure
+  增益，gain
+  触发， trigger
+ 注，exposure数值越大，拍照所需时间越长；gain数值越大，图像越亮，噪点越多越明显；trigger分为 硬触发、软触发;
+   相机采集代码流程示例 #    关闭相机所有图像采集设备
+close_all_framegrabbers()
+  打开并配置图像采集设备
+open_framegrabber(&lsquo;GigEVision&rsquo;, 0, 0, 0, 0, 0, 0, &lsquo;default&rsquo;, -1, &lsquo;default&rsquo;, -1, &lsquo;false&rsquo;, &lsquo;default&rsquo;, &lsquo;ccd1&rsquo;, 0, -1, AcqHandle)
+  设置触发
+set_framegrabber_param(AcqHandle, &lsquo;TriggerMode&rsquo;, &lsquo;Off&rsquo;)
+  设置快门
+set_framegrabber_param(AcqHandle, &lsquo;ExposureTime&rsquo;, 4693.0)
+  设置增益
+set_framegrabber_param(AcqHandle, &lsquo;Gain&rsquo;, 3.0156)
+  采集图像" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" />
-
-<title>Halcon数据类型 | Halcon学习</title>
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/" />
+<meta property="article:published_time" content="2021-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-07T00:00:00+00:00" />
+<title>相机图像采集 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
@@ -314,7 +335,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/" class="">相机图像采集</a>
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/" class=" active">相机图像采集</a>
   
 
         </li>
@@ -475,7 +496,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-831861fa2ffa638ce1dfd6df02d79595" class="toggle" checked />
+    <input type="checkbox" id="section-831861fa2ffa638ce1dfd6df02d79595" class="toggle"  />
     <label for="section-831861fa2ffa638ce1dfd6df02d79595" class="flex justify-between">
       <a  class="">C#联合编程</a>
       <span>▾</span>
@@ -492,7 +513,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class=" active">Halcon数据类型</a>
+    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="">Halcon数据类型</a>
   
 
         </li>
@@ -589,7 +610,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Halcon数据类型</strong>
+  <strong>相机图像采集</strong>
 
   <label for="toc-control">
     
@@ -604,9 +625,8 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#命名规范">命名规范</a></li>
-    <li><a href="#图像类型的使用步骤">图像类型的使用步骤</a></li>
-    <li><a href="#c与halcon数据间转换">C#与Halcon数据间转换</a></li>
+    <li><a href="#最频繁调节的参数">最频繁调节的参数</a></li>
+    <li><a href="#相机采集代码流程示例">相机采集代码流程示例</a></li>
   </ul>
 </nav>
 
@@ -618,47 +638,61 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="halcon的数据类型">
-  Halcon的数据类型
-  <a class="anchor" href="#halcon%e7%9a%84%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b">#</a>
+  <article class="markdown"><h1 id="相机图像采集">
+  相机图像采集
+  <a class="anchor" href="#%e7%9b%b8%e6%9c%ba%e5%9b%be%e5%83%8f%e9%87%87%e9%9b%86">#</a>
 </h1>
-<h2 id="命名规范">
-  命名规范
-  <a class="anchor" href="#%e5%91%bd%e5%90%8d%e8%a7%84%e8%8c%83">#</a>
-</h2>
-<p>Halcon导出的图像变量类型是HObject，简称 ho；导出的控制变量类型是HTuple，简称 hv。</p>
-<h2 id="图像类型的使用步骤">
-  图像类型的使用步骤
-  <a class="anchor" href="#%e5%9b%be%e5%83%8f%e7%b1%bb%e5%9e%8b%e7%9a%84%e4%bd%bf%e7%94%a8%e6%ad%a5%e9%aa%a4">#</a>
+<h2 id="最频繁调节的参数">
+  最频繁调节的参数
+  <a class="anchor" href="#%e6%9c%80%e9%a2%91%e7%b9%81%e8%b0%83%e8%8a%82%e7%9a%84%e5%8f%82%e6%95%b0">#</a>
 </h2>
 <ol>
-<li>用GenEmptyObj初始化图像变量，或产生一个非空的图像变量；</li>
-<li>在更新图像变量的内容前，用Dispose释放资源；</li>
-<li>使用图像变量；</li>
-<li>图像变量生命周期结束时，用Dispose释放资源。(C#中有GC垃圾回收机制，不强制Dispose；但C++中最好Dispose)</li>
-</ol>
+<li>
+<p>曝光，exposure</p>
+</li>
+<li>
+<p>增益，gain</p>
+</li>
+<li>
+<p>触发， trigger</p>
 <blockquote>
-<p>注：如果不及时用Dispose释放资源，可能会导致内存泄漏。</p>
+<p>注，exposure数值越大，拍照所需时间越长；gain数值越大，图像越亮，噪点越多越明显；trigger分为 硬触发、软触发;</p>
 </blockquote>
-<h2 id="c与halcon数据间转换">
-  C#与Halcon数据间转换
-  <a class="anchor" href="#c%e4%b8%8ehalcon%e6%95%b0%e6%8d%ae%e9%97%b4%e8%bd%ac%e6%8d%a2">#</a>
+</li>
+</ol>
+<h2 id="相机采集代码流程示例">
+  相机采集代码流程示例
+  <a class="anchor" href="#%e7%9b%b8%e6%9c%ba%e9%87%87%e9%9b%86%e4%bb%a3%e7%a0%81%e6%b5%81%e7%a8%8b%e7%a4%ba%e4%be%8b">#</a>
 </h2>
 <ol>
 <li>
-<p>tuple变量赋值给C#变量：</p>
-<pre><code>csharp_int = halcon_int[0].I   (英文字母i 的大写，表示int)
-   
-csharp_real = halcon_real[0].D (英文字母d的大写，表示double)
-   
-csharp_string = halcon_string[0].S (英文字母s的大写，表示string)
-</code></pre></li>
+<p>关闭相机所有图像采集设备</p>
+<p>close_all_framegrabbers()</p>
+</li>
 <li>
-<p>C#变量赋值给tuple变量：</p>
-<pre><code>halcon_int = csharp_int * 2;  (隐式转换)
-halcon_int = (HTuple)(csharp_int * 2) (显示强制转换)
-halcon_int = new HTuple(csharp_int * 2)
-</code></pre></li>
+<p>打开并配置图像采集设备</p>
+<p>open_framegrabber(&lsquo;GigEVision&rsquo;, 0, 0, 0, 0, 0, 0, &lsquo;default&rsquo;, -1, &lsquo;default&rsquo;, -1, &lsquo;false&rsquo;, &lsquo;default&rsquo;, &lsquo;ccd1&rsquo;, 0, -1, AcqHandle)</p>
+</li>
+<li>
+<p>设置触发</p>
+<p>set_framegrabber_param(AcqHandle, &lsquo;TriggerMode&rsquo;, &lsquo;Off&rsquo;)</p>
+</li>
+<li>
+<p>设置快门</p>
+<p>set_framegrabber_param(AcqHandle, &lsquo;ExposureTime&rsquo;, 4693.0)</p>
+</li>
+<li>
+<p>设置增益</p>
+<p>set_framegrabber_param(AcqHandle, &lsquo;Gain&rsquo;, 3.0156)</p>
+</li>
+<li>
+<p>采集图像</p>
+<p>grab_image(Image, AcqHandle)</p>
+</li>
+<li>
+<p>关闭图像采集设备</p>
+<p>close_framegrabber(AcqHandle)</p>
+</li>
 </ol>
 </article>
  
@@ -694,9 +728,8 @@ halcon_int = new HTuple(csharp_int * 2)
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#命名规范">命名规范</a></li>
-    <li><a href="#图像类型的使用步骤">图像类型的使用步骤</a></li>
-    <li><a href="#c与halcon数据间转换">C#与Halcon数据间转换</a></li>
+    <li><a href="#最频繁调节的参数">最频繁调节的参数</a></li>
+    <li><a href="#相机采集代码流程示例">相机采集代码流程示例</a></li>
   </ul>
 </nav>
 

@@ -6,32 +6,35 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="仿射变换 #  仿射变换可以理解为“跟随”， 即目标物体移动到哪里，相应轮廓、ROI等跟随到哪里。
-流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;获取特征点坐标，角度 &#34;] -- B[&#34;计算仿射变换矩阵&#34; ]B -- C[&#34;对图像，区域，轮廓进行仿射变换&#34;]三种常见类型 #    根据特征点、角度计算仿射变换矩阵。
+在基于参考的视觉检测中，由于待检测图像与参考图像或多或少都会存在几何变化(平移、旋转、缩放等)，所以一般都要对待检测图像或ROI进行仿射变换操作。
+仿射变换有平移、旋转、缩放、斜切(切变)。
+ 注，两个坐标系Y轴的旋转角度，叫斜切角。
+机器X与Y 轴之间的角度不是绝对的90度，从原点沿着Y轴方向不断移动时，X方向的偏移会越来越大，在求图像坐标系和机器坐标系映射关系时，不能忽略了斜切角的影响。
+九点标定可以比较准确的求出斜切角。
+ 流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;获取特征点坐标，角度 &#34;] -- B[&#34;计算仿射变换矩阵&#34; ]B -- C[&#34;对图像，区域，轮廓进行仿射变换&#34;]三种常见类型 #    根据特征点、角度计算仿射变换矩阵。
 如， vector_angle_to_rigid，支持平移、旋转，参数：
    &mdash; 角度 位置(x,y)     对模板轮廓进行变换 0 (0, 0)   对ROI进行变换(包括模板区域) 0 模板区域中心(用area_center获得)    hom_mat2d_scale，支持缩放。
-  根据两个以上特征点计算仿射变换矩阵。
-如，	vector_to_rigid，支持平移、旋转；	vector_to_similarity，支持平移、旋转、缩放。
-  根据三个以上特征点获取仿射变换矩阵。
-如，vector_to_hom_mat2d，支持平移、旋转、缩放、斜切。
-适用于“手眼标定”（九点标定）、多相机标定到同一坐标系。">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+  根据两个以上特征点计算仿射变换矩阵。">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="仿射变换" />
 <meta property="og:description" content="仿射变换 #  仿射变换可以理解为“跟随”， 即目标物体移动到哪里，相应轮廓、ROI等跟随到哪里。
-流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;获取特征点坐标，角度 &#34;] -- B[&#34;计算仿射变换矩阵&#34; ]B -- C[&#34;对图像，区域，轮廓进行仿射变换&#34;]三种常见类型 #    根据特征点、角度计算仿射变换矩阵。
+在基于参考的视觉检测中，由于待检测图像与参考图像或多或少都会存在几何变化(平移、旋转、缩放等)，所以一般都要对待检测图像或ROI进行仿射变换操作。
+仿射变换有平移、旋转、缩放、斜切(切变)。
+ 注，两个坐标系Y轴的旋转角度，叫斜切角。
+机器X与Y 轴之间的角度不是绝对的90度，从原点沿着Y轴方向不断移动时，X方向的偏移会越来越大，在求图像坐标系和机器坐标系映射关系时，不能忽略了斜切角的影响。
+九点标定可以比较准确的求出斜切角。
+ 流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;获取特征点坐标，角度 &#34;] -- B[&#34;计算仿射变换矩阵&#34; ]B -- C[&#34;对图像，区域，轮廓进行仿射变换&#34;]三种常见类型 #    根据特征点、角度计算仿射变换矩阵。
 如， vector_angle_to_rigid，支持平移、旋转，参数：
    &mdash; 角度 位置(x,y)     对模板轮廓进行变换 0 (0, 0)   对ROI进行变换(包括模板区域) 0 模板区域中心(用area_center获得)    hom_mat2d_scale，支持缩放。
-  根据两个以上特征点计算仿射变换矩阵。
-如，	vector_to_rigid，支持平移、旋转；	vector_to_similarity，支持平移、旋转、缩放。
-  根据三个以上特征点获取仿射变换矩阵。
-如，vector_to_hom_mat2d，支持平移、旋转、缩放、斜切。
-适用于“手眼标定”（九点标定）、多相机标定到同一坐标系。" />
+  根据两个以上特征点计算仿射变换矩阵。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/" />
-
+<meta property="article:published_time" content="2021-01-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-07T00:00:00+00:00" />
 <title>仿射变换 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
-<script defer src="/en.search.min.4818c6c8534ae40dcc6f00cdd67c57db31585e8f9d71fda27bc3bd6b89a48c87.js" integrity="sha256-SBjGyFNK5A3MbwDN1nxX2zFYXo&#43;dcf2ie8O9a4mkjIc="></script>
+<script defer src="/en.search.min.48febf339bdfa0fe3ca1fea484e1580a80474b66ed4b1ee42f82b5fa1dd110ef.js" integrity="sha256-SP6/M5vfoP48of6khOFYCoBHS2btSx7kL4K1&#43;h3REO8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -296,6 +299,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%BC%82%E5%B8%B8/" class="">异常</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/" class="">几何定位</a>
   
 
@@ -309,7 +325,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/" class="">相机图像采集</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/" class="">图像预处理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/" class="">硬件</a>
   
 
         </li>
@@ -336,6 +378,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/" class="">常用标定</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/" class=" active">仿射变换</a>
   
 
         </li>
@@ -498,19 +553,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/" class=" active">仿射变换</a>
-  
-
-        </li>
-      
-    
   </ul>
 
 
@@ -592,6 +634,13 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e4%bb%bf%e5%b0%84%e5%8f%98%e6%8d%a2">#</a>
 </h1>
 <p>仿射变换可以理解为“跟随”， 即目标物体移动到哪里，相应轮廓、ROI等跟随到哪里。</p>
+<p><strong>在基于参考的视觉检测中，由于待检测图像与参考图像或多或少都会存在几何变化(平移、旋转、缩放等)，所以一般都要对待检测图像或ROI进行仿射变换操作。</strong></p>
+<p>仿射变换有平移、旋转、缩放、斜切(切变)。</p>
+<blockquote>
+<p>注，两个坐标系Y轴的旋转角度，叫斜切角。</p>
+<p>机器X与Y 轴之间的角度不是绝对的90度，从原点沿着Y轴方向不断移动时，X方向的偏移会越来越大，在求图像坐标系和机器坐标系映射关系时，不能忽略了斜切角的影响。</p>
+<p>九点标定可以比较准确的求出斜切角。</p>
+</blockquote>
 <h2 id="流程">
   流程
   <a class="anchor" href="#%e6%b5%81%e7%a8%8b">#</a>

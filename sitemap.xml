@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://halcon.lizhenguo.cn/</loc>
-    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -79,13 +79,28 @@
   </url>
   
   <url>
+    <loc>http://halcon.lizhenguo.cn/docs/%E5%BC%82%E5%B8%B8/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -96,6 +111,11 @@
   <url>
     <loc>http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/</loc>
     <lastmod>2020-12-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -114,7 +134,7 @@
   
   <url>
     <loc>http://halcon.lizhenguo.cn/docs/</loc>
-    <lastmod>2021-01-03T15:01:33+08:00</lastmod>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -209,10 +229,6 @@
   
   <url>
     <loc>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</loc>
-  </url>
-  
-  <url>
-    <loc>http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/</loc>
   </url>
   
   <url>

@@ -6,7 +6,7 @@
     <description>Recent content in Docs on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Jan 2021 15:01:33 +0800</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/docs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基础算子(方法函数)</title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/</link>
@@ -71,12 +71,51 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
     </item>
     
     <item>
+      <title>异常</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E5%BC%82%E5%B8%B8/</guid>
+      <description>异常 #  代码格式：
+dev_set_check(&#39;give_error&#39;)try//do somethingcatch(Exception)//Exception第0个元素：错误代码，第2个元素：错误描述，第5个元素：产生错误的算子endtry</description>
+    </item>
+    
+    <item>
       <title>几何定位</title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/</guid>
-      <description>几何定位 #  通过几何特征(如模板轮廓)，来判断图像中是否有目标区域。</description>
+      <description>几何定位 #  通过几何特征(如模板轮廓)，来判断图像中是否有目标区域。
+金字塔等级 #  等级越高，占用内存越少、匹配度要求越低；但等级过高时，会导致匹配出错
+极性 #    use_polarity 使用极性，在白色背景中找黑色目标
+  ignore_global_polarity 忽略全局极性，可以在白色背景中找黑色目标，也可以在黑色背景中找白色目标
+  ignore_local_polarity 忽略局部极性，可以适应更差的环境，可以在背景不稳定，如渐变的情况下找目标
+  匹配助手 #   贪心算法，值越大，处理时间越短，但可能会漏匹配部分区域，一般设置在0.7~0.8； 最大重叠，值越大，允许重叠的比例越大，但可能会匹配错； 最大变形，值越大，处理时间越长，但可以尝试匹配的区域越多；  对比度 #  对比度 = 相邻像素点、像素值的差值/距离
+建模经验 #   什么是关键轮廓，什么是干扰轮廓； 边缘数量越少越好；边缘数量多了，速度变慢； 边缘越长越好； 干扰边缘越少越好； 关键边缘越长越好，占模板轮廓的比例越多越好； 可以使用PS软件，制造理想的模板图像 灵活运用区域操作技术，获取关键边缘区域；  difference: 特别是回型区域、挖洞大法； union    定位经验 #   频繁调节的参数：角度、缩放、分数、极性； 多次搜索策略(分类)：匹配分数逐步降低；for循环 合理设置旋转角度范围； 合理设置贪婪度：定位要求高，贪婪度越小越好，但时间会边长； 有效提高匹配分数的措施：缩放，会增加时间。（对分数提高效果：异步缩放 &amp;gt; 同步缩放 &amp;gt; 不缩放，要合理设置缩放)。  定位的主要作用 #   最常用：粗定位 -&amp;gt; 仿射变换矩阵(模板轮廓变换矩阵、ROI变换矩阵) -&amp;gt; 模板轮廓跟随、ROI跟随； 异形定位：对定位参数要求高；对于定位准确性、**精确性(edges_sub_pix)**理解要求高； 定位结果是相对值，相对于模板的：  xy： 对于同一个模板图像，每次重新建模，模板中心xy都会变，如果直接使用模板中心，每次都需要调节xy补偿量；如果使用blob或测量进行精定位，则不需要调节； 角度：如果是异形件， 没有办法抓直边或2个以上的mark点，直接使用模板角度(角度精度不是非常高)；如果有办法抓直边或2个以上的mark点，这种方法精度高。    </description>
+    </item>
+    
+    <item>
+      <title>相机图像采集</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/</guid>
+      <description>相机图像采集 #  最频繁调节的参数 #    曝光，exposure
+  增益，gain
+  触发， trigger
+ 注，exposure数值越大，拍照所需时间越长；gain数值越大，图像越亮，噪点越多越明显；trigger分为 硬触发、软触发;
+   相机采集代码流程示例 #    关闭相机所有图像采集设备
+close_all_framegrabbers()
+  打开并配置图像采集设备
+open_framegrabber(&amp;lsquo;GigEVision&amp;rsquo;, 0, 0, 0, 0, 0, 0, &amp;lsquo;default&amp;rsquo;, -1, &amp;lsquo;default&amp;rsquo;, -1, &amp;lsquo;false&amp;rsquo;, &amp;lsquo;default&amp;rsquo;, &amp;lsquo;ccd1&amp;rsquo;, 0, -1, AcqHandle)
+  设置触发
+set_framegrabber_param(AcqHandle, &amp;lsquo;TriggerMode&amp;rsquo;, &amp;lsquo;Off&amp;rsquo;)
+  设置快门
+set_framegrabber_param(AcqHandle, &amp;lsquo;ExposureTime&amp;rsquo;, 4693.0)
+  设置增益
+set_framegrabber_param(AcqHandle, &amp;lsquo;Gain&amp;rsquo;, 3.0156)
+  采集图像</description>
     </item>
     
     <item>
@@ -89,6 +128,22 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
  mean_image median_image  锐化 #  对图像边缘进行对比度提升使用，可以让图像轮廓更清晰
  sobel_amp frei_amp  增强 #  emphasize
 形态学 #   腐蚀, erosion 膨胀, dilation  骨架 #  skeleton</description>
+    </item>
+    
+    <item>
+      <title>硬件</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/</guid>
+      <description>相机硬件 #    相机靶面尺寸 = 分辨率 * 像元尺寸
+  像元越大，成像效果越好
+  相机分辨率 * 最大帧率 &amp;lt;= 千兆网带宽
+  图像大小 * 相机稳定工作帧率 * 相机数量 &amp;lt;= 千兆网带宽
+  千兆网带宽：1000 / 8 = 125M
+  帧率 = 1 / 曝光
+  相机首选 ，CA, 600万像素；CE, 2000万像素(2000多人民币)；
+  </description>
     </item>
     
     <item>
@@ -110,20 +165,21 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
     </item>
     
     <item>
-      <title></title>
+      <title>仿射变换</title>
       <link>http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/</guid>
       <description>仿射变换 #  仿射变换可以理解为“跟随”， 即目标物体移动到哪里，相应轮廓、ROI等跟随到哪里。
-流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;获取特征点坐标，角度 &#34;] -- B[&#34;计算仿射变换矩阵&#34; ]B -- C[&#34;对图像，区域，轮廓进行仿射变换&#34;]三种常见类型 #    根据特征点、角度计算仿射变换矩阵。
+在基于参考的视觉检测中，由于待检测图像与参考图像或多或少都会存在几何变化(平移、旋转、缩放等)，所以一般都要对待检测图像或ROI进行仿射变换操作。
+仿射变换有平移、旋转、缩放、斜切(切变)。
+ 注，两个坐标系Y轴的旋转角度，叫斜切角。
+机器X与Y 轴之间的角度不是绝对的90度，从原点沿着Y轴方向不断移动时，X方向的偏移会越来越大，在求图像坐标系和机器坐标系映射关系时，不能忽略了斜切角的影响。
+九点标定可以比较准确的求出斜切角。
+ 流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;获取特征点坐标，角度 &#34;] -- B[&#34;计算仿射变换矩阵&#34; ]B -- C[&#34;对图像，区域，轮廓进行仿射变换&#34;]三种常见类型 #    根据特征点、角度计算仿射变换矩阵。
 如， vector_angle_to_rigid，支持平移、旋转，参数：
    &amp;mdash; 角度 位置(x,y)     对模板轮廓进行变换 0 (0, 0)   对ROI进行变换(包括模板区域) 0 模板区域中心(用area_center获得)    hom_mat2d_scale，支持缩放。
-  根据两个以上特征点计算仿射变换矩阵。
-如，	vector_to_rigid，支持平移、旋转；	vector_to_similarity，支持平移、旋转、缩放。
-  根据三个以上特征点获取仿射变换矩阵。
-如，vector_to_hom_mat2d，支持平移、旋转、缩放、斜切。
-适用于“手眼标定”（九点标定）、多相机标定到同一坐标系。</description>
+  根据两个以上特征点计算仿射变换矩阵。</description>
     </item>
     
   </channel>

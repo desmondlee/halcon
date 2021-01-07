@@ -9,13 +9,13 @@
 阈值 (不是_阀值_)又叫临界值，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括建筑学、生物学、飞行、化学、电信、电学、心理学等，如生态阈值。（摘自百度百科）
 前提 #  需要将通过read_image读取图像得到的Image类型变量作为参数。
 使用方式 #   通过read_image 读取图像； 打开灰度直方图，并勾选 阈值选项； 调整绿线和红线，勾勒出目标物； 点击插入代码。  提醒 #  若无法勾选阈值选项，看下阈值行的通道 是不是RGB，若是，选择某一具体值，这时阈值选项即可勾选了。
-参考图 #  ">
+参考图 #  使用代码获取灰度直方图 #  * 读取图像read_image(Image, &#39;clip&#39;)* 产生直方图gray_histo (Image, Image, AbsoluteHisto, RelativeHisto)* 产生直方图区域gen_region_histo (Region, AbsoluteHisto, 255, 255, 1)* 根据直方图求分割阈值histo_to_thresh (AbsoluteHisto, 2, MinThresh, MaxThresh)* 阈值分割threshold (Image, Region1, MinThresh, MaxThresh)">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
 <meta property="og:description" content="借助灰度直方图创建threshold代码 #  发音：ˈθreʃhəʊld
 阈值 (不是_阀值_)又叫临界值，是指一个效应能够产生的最低值或最高值。此一名词广泛用于各方面，包括建筑学、生物学、飞行、化学、电信、电学、心理学等，如生态阈值。（摘自百度百科）
 前提 #  需要将通过read_image读取图像得到的Image类型变量作为参数。
 使用方式 #   通过read_image 读取图像； 打开灰度直方图，并勾选 阈值选项； 调整绿线和红线，勾勒出目标物； 点击插入代码。  提醒 #  若无法勾选阈值选项，看下阈值行的通道 是不是RGB，若是，选择某一具体值，这时阈值选项即可勾选了。
-参考图 #  " />
+参考图 #  使用代码获取灰度直方图 #  * 读取图像read_image(Image, &#39;clip&#39;)* 产生直方图gray_histo (Image, Image, AbsoluteHisto, RelativeHisto)* 产生直方图区域gen_region_histo (Region, AbsoluteHisto, 255, 255, 1)* 根据直方图求分割阈值histo_to_thresh (AbsoluteHisto, 2, MinThresh, MaxThresh)* 阈值分割threshold (Image, Region1, MinThresh, MaxThresh)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/" />
 
@@ -23,7 +23,7 @@
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
-<script defer src="/en.search.min.4818c6c8534ae40dcc6f00cdd67c57db31585e8f9d71fda27bc3bd6b89a48c87.js" integrity="sha256-SBjGyFNK5A3MbwDN1nxX2zFYXo&#43;dcf2ie8O9a4mkjIc="></script>
+<script defer src="/en.search.min.48febf339bdfa0fe3ca1fea484e1580a80474b66ed4b1ee42f82b5fa1dd110ef.js" integrity="sha256-SP6/M5vfoP48of6khOFYCoBHS2btSx7kL4K1&#43;h3REO8="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -288,6 +288,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%BC%82%E5%B8%B8/" class="">异常</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/" class="">几何定位</a>
   
 
@@ -301,7 +314,33 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/" class="">相机图像采集</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <a href="http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/" class="">图像预处理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/" class="">硬件</a>
   
 
         </li>
@@ -328,6 +367,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/" class="">常用标定</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/" class="">仿射变换</a>
   
 
         </li>
@@ -490,19 +542,6 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
-      
-        <li>
-          
-  
-  
-
-  
-    <a href="http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/" class="">仿射变换</a>
-  
-
-        </li>
-      
-    
   </ul>
 
 
@@ -576,6 +615,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#参考图">参考图</a></li>
       </ul>
     </li>
+    <li><a href="#使用代码获取灰度直方图">使用代码获取灰度直方图</a></li>
   </ul>
 </nav>
 
@@ -618,7 +658,21 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#%e5%8f%82%e8%80%83%e5%9b%be">#</a>
 </h3>
 <p><img src="http://qn.halcon.lizhenguo.cn/image/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE1.png" alt="灰度直方图" /></p>
-</article>
+<h2 id="使用代码获取灰度直方图">
+  使用代码获取灰度直方图
+  <a class="anchor" href="#%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%a0%81%e8%8e%b7%e5%8f%96%e7%81%b0%e5%ba%a6%e7%9b%b4%e6%96%b9%e5%9b%be">#</a>
+</h2>
+<pre><code>* 读取图像
+read_image(Image, 'clip')
+* 产生直方图
+gray_histo (Image, Image, AbsoluteHisto, RelativeHisto)
+* 产生直方图区域
+gen_region_histo (Region, AbsoluteHisto, 255, 255, 1)
+* 根据直方图求分割阈值
+histo_to_thresh (AbsoluteHisto, 2, MinThresh, MaxThresh)
+* 阈值分割
+threshold (Image, Region1, MinThresh, MaxThresh)
+</code></pre></article>
  
       
 
@@ -663,6 +717,7 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#参考图">参考图</a></li>
       </ul>
     </li>
+    <li><a href="#使用代码获取灰度直方图">使用代码获取灰度直方图</a></li>
   </ul>
 </nav>
 
