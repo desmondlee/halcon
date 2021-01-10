@@ -10,12 +10,12 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://halcon.lizhenguo.cn/posts/" />
-<meta property="og:updated_time" content="2021-01-02T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-01-08T00:00:00+00:00" />
 <title>常见问题 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
-<script defer src="/en.search.min.48febf339bdfa0fe3ca1fea484e1580a80474b66ed4b1ee42f82b5fa1dd110ef.js" integrity="sha256-SP6/M5vfoP48of6khOFYCoBHS2btSx7kL4K1&#43;h3REO8="></script>
+<script defer src="/en.search.min.02ce2e17cfe9bfeddf76b66f323e3ca5d2adf137d78348a126a72820006a25f3.js" integrity="sha256-As4uF8/pv&#43;3fdrZvMj48pdKt8TfXg0ihJqcoIABqJfM="></script>
 <link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/posts/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
@@ -385,6 +385,19 @@ https://github.com/alex-shpak/hugo-book
   
 
   
+    <a href="http://halcon.lizhenguo.cn/docs/%E6%B5%8B%E9%87%8F/" class="">测量</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
     <input type="checkbox" id="section-01a9abdd638ce3226538b97dbfe9e0d5" class="toggle"  />
     <label for="section-01a9abdd638ce3226538b97dbfe9e0d5" class="flex justify-between">
       <a  class="">示例</a>
@@ -535,6 +548,19 @@ https://github.com/alex-shpak/hugo-book
         </li>
       
     
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/" class="">形态学</a>
+  
+
+        </li>
+      
+    
   </ul>
 
 
@@ -623,6 +649,26 @@ https://github.com/alex-shpak/hugo-book
       <ul>
       
         <li class="flex justify-between">
+          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/thread/">thread</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
           <a href="/tags/tips/">tips</a>
           <span>1</span>
         </li>
@@ -652,6 +698,78 @@ https://github.com/alex-shpak/hugo-book
 
       
       
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/">Halcon描述有错误的算子</a>
+    </h2>
+    
+  <h5>January 8, 2021</h5>
+
+
+
+  
+
+  
+  <div>
+    
+      <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>, 
+      <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
+  </div>
+  
+
+
+    <p>1. hom_mat2d_translate #  定义： hom_mat2d_translate( : : HomMat2D, Tx, Ty : HomMat2DTranslate)
+错误：Tx, Ty反了，应该是hom_mat2d_translate( : : HomMat2D, Ty, Tx : HomMat2DTranslate)
+2. affine_trans_point_2d #  定义：affine_trans_point_2d( : : HomMat2D, Px, Py : Qx, Qy)
+错误：Px, Py反了，Qx, Qy反了，应该是affine_trans_point_2d( : : HomMat2D, Py, Px : Qy, Qx)	
+综上，Halcon算子中，总是先用y坐标(Row)， 再用x坐标(Column)
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/halcon%E7%AE%97%E5%AD%90%E6%96%87%E6%A1%A3/">Halcon算子文档</a>
+    </h2>
+    
+  <h5>January 8, 2021</h5>
+
+
+
+  
+
+  
+
+
+    <p>每个算子的定义，都是由三个 冒号 : 分割的4组参数，分别表示 图形输入参数 : 图形输出参数：控制变量输入参数：控制变量输出参数
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/posts/%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3/">System.InvalidOperationException:线程间操作无效: 从不是创建控件 ** 的线程访问它。</a>
+    </h2>
+    
+  <h5>January 7, 2021</h5>
+
+
+
+  
+
+  
+  <div>
+    
+      <a href="/tags/thread/">thread</a>, 
+      <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
+  </div>
+  
+
+
+    <p>在使用Thread 多线程时，线程间不能跨线程访问其他线程的控件。
+如，主线程创建了某个label控件，子线程不能直接访问该控件，若想访问，则可以在Form窗体初始化函数中设置CheckForIllegalCrossThreadCalls = false， 否则会报以下类似的错误：&quot;System.InvalidOperationException:线程间操作无效: 从不是创建控件 ** 的线程访问它。&quot;
+MSDN参考连接
+    </p>
+  </article>
   
   <article class="markdown book-post">
     <h2>
@@ -812,6 +930,26 @@ https://github.com/alex-shpak/hugo-book
     <li class="book-section-flat">
       <strong>Tags</strong>
       <ul>
+      
+        <li class="flex justify-between">
+          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/thread/">thread</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
+          <span>1</span>
+        </li>
       
         <li class="flex justify-between">
           <a href="/tags/tips/">tips</a>

@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://halcon.lizhenguo.cn/</loc>
-    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -119,6 +119,11 @@
   </url>
   
   <url>
+    <loc>http://halcon.lizhenguo.cn/docs/%E6%B5%8B%E9%87%8F/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://halcon.lizhenguo.cn/docs/examples/</loc>
     <lastmod>2021-01-03T15:01:33+08:00</lastmod>
   </url>
@@ -133,7 +138,52 @@
   </url>
   
   <url>
+    <loc>http://halcon.lizhenguo.cn/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/posts/halcon%E7%AE%97%E5%AD%90%E6%96%87%E6%A1%A3/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/tags/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/tags/%E5%AE%98%E6%96%B9/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/posts/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/tags/%E6%9C%89%E8%AF%AF/</loc>
+    <lastmod>2021-01-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://halcon.lizhenguo.cn/docs/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/posts/%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/tags/thread/</loc>
+    <lastmod>2021-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/tags/%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2021-01-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -154,11 +204,6 @@
   
   <url>
     <loc>http://halcon.lizhenguo.cn/posts/%E5%9B%BE%E5%BD%A2%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84vs%E6%8E%A7%E5%88%B6%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://halcon.lizhenguo.cn/posts/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -189,11 +234,6 @@
   
   <url>
     <loc>http://halcon.lizhenguo.cn/categories/development/</loc>
-    <lastmod>2020-12-24T22:32:06+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://halcon.lizhenguo.cn/tags/</loc>
     <lastmod>2020-12-24T22:32:06+08:00</lastmod>
   </url>
   
@@ -229,6 +269,10 @@
   
   <url>
     <loc>http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/</loc>
+  </url>
+  
+  <url>
+    <loc>http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/</loc>
   </url>
   
   <url>

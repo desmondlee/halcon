@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>官方 on Halcon学习</title>
+    <link>http://halcon.lizhenguo.cn/tags/%E5%AE%98%E6%96%B9/</link>
+    <description>Recent content in 官方 on Halcon学习</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/tags/%E5%AE%98%E6%96%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Halcon描述有错误的算子</title>
+      <link>http://halcon.lizhenguo.cn/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/</guid>
+      <description>1. hom_mat2d_translate #  定义： hom_mat2d_translate( : : HomMat2D, Tx, Ty : HomMat2DTranslate)
+错误：Tx, Ty反了，应该是hom_mat2d_translate( : : HomMat2D, Ty, Tx : HomMat2DTranslate)
+2. affine_trans_point_2d #  定义：affine_trans_point_2d( : : HomMat2D, Px, Py : Qx, Qy)
+错误：Px, Py反了，Qx, Qy反了，应该是affine_trans_point_2d( : : HomMat2D, Py, Px : Qy, Qx)	
+综上，Halcon算子中，总是先用y坐标(Row)， 再用x坐标(Column)</description>
+    </item>
+    
+  </channel>
+</rss>

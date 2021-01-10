@@ -24,7 +24,15 @@
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E9%87%8D%E8%A6%81%E7%AE%97%E5%AD%90/</guid>
-      <description>重要算子 #   get_region_xxx: 获取区域点组； get_contour_xld: 获取xld点组； area_center: 求区域面积 intensity: shape_trans: 区域形状变换 smallest_xxx: 求区域或xld的最小外接圆  </description>
+      <description>重要算子 #    get_region_xxx: 获取区域点组；
+  get_contour_xld: 获取xld点组；
+  area_center: 求区域面积
+  intensity:
+  shape_trans: 区域形状变换
+  smallest_xxx: 求区域或xld的最小外接圆
+  dyn_threshold, var_threshold ：使用局部均值和标准差分析分割图像
+ dyn_threshold, var_threshold 常用于缺陷检测。
+   </description>
     </item>
     
     <item>
@@ -152,7 +160,7 @@ set_framegrabber_param(AcqHandle, &amp;lsquo;Gain&amp;rsquo;, 3.0156)
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E6%A8%A1%E6%9D%BF/</guid>
-      <description>创建&amp;amp;保存&amp;amp;读取&amp;amp;使用模板 #  创建模板 #  dev_get_window (WindowHandle1)dev_set_draw (&#39;margin&#39;) //区域展示样式：边框read_image (Image, &#39;printer_chip/printer_chip_01&#39;)//加载图像draw_rectangle2 (WindowHandle1, Row2, Column, Phi, Length1, Length2)//绘制模板区域gen_rectangle2 (Rectangle, Row2, Column, Phi, Length1, Length2)//展示区域reduce_domain (Image, Rectangle, ImageReduced)//获取图像在区域内的部分内容图像create_shape_model (ImageReduced, &#39;auto&#39;, 0, rad(45), &#39;auto&#39;, &#39;auto&#39;, &#39;use_polarity&#39;, &#39;auto&#39;, &#39;auto&#39;, ModelID)//将区域内的部分图像作为模板内容，制作模板保存模板 #  write_shape_model (ModelID, &#39;C:/Users/lee/Desktop/model.shm&#39;)读取模板 #  read_shape_model (&#39;C:/Users/lee/Desktop/model.shm&#39;, ModelID)使用(查找)模板 #  find_shape_model (Image, ModelID, rad(-45), rad(180), 0.5, 1, 0.5, &#39;least_squares&#39;, 0, 0.9, Row3, Column2, Angle, Score)//判定有无，此处是几何定位法if (|Row3| &amp;gt; 0)vector_angle_to_rigid (0,0,0, Row3, Column2, Angle, HomMat2D)//获得变换矩阵HomMat2Dget_shape_model_contours (ModelContours1, ModelID, 1)//会将模板轮廓显示在图像左上角，模板中心在图像坐标0，0的位置affine_trans_contour_xld (ModelContours1, ContoursAffineTrans1, HomMat2D)//根据变换矩阵，将模板轮廓仿射变换到对应的位置else disp_message (WindowHandle1, &#39;未找到模板&#39;, &#39;window&#39;, 20, 20, &#39;red&#39;, &#39;false&#39;)endif参考图 #  </description>
+      <description>创建&amp;amp;保存&amp;amp;读取&amp;amp;使用模板 #  经验 #   金字塔等级(NumLevels)越高，匹配时间越短，但匹配越模糊，容易多匹配； 贪婪度(Greedness)越高，匹配时间越长，匹配越精确； 匹配分数(Score)越高，匹配越精确； 单模板支持x,y同步缩放、异步缩放；多模板不支持缩放。  创建模板 #  dev_get_window (WindowHandle1)dev_set_draw (&#39;margin&#39;) //区域展示样式：边框read_image (Image, &#39;printer_chip/printer_chip_01&#39;)//加载图像draw_rectangle2 (WindowHandle1, Row2, Column, Phi, Length1, Length2)//绘制模板区域gen_rectangle2 (Rectangle, Row2, Column, Phi, Length1, Length2)//展示区域reduce_domain (Image, Rectangle, ImageReduced)//获取图像在区域内的部分内容图像create_shape_model (ImageReduced, &#39;auto&#39;, 0, rad(45), &#39;auto&#39;, &#39;auto&#39;, &#39;use_polarity&#39;, &#39;auto&#39;, &#39;auto&#39;, ModelID)//将区域内的部分图像作为模板内容，制作模板保存模板 #  write_shape_model (ModelID, &#39;C:/Users/lee/Desktop/model.shm&#39;)读取模板 #  read_shape_model (&#39;C:/Users/lee/Desktop/model.shm&#39;, ModelID)使用(查找)模板 #  find_shape_model (Image, ModelID, rad(-45), rad(180), 0.</description>
     </item>
     
     <item>
@@ -180,6 +188,27 @@ set_framegrabber_param(AcqHandle, &amp;lsquo;Gain&amp;rsquo;, 3.0156)
 如， vector_angle_to_rigid，支持平移、旋转，参数：
    &amp;mdash; 角度 位置(x,y)     对模板轮廓进行变换 0 (0, 0)   对ROI进行变换(包括模板区域) 0 模板区域中心(用area_center获得)    hom_mat2d_scale，支持缩放。
   根据两个以上特征点计算仿射变换矩阵。</description>
+    </item>
+    
+    <item>
+      <title>测量</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E6%B5%8B%E9%87%8F/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E6%B5%8B%E9%87%8F/</guid>
+      <description>测量 #  工业测量的基础——卡尺工具。
+卡尺工具过程 #   确定边缘检测方向； 高斯滤波； 执行投影处理； 执行微分（对比度）处理； 设置边缘敏感度（对比度阈值）、边缘极性、边缘的位置； 边缘执行亚像素处理。  一维测量流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;采集图像&#34;] -- B[&#34;创建测量对象&#34; ]B -- C[&#34;测量&#34;]C -- D[&#34;销毁测量对象&#34;] 需要熟练使用的一维测量工具：测量助手
+ 二维测量流程 #  graph TDA[&#34;采集图像&#34;] -- B[&#34;按顺序创建边缘测量ROI(卡尺工具)&#34; ]B -- C[&#34;边缘测量&#34;]C -- D[&#34;把边缘连接成XLD多边形轮廓&#34;]D -- E[&#34;拟合&#34;] 拟合方法：
+ 回归线法（无损拟合） 加权法（奇异点进行加权处理，距离XLD越远，权重越小）：huber 抛点法（抛除奇异点）：tukey   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/</guid>
+      <description>形态学 #   腐蚀 (erosion1, erosion_rectangle1, erosion_circle) 膨胀(dilation1, dilation_rectangle1, dilation_circle) 开运算(opening_*) 闭运算(closing_*)  描述 #   腐蚀：去除毛刺 开运算：先腐蚀再膨胀，作用是去除毛刺的同时，减少面积的丢失。  </description>
     </item>
     
   </channel>

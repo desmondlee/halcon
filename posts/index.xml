@@ -6,7 +6,40 @@
     <description>Recent content in 常见问题 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Halcon描述有错误的算子</title>
+      <link>http://halcon.lizhenguo.cn/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/</guid>
+      <description>1. hom_mat2d_translate #  定义： hom_mat2d_translate( : : HomMat2D, Tx, Ty : HomMat2DTranslate)
+错误：Tx, Ty反了，应该是hom_mat2d_translate( : : HomMat2D, Ty, Tx : HomMat2DTranslate)
+2. affine_trans_point_2d #  定义：affine_trans_point_2d( : : HomMat2D, Px, Py : Qx, Qy)
+错误：Px, Py反了，Qx, Qy反了，应该是affine_trans_point_2d( : : HomMat2D, Py, Px : Qy, Qx)	
+综上，Halcon算子中，总是先用y坐标(Row)， 再用x坐标(Column)</description>
+    </item>
+    
+    <item>
+      <title>Halcon算子文档</title>
+      <link>http://halcon.lizhenguo.cn/posts/halcon%E7%AE%97%E5%AD%90%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Fri, 08 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/halcon%E7%AE%97%E5%AD%90%E6%96%87%E6%A1%A3/</guid>
+      <description>每个算子的定义，都是由三个 冒号 : 分割的4组参数，分别表示 图形输入参数 : 图形输出参数：控制变量输入参数：控制变量输出参数</description>
+    </item>
+    
+    <item>
+      <title>System.InvalidOperationException:线程间操作无效: 从不是创建控件 ** 的线程访问它。</title>
+      <link>http://halcon.lizhenguo.cn/posts/%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3/</guid>
+      <description>在使用Thread 多线程时，线程间不能跨线程访问其他线程的控件。
+如，主线程创建了某个label控件，子线程不能直接访问该控件，若想访问，则可以在Form窗体初始化函数中设置CheckForIllegalCrossThreadCalls = false， 否则会报以下类似的错误：&amp;quot;System.InvalidOperationException:线程间操作无效: 从不是创建控件 ** 的线程访问它。&amp;quot;
+MSDN参考连接</description>
+    </item>
+    
     <item>
       <title>图形类型数组VS控制类型数组</title>
       <link>http://halcon.lizhenguo.cn/posts/%E5%9B%BE%E5%BD%A2%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84vs%E6%8E%A7%E5%88%B6%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
