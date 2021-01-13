@@ -19,12 +19,12 @@
     </item>
     
     <item>
-      <title>重要算子</title>
-      <link>http://halcon.lizhenguo.cn/docs/%E9%87%8D%E8%A6%81%E7%AE%97%E5%AD%90/</link>
+      <title>常用算子</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E7%AE%97%E5%AD%90/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://halcon.lizhenguo.cn/docs/%E9%87%8D%E8%A6%81%E7%AE%97%E5%AD%90/</guid>
-      <description>重要算子 #    get_region_xxx: 获取区域点组；
+      <guid>http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E7%AE%97%E5%AD%90/</guid>
+      <description>常用算子 #    get_region_xxx:获取区域点组
   get_contour_xld: 获取xld点组；
   area_center: 求区域面积
   intensity:
@@ -32,7 +32,10 @@
   smallest_xxx: 求区域或xld的最小外接圆
   dyn_threshold, var_threshold ：使用局部均值和标准差分析分割图像
  dyn_threshold, var_threshold 常用于缺陷检测。
-   </description>
+   read_image (Image, &#39;printer_chip/printer_chip_01&#39;)
+ 灰度线性变换   scale_image (Image, ImageScaled, 0.5, 0) scale_image_max (Image, ImageScaleMax)    直方图均衡化 equ_histo_image (Image, ImageEquHisto)
+  图像反转 invert_image (Image, ImageInvert)
+  图像旋转 rotate_image (Image, ImageRotate, 90, &amp;lsquo;constant&amp;rsquo;)</description>
     </item>
     
     <item>
