@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>硬件 on Halcon学习</title>
+    <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/</link>
+    <description>Recent content in 硬件 on Halcon学习</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
+      <description>基础知识 #  拖影 #  拖影由运动速度和曝光时间影响导致，速度越快，或曝光时间越长，拖影越明显。
+如何拍照，使照片教亮？ #   光源亮度调大 适当调大增益（但增益越大，噪点越多） 光圈调大（进入的光线会变多） 延长曝光时间（但会出现拖影）  相机电压 #  通用12V
+相机保护 #  相机信号输出时，加光耦保护
+使用触发的好处 #  占用带宽少。（触发方式常用 edge方式）</description>
+    </item>
+    
+  </channel>
+</rss>

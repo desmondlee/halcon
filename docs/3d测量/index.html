@@ -6,17 +6,17 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="线程" />
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="3D测量" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/tags/%E7%BA%BF%E7%A8%8B/" />
-<meta property="og:updated_time" content="2021-01-07T00:00:00+00:00" />
-<title>线程 | Halcon学习</title>
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/" />
+
+<title>3D测量 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
 <script defer src="/en.search.min.4cc67a03b5ab2b6528634b1fc213f2d16947a1213c4da2b5135a58b8affcd02d.js" integrity="sha256-TMZ6A7WrK2UoY0sfwhPy0WlHoSE8TaK1E1pYuK/80C0="></script>
-<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/tags/%E7%BA%BF%E7%A8%8B/index.xml" title="Halcon学习" />
+<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -255,9 +255,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-c7167925f6f1379ea6d2133fe35b7232" class="toggle"  />
+    <input type="checkbox" id="section-c7167925f6f1379ea6d2133fe35b7232" class="toggle" checked />
     <label for="section-c7167925f6f1379ea6d2133fe35b7232" class="flex justify-between">
-      <a  class="">3D测量</a>
+      <a  class="active">3D测量</a>
       <span>▾</span>
     </label>
   
@@ -691,7 +691,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>线程</strong>
+  <strong>3D测量</strong>
 
   <label for="toc-control">
     
@@ -704,74 +704,7 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
-  <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
 
   </aside>
@@ -781,37 +714,7 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3/">System.InvalidOperationException:线程间操作无效: 从不是创建控件 ** 的线程访问它。</a>
-    </h2>
-    
-  <h5>January 7, 2021</h5>
-
-
-
-  
-
-  
-  <div>
-    
-      <a href="/tags/thread/">thread</a>, 
-      <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-  </div>
-  
-
-
-    <p>在使用Thread 多线程时，线程间不能跨线程访问其他线程的控件。
-如，主线程创建了某个label控件，子线程不能直接访问该控件，若想访问，则可以在Form窗体初始化函数中设置CheckForIllegalCrossThreadCalls = false， 否则会报以下类似的错误：&quot;System.InvalidOperationException:线程间操作无效: 从不是创建控件 ** 的线程访问它。&quot;
-MSDN参考连接
-    </p>
-  </article>
-  
-
-  
-
-
+  <article class="markdown"></article>
  
       
 
@@ -839,74 +742,7 @@ MSDN参考连接
     
     <aside class="book-toc">
       
-  <nav>
-  <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-  </ul>
-</nav>
+  <nav id="TableOfContents"></nav>
 
  
     </aside>
