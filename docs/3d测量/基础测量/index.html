@@ -5,18 +5,25 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="快捷键" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" />
-<meta property="og:updated_time" content="2020-12-24T22:32:06+08:00" />
-<title>快捷键 | Halcon学习</title>
+<meta name="description" content="基础测量 #  准备工作 #    调整相机的帧率、曝光时间、增益、ROI等参数，使实际帧率达到200以上；
+  调整相机轴臂移动速度、触发模式(开)，使的X轴每移动指定距离(如5mm)时，相机的拍照图像张数基本固定(多次测量前后数量相差3张以内)。
+  X方向分辨率(像素单量) #  指的是X轴方向，每个像素代表的实际距离(一般单位是mm，或um)
+测量方法 #   用相机拍摄一段尺子(如10mm)； 在Halcon中使用测量助手 打开照片； 通过画直线，调整最小边缘幅度、平滑等参数，得出图像中某一长度(如10mm)对应的像素个数； X方向分辨率 = 物理距离 / 像素个数，单位 mm/pixel  Y方向分辨率(像素单量) #  指的是Y轴方向，每个像素代表的实际距离(一般单位是mm，或um)
+测量方法 #   相机开启触发模式； 让相机轴臂低速(保证帧率)移动指定距离(如5mm)，记录照片张数； Y方向分辨率 = 移动距离 / 照片张数，单位 mm/pixel  ">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="基础测量 #  准备工作 #    调整相机的帧率、曝光时间、增益、ROI等参数，使实际帧率达到200以上；
+  调整相机轴臂移动速度、触发模式(开)，使的X轴每移动指定距离(如5mm)时，相机的拍照图像张数基本固定(多次测量前后数量相差3张以内)。
+  X方向分辨率(像素单量) #  指的是X轴方向，每个像素代表的实际距离(一般单位是mm，或um)
+测量方法 #   用相机拍摄一段尺子(如10mm)； 在Halcon中使用测量助手 打开照片； 通过画直线，调整最小边缘幅度、平滑等参数，得出图像中某一长度(如10mm)对应的像素个数； X方向分辨率 = 物理距离 / 像素个数，单位 mm/pixel  Y方向分辨率(像素单量) #  指的是Y轴方向，每个像素代表的实际距离(一般单位是mm，或um)
+测量方法 #   相机开启触发模式； 让相机轴臂低速(保证帧率)移动指定距离(如5mm)，记录照片张数； Y方向分辨率 = 移动距离 / 照片张数，单位 mm/pixel  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%9F%BA%E7%A1%80%E6%B5%8B%E9%87%8F/" />
+
+<title>基础测量 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
 <script defer src="/en.search.min.40bbd4563bd5f2c5fbe89c9ed1814b7356432bbff22b15c32e0d8030992b9e0b.js" integrity="sha256-QLvUVjvV8sX76Jye0YFLc1ZDK7/yKxXDLg2AMJkrngs="></script>
-<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -568,7 +575,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%9F%BA%E7%A1%80%E6%B5%8B%E9%87%8F/" class="">基础测量</a>
+    <a href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%9F%BA%E7%A1%80%E6%B5%8B%E9%87%8F/" class=" active">基础测量</a>
   
 
         </li>
@@ -647,7 +654,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>快捷键</strong>
+  <strong>基础测量</strong>
 
   <label for="toc-control">
     
@@ -660,72 +667,19 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#x方向分辨率像素单量">X方向分辨率(像素单量)</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#测量方法">测量方法</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
+    <li><a href="#y方向分辨率像素单量">Y方向分辨率(像素单量)</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
+        <li><a href="#测量方法-1">测量方法</a></li>
       </ul>
     </li>
-    
-  
   </ul>
 </nav>
 
@@ -737,41 +691,52 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/hotkeys/">Windows下的快捷键</a>
-    </h2>
-    
-  <h5>December 24, 2020</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/development/">Development</a>, 
-      <a href="/categories/tips/">tips</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>, 
-      <a href="/tags/windows/">Windows</a>
-  </div>
-  
-
-
-    <p>快捷键 #   F2: 重置程序执行，停止执行程序，清零所有变量； F3: 取消注释所在行； F4: 注释所在行； F5: 运行程序(遇到断点会暂停)； F6: 单步步过执行(不进入自定义函数内部)； F7: 单步步入执行，会进入自定义函数内部(内置函数除外)； F8: 步过执行完成当前函数，到前一个函数后面； F9: 停止执行； F10: 给当前行加断点。 使用灰度直方图时，按ctrl键，鼠标放在图像上可以到看灰度值。  
-    </p>
-  </article>
-  
-
-  
-
-
+  <article class="markdown"><h1 id="基础测量">
+  基础测量
+  <a class="anchor" href="#%e5%9f%ba%e7%a1%80%e6%b5%8b%e9%87%8f">#</a>
+</h1>
+<h2 id="准备工作">
+  准备工作
+  <a class="anchor" href="#%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c">#</a>
+</h2>
+<ol>
+<li>
+<p>调整相机的帧率、曝光时间、增益、ROI等参数，使实际帧率达到200以上；</p>
+</li>
+<li>
+<p>调整相机轴臂移动速度、触发模式(开)，使的X轴每移动指定距离(如5mm)时，相机的拍照图像张数基本固定(多次测量前后数量相差3张以内)。</p>
+</li>
+</ol>
+<h2 id="x方向分辨率像素单量">
+  X方向分辨率(像素单量)
+  <a class="anchor" href="#x%e6%96%b9%e5%90%91%e5%88%86%e8%be%a8%e7%8e%87%e5%83%8f%e7%b4%a0%e5%8d%95%e9%87%8f">#</a>
+</h2>
+<p>指的是X轴方向，每个像素代表的实际距离(一般单位是mm，或um)</p>
+<h3 id="测量方法">
+  测量方法
+  <a class="anchor" href="#%e6%b5%8b%e9%87%8f%e6%96%b9%e6%b3%95">#</a>
+</h3>
+<ol>
+<li>用相机拍摄一段尺子(如10mm)；</li>
+<li>在Halcon中使用测量助手 打开照片；</li>
+<li>通过画直线，调整最小边缘幅度、平滑等参数，得出图像中某一长度(如10mm)对应的像素个数；</li>
+<li>X方向分辨率 = 物理距离 / 像素个数，单位 mm/pixel</li>
+</ol>
+<h2 id="y方向分辨率像素单量">
+  Y方向分辨率(像素单量)
+  <a class="anchor" href="#y%e6%96%b9%e5%90%91%e5%88%86%e8%be%a8%e7%8e%87%e5%83%8f%e7%b4%a0%e5%8d%95%e9%87%8f">#</a>
+</h2>
+<p>指的是Y轴方向，每个像素代表的实际距离(一般单位是mm，或um)</p>
+<h3 id="测量方法-1">
+  测量方法
+  <a class="anchor" href="#%e6%b5%8b%e9%87%8f%e6%96%b9%e6%b3%95-1">#</a>
+</h3>
+<ol>
+<li>相机开启触发模式；</li>
+<li>让相机轴臂低速(保证帧率)移动指定距离(如5mm)，记录照片张数；</li>
+<li>Y方向分辨率 =  移动距离 / 照片张数，单位 mm/pixel</li>
+</ol>
+</article>
  
       
 
@@ -791,6 +756,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -799,72 +768,19 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#准备工作">准备工作</a></li>
+    <li><a href="#x方向分辨率像素单量">X方向分辨率(像素单量)</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#测量方法">测量方法</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
+    <li><a href="#y方向分辨率像素单量">Y方向分辨率(像素单量)</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
+        <li><a href="#测量方法-1">测量方法</a></li>
       </ul>
     </li>
-    
-  
   </ul>
 </nav>
 

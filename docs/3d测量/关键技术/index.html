@@ -5,18 +5,35 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="快捷键" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" />
-<meta property="og:updated_time" content="2020-12-24T22:32:06+08:00" />
-<title>快捷键 | Halcon学习</title>
+<meta name="description" content="关键技术 #  3D测量适合测高度，X、Y方向的精度不高
+线激光和相机的角度 #  一般在10~60度，角度越大，精度越高。。。
+场合 #  拍摄反光较强的表面时，相机、激光都要与拍摄物有一定角度。
+Z方向分辨率 #  Z方向的分辨率 = X方向分辨率 * 常量(夹角决定)
+简易算法： Z方向像素j单量 = Height / Width (Height:用于测量的矩形块高度， Width:视场长度)
+Z方向重复性 #  一体式相机： Z方向重复性 = X方向像素单量 * 系数 （系数在0.5 ~ 2 之间，初次选型，可采用参考值1.5）
+分体式相机：Z方向重复性 = X方向像素单量 / tanα * 系数(1-3) ， 角度参考值为45°(此时tanα = 1)
+Z方向像素单量 = X方向像素单量 / tanα
+Y方向 #  线激光传感器在机器人手臂上时，是时间频率拍照，没法触发拍照。
+扫描间隔/触发间隔 #  扫描间隔(距离, 单位mm) = 扫描(脉冲)间隔 * 脉冲单量">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="关键技术 #  3D测量适合测高度，X、Y方向的精度不高
+线激光和相机的角度 #  一般在10~60度，角度越大，精度越高。。。
+场合 #  拍摄反光较强的表面时，相机、激光都要与拍摄物有一定角度。
+Z方向分辨率 #  Z方向的分辨率 = X方向分辨率 * 常量(夹角决定)
+简易算法： Z方向像素j单量 = Height / Width (Height:用于测量的矩形块高度， Width:视场长度)
+Z方向重复性 #  一体式相机： Z方向重复性 = X方向像素单量 * 系数 （系数在0.5 ~ 2 之间，初次选型，可采用参考值1.5）
+分体式相机：Z方向重复性 = X方向像素单量 / tanα * 系数(1-3) ， 角度参考值为45°(此时tanα = 1)
+Z方向像素单量 = X方向像素单量 / tanα
+Y方向 #  线激光传感器在机器人手臂上时，是时间频率拍照，没法触发拍照。
+扫描间隔/触发间隔 #  扫描间隔(距离, 单位mm) = 扫描(脉冲)间隔 * 脉冲单量" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/" />
+
+<title>关键技术 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
 <script defer src="/en.search.min.40bbd4563bd5f2c5fbe89c9ed1814b7356432bbff22b15c32e0d8030992b9e0b.js" integrity="sha256-QLvUVjvV8sX76Jye0YFLc1ZDK7/yKxXDLg2AMJkrngs="></script>
-<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -555,7 +572,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/" class="">关键技术</a>
+    <a href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/" class=" active">关键技术</a>
   
 
         </li>
@@ -647,7 +664,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>快捷键</strong>
+  <strong>关键技术</strong>
 
   <label for="toc-control">
     
@@ -660,72 +677,24 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
+    <li><a href="#线激光和相机的角度">线激光和相机的角度</a></li>
+    <li><a href="#场合">场合</a></li>
+    <li><a href="#z方向分辨率">Z方向分辨率</a></li>
+    <li><a href="#z方向重复性">Z方向重复性</a></li>
+    <li><a href="#y方向">Y方向</a></li>
+    <li><a href="#扫描间隔触发间隔">扫描间隔/触发间隔</a></li>
+    <li><a href="#曝光方式">曝光方式</a></li>
+    <li><a href="#光亮控制">光亮控制</a></li>
+    <li><a href="#轮廓线提取">轮廓线提取</a></li>
+    <li><a href="#halcon图像数据类型">halcon图像数据类型</a></li>
+    <li><a href="#参考面补正">参考面补正</a></li>
+    <li><a href="#3d测量常用方法">3D测量常用方法</a></li>
+    <li><a href="#轮廓和截面的25d测量">轮廓和截面的2.5D测量</a></li>
+    <li><a href="#激光器">激光器</a></li>
+    <li><a href="#相机和镜头调节">相机和镜头调节</a></li>
+    <li><a href="#备注">备注</a></li>
   </ul>
 </nav>
 
@@ -737,41 +706,134 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/hotkeys/">Windows下的快捷键</a>
-    </h2>
-    
-  <h5>December 24, 2020</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/development/">Development</a>, 
-      <a href="/categories/tips/">tips</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>, 
-      <a href="/tags/windows/">Windows</a>
-  </div>
-  
-
-
-    <p>快捷键 #   F2: 重置程序执行，停止执行程序，清零所有变量； F3: 取消注释所在行； F4: 注释所在行； F5: 运行程序(遇到断点会暂停)； F6: 单步步过执行(不进入自定义函数内部)； F7: 单步步入执行，会进入自定义函数内部(内置函数除外)； F8: 步过执行完成当前函数，到前一个函数后面； F9: 停止执行； F10: 给当前行加断点。 使用灰度直方图时，按ctrl键，鼠标放在图像上可以到看灰度值。  
-    </p>
-  </article>
-  
-
-  
-
-
+  <article class="markdown"><h1 id="关键技术">
+  关键技术
+  <a class="anchor" href="#%e5%85%b3%e9%94%ae%e6%8a%80%e6%9c%af">#</a>
+</h1>
+<p>3D测量适合测高度，X、Y方向的精度不高</p>
+<h2 id="线激光和相机的角度">
+  线激光和相机的角度
+  <a class="anchor" href="#%e7%ba%bf%e6%bf%80%e5%85%89%e5%92%8c%e7%9b%b8%e6%9c%ba%e7%9a%84%e8%a7%92%e5%ba%a6">#</a>
+</h2>
+<p>一般在10~60度，角度越大，精度越高。。。</p>
+<h2 id="场合">
+  场合
+  <a class="anchor" href="#%e5%9c%ba%e5%90%88">#</a>
+</h2>
+<p>拍摄反光较强的表面时，相机、激光都要与拍摄物有一定角度。</p>
+<h2 id="z方向分辨率">
+  Z方向分辨率
+  <a class="anchor" href="#z%e6%96%b9%e5%90%91%e5%88%86%e8%be%a8%e7%8e%87">#</a>
+</h2>
+<p>Z方向的分辨率 = X方向分辨率 * 常量(夹角决定)</p>
+<p>简易算法： Z方向像素j单量 = Height / Width (Height:用于测量的矩形块高度， Width:视场长度)</p>
+<h2 id="z方向重复性">
+  Z方向重复性
+  <a class="anchor" href="#z%e6%96%b9%e5%90%91%e9%87%8d%e5%a4%8d%e6%80%a7">#</a>
+</h2>
+<p>一体式相机： Z方向重复性 = X方向像素单量 * 系数 （系数在0.5 ~ 2 之间，初次选型，可采用参考值1.5）</p>
+<p>分体式相机：Z方向重复性 = X方向像素单量 / tanα * 系数(1-3)   ， 角度参考值为45°(此时tanα = 1)</p>
+<p>Z方向像素单量 = X方向像素单量 / tanα</p>
+<h2 id="y方向">
+  Y方向
+  <a class="anchor" href="#y%e6%96%b9%e5%90%91">#</a>
+</h2>
+<p>线激光传感器在机器人手臂上时，是时间频率拍照，没法触发拍照。</p>
+<h2 id="扫描间隔触发间隔">
+  扫描间隔/触发间隔
+  <a class="anchor" href="#%e6%89%ab%e6%8f%8f%e9%97%b4%e9%9a%94%e8%a7%a6%e5%8f%91%e9%97%b4%e9%9a%94">#</a>
+</h2>
+<p>扫描间隔(距离, 单位mm) =  扫描(脉冲)间隔 * 脉冲单量</p>
+<h2 id="曝光方式">
+  曝光方式
+  <a class="anchor" href="#%e6%9b%9d%e5%85%89%e6%96%b9%e5%bc%8f">#</a>
+</h2>
+<p>建议使用<strong>多曝光</strong>方式，特别是有色差的物体。</p>
+<h2 id="光亮控制">
+  光亮控制
+  <a class="anchor" href="#%e5%85%89%e4%ba%ae%e6%8e%a7%e5%88%b6">#</a>
+</h2>
+<p>可以通过调整激光电压来改变激光的亮度。</p>
+<h2 id="轮廓线提取">
+  轮廓线提取
+  <a class="anchor" href="#%e8%bd%ae%e5%bb%93%e7%ba%bf%e6%8f%90%e5%8f%96">#</a>
+</h2>
+<ol>
+<li>激光线与2D图像X轴平行；</li>
+<li>按列搜索；</li>
+<li>有效点阈值；</li>
+<li>有效点选择</li>
+<li>倾斜补正</li>
+</ol>
+<h2 id="halcon图像数据类型">
+  halcon图像数据类型
+  <a class="anchor" href="#halcon%e5%9b%be%e5%83%8f%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b">#</a>
+</h2>
+<ol>
+<li>halcon算子支持的图像数据类型一般有限制，需要查看帮助文档，获取支持的类型</li>
+<li>常用图像数据类型：byte, uint2</li>
+<li>图像数据类型转化算子:convert_image_type</li>
+<li>halcon轮廓匹配支持的类型：byte, uint2</li>
+</ol>
+<h2 id="参考面补正">
+  参考面补正
+  <a class="anchor" href="#%e5%8f%82%e8%80%83%e9%9d%a2%e8%a1%a5%e6%ad%a3">#</a>
+</h2>
+<ol>
+<li>3D测量尽量做相对测量（相对于参考面），数据重复性好；避免做绝对测量；</li>
+<li>用<strong>轮廓线</strong>测量背景，若是平的(变化不大)，用大平面补正；若是凹凸不平的，用曲面补正(分割成多个小平面，再拉直补正)</li>
+</ol>
+<h2 id="3d测量常用方法">
+  3D测量常用方法
+  <a class="anchor" href="#3d%e6%b5%8b%e9%87%8f%e5%b8%b8%e7%94%a8%e6%96%b9%e6%b3%95">#</a>
+</h2>
+<ol>
+<li>
+<p>高度差/段差</p>
+<p>在高度差测量位置，生成两个<strong>临近</strong> 的<strong>区域</strong>，求两个区域的平均高度值(min_max_gray)，两个高度值之差为该位置的高度差。</p>
+</li>
+<li>
+<p>平面度</p>
+<ol>
+<li>生成一些小的测量点</li>
+<li>多个三维点点拟合平面</li>
+<li>。。。</li>
+</ol>
+</li>
+<li>
+<p>体积</p>
+<p>物体的体积 = X方向分辨率 * Y方向分辨率 * 物体面积(像素单位) * 高度平均值(单位mm)</p>
+</li>
+</ol>
+<h2 id="轮廓和截面的25d测量">
+  轮廓和截面的2.5D测量
+  <a class="anchor" href="#%e8%bd%ae%e5%bb%93%e5%92%8c%e6%88%aa%e9%9d%a2%e7%9a%8425d%e6%b5%8b%e9%87%8f">#</a>
+</h2>
+<p>基于轮廓线的测量</p>
+<h2 id="激光器">
+  激光器
+  <a class="anchor" href="#%e6%bf%80%e5%85%89%e5%99%a8">#</a>
+</h2>
+<p>最佳工作距离：65mm</p>
+<p>要调节激光水平，使其与X轴平行</p>
+<h2 id="相机和镜头调节">
+  相机和镜头调节
+  <a class="anchor" href="#%e7%9b%b8%e6%9c%ba%e5%92%8c%e9%95%9c%e5%a4%b4%e8%b0%83%e8%8a%82">#</a>
+</h2>
+<ol>
+<li>调节合适的曝光、增益、镜头光圈，让每列激光饱和（亮度值200以上）的像素个数达2个以上。曝光不能过大，否则会降低相机帧率。</li>
+</ol>
+<h2 id="备注">
+  备注
+  <a class="anchor" href="#%e5%a4%87%e6%b3%a8">#</a>
+</h2>
+<ol>
+<li>点云图、高度图中的像素值是高度信息；</li>
+<li>亮度图的像素值是亮度信息；</li>
+<li>分频倍率 = X方向分辨率 / Y方向分辨率，然后取整；</li>
+<li></li>
+</ol>
+</article>
  
       
 
@@ -791,6 +853,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -799,72 +865,24 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
-      <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
-      </ul>
-    </li>
-    
-  
+    <li><a href="#线激光和相机的角度">线激光和相机的角度</a></li>
+    <li><a href="#场合">场合</a></li>
+    <li><a href="#z方向分辨率">Z方向分辨率</a></li>
+    <li><a href="#z方向重复性">Z方向重复性</a></li>
+    <li><a href="#y方向">Y方向</a></li>
+    <li><a href="#扫描间隔触发间隔">扫描间隔/触发间隔</a></li>
+    <li><a href="#曝光方式">曝光方式</a></li>
+    <li><a href="#光亮控制">光亮控制</a></li>
+    <li><a href="#轮廓线提取">轮廓线提取</a></li>
+    <li><a href="#halcon图像数据类型">halcon图像数据类型</a></li>
+    <li><a href="#参考面补正">参考面补正</a></li>
+    <li><a href="#3d测量常用方法">3D测量常用方法</a></li>
+    <li><a href="#轮廓和截面的25d测量">轮廓和截面的2.5D测量</a></li>
+    <li><a href="#激光器">激光器</a></li>
+    <li><a href="#相机和镜头调节">相机和镜头调节</a></li>
+    <li><a href="#备注">备注</a></li>
   </ul>
 </nav>
 

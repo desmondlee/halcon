@@ -204,11 +204,54 @@ set_framegrabber_param(AcqHandle, &amp;lsquo;Gain&amp;rsquo;, 3.0156)
     
     <item>
       <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</guid>
+      <description>关键技术 #  3D测量适合测高度，X、Y方向的精度不高
+线激光和相机的角度 #  一般在10~60度，角度越大，精度越高。。。
+场合 #  拍摄反光较强的表面时，相机、激光都要与拍摄物有一定角度。
+Z方向分辨率 #  Z方向的分辨率 = X方向分辨率 * 常量(夹角决定)
+简易算法： Z方向像素j单量 = Height / Width (Height:用于测量的矩形块高度， Width:视场长度)
+Z方向重复性 #  一体式相机： Z方向重复性 = X方向像素单量 * 系数 （系数在0.5 ~ 2 之间，初次选型，可采用参考值1.5）
+分体式相机：Z方向重复性 = X方向像素单量 / tanα * 系数(1-3) ， 角度参考值为45°(此时tanα = 1)
+Z方向像素单量 = X方向像素单量 / tanα
+Y方向 #  线激光传感器在机器人手臂上时，是时间频率拍照，没法触发拍照。
+扫描间隔/触发间隔 #  扫描间隔(距离, 单位mm) = 扫描(脉冲)间隔 * 脉冲单量</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%9F%BA%E7%A1%80%E6%B5%8B%E9%87%8F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%9F%BA%E7%A1%80%E6%B5%8B%E9%87%8F/</guid>
+      <description>基础测量 #  准备工作 #    调整相机的帧率、曝光时间、增益、ROI等参数，使实际帧率达到200以上；
+  调整相机轴臂移动速度、触发模式(开)，使的X轴每移动指定距离(如5mm)时，相机的拍照图像张数基本固定(多次测量前后数量相差3张以内)。
+  X方向分辨率(像素单量) #  指的是X轴方向，每个像素代表的实际距离(一般单位是mm，或um)
+测量方法 #   用相机拍摄一段尺子(如10mm)； 在Halcon中使用测量助手 打开照片； 通过画直线，调整最小边缘幅度、平滑等参数，得出图像中某一长度(如10mm)对应的像素个数； X方向分辨率 = 物理距离 / 像素个数，单位 mm/pixel  Y方向分辨率(像素单量) #  指的是Y轴方向，每个像素代表的实际距离(一般单位是mm，或um)
+测量方法 #   相机开启触发模式； 让相机轴臂低速(保证帧率)移动指定距离(如5mm)，记录照片张数； Y方向分辨率 = 移动距离 / 照片张数，单位 mm/pixel  </description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/</guid>
       <description>形态学 #   腐蚀 (erosion1, erosion_rectangle1, erosion_circle) 膨胀(dilation1, dilation_rectangle1, dilation_circle) 开运算(opening_*) 闭运算(closing_*)  描述 #   腐蚀：去除毛刺 开运算：先腐蚀再膨胀，作用是去除毛刺的同时，减少面积的丢失。  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
+      <description>基础知识 #  拖影 #  拖影由运动速度和曝光时间影响导致，速度越快，或曝光时间越长，拖影越明显。
+如何拍照，使照片教亮？ #   光源亮度调大 适当调大增益（但增益越大，噪点越多） 光圈调大（进入的光线会变多） 延长曝光时间（但会出现拖影）  相机电压 #  通用12V
+相机保护 #  相机信号输出时，加光耦保护
+使用触发的好处 #  占用带宽少。（触发方式常用 edge方式）</description>
     </item>
     
   </channel>
