@@ -6,7 +6,7 @@
     <description>Recent content in 图像处理 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基础算子(方法函数)</title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/</link>
@@ -257,15 +257,6 @@ set_framegrabber_param(AcqHandle, &amp;lsquo;Gain&amp;rsquo;, 3.0156)
     </item>
     
     <item>
-      <title>模板</title>
-      <link>http://halcon.lizhenguo.cn/docs/%E6%A8%A1%E6%9D%BF/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://halcon.lizhenguo.cn/docs/%E6%A8%A1%E6%9D%BF/</guid>
-      <description>创建&amp;amp;保存&amp;amp;读取&amp;amp;使用模板 #  经验 #   金字塔等级(NumLevels)越高，匹配时间越短，但匹配越模糊，容易多匹配； 贪婪度(Greedness)越高，匹配时间越长，匹配越精确； 匹配分数(Score)越高，匹配越精确； 单模板支持x,y同步缩放、异步缩放；多模板不支持缩放。  创建模板 #  dev_get_window (WindowHandle1)dev_set_draw (&#39;margin&#39;) //区域展示样式：边框read_image (Image, &#39;printer_chip/printer_chip_01&#39;)//加载图像draw_rectangle2 (WindowHandle1, Row2, Column, Phi, Length1, Length2)//绘制模板区域gen_rectangle2 (Rectangle, Row2, Column, Phi, Length1, Length2)//展示区域reduce_domain (Image, Rectangle, ImageReduced)//获取图像在区域内的部分内容图像create_shape_model (ImageReduced, &#39;auto&#39;, 0, rad(45), &#39;auto&#39;, &#39;auto&#39;, &#39;use_polarity&#39;, &#39;auto&#39;, &#39;auto&#39;, ModelID)//将区域内的部分图像作为模板内容，制作模板保存模板 #  write_shape_model (ModelID, &#39;C:/Users/lee/Desktop/model.shm&#39;)读取模板 #  read_shape_model (&#39;C:/Users/lee/Desktop/model.shm&#39;, ModelID)使用(查找)模板 #  find_shape_model (Image, ModelID, rad(-45), rad(180), 0.</description>
-    </item>
-    
-    <item>
       <title>常用标定</title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
@@ -302,6 +293,16 @@ set_framegrabber_param(AcqHandle, &amp;lsquo;Gain&amp;rsquo;, 3.0156)
 卡尺工具过程 #   确定边缘检测方向； 高斯滤波； 执行投影处理； 执行微分（对比度）处理； 设置边缘敏感度（对比度阈值）、边缘极性、边缘的位置； 边缘执行亚像素处理。  一维测量流程 #   mermaid.initialize({ &#34;flowchart&#34;: { &#34;useMaxWidth&#34;:true }, &#34;theme&#34;: &#34;default&#34; } ) graph TDA[&#34;采集图像&#34;] -- B[&#34;创建测量对象&#34; ]B -- C[&#34;测量&#34;]C -- D[&#34;销毁测量对象&#34;] 需要熟练使用的一维测量工具：测量助手
  二维测量流程 #  graph TDA[&#34;采集图像&#34;] -- B[&#34;按顺序创建边缘测量ROI(卡尺工具)&#34; ]B -- C[&#34;边缘测量&#34;]C -- D[&#34;把边缘连接成XLD多边形轮廓&#34;]D -- E[&#34;拟合&#34;] 拟合方法：
  回归线法（无损拟合） 加权法（奇异点进行加权处理，距离XLD越远，权重越小）：huber 抛点法（抛除奇异点）：tukey   </description>
+    </item>
+    
+    <item>
+      <title>border_shape_models</title>
+      <link>http://halcon.lizhenguo.cn/posts/border_shape_models/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/border_shape_models/</guid>
+      <description>形状模板可能与图像边缘相交，为了确保在这种情况下也能定位到，需要开启该功能：
+set_system(&#39;border_shape_models&#39;, &#39;true&#39;)</description>
     </item>
     
     <item>
@@ -394,6 +395,15 @@ Row: 起始点Y坐标；Col: 七十点X坐标；Angle: 角度；Length: 直线�
     </item>
     
     <item>
+      <title>模板</title>
+      <link>http://halcon.lizhenguo.cn/docs/%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E6%A8%A1%E6%9D%BF/</guid>
+      <description>创建&amp;amp;保存&amp;amp;读取&amp;amp;使用模板 #  经验 #   金字塔等级(NumLevels)越高，匹配时间越短，但匹配越模糊，容易多匹配； 贪婪度(Greedness)越高，匹配时间越长，匹配越精确； 匹配分数(Score)越高，匹配越精确； 单模板支持x,y同步缩放、异步缩放；多模板不支持缩放。  创建模板 #  dev_get_window (WindowHandle1)dev_set_draw (&#39;margin&#39;) //区域展示样式：边框read_image (Image, &#39;printer_chip/printer_chip_01&#39;)//加载图像draw_rectangle2 (WindowHandle1, Row2, Column, Phi, Length1, Length2)//绘制模板区域gen_rectangle2 (Rectangle, Row2, Column, Phi, Length1, Length2)//展示区域reduce_domain (Image, Rectangle, ImageReduced)//获取图像在区域内的部分内容图像create_shape_model (ImageReduced, &#39;auto&#39;, 0, rad(45), &#39;auto&#39;, &#39;auto&#39;, &#39;use_polarity&#39;, &#39;auto&#39;, &#39;auto&#39;, ModelID)//将区域内的部分图像作为模板内容，制作模板保存模板 #  write_shape_model (ModelID, &#39;C:/Users/lee/Desktop/model.shm&#39;)读取模板 #  read_shape_model (&#39;C:/Users/lee/Desktop/model.shm&#39;, ModelID)使用(查找)模板 #  find_shape_model (Image, ModelID, rad(-45), rad(180), 0.</description>
+    </item>
+    
+    <item>
       <title>list_files</title>
       <link>http://halcon.lizhenguo.cn/docs/image/operators/list_files/</link>
       <pubDate>Thu, 24 Dec 2020 22:59:03 +0800</pubDate>
@@ -441,11 +451,32 @@ Row: 起始点Y坐标；Col: 七十点X坐标；Angle: 角度；Length: 直线�
     
     <item>
       <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E4%B8%80%E4%BD%93%E5%BC%8F%E7%9B%B8%E6%9C%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E4%B8%80%E4%BD%93%E5%BC%8F%E7%9B%B8%E6%9C%BA/</guid>
+      <description>一体式相机 #  以SSZN一体式相机为例
+sszn相机相关设置 #   光量控制改为手动时，设置的曝光时间才会有效。（自动模式时，手动设置的曝光时间可能会无效） 感光特性调节的是曝光时间；峰值检测灵敏度，指的是对比度，调节的是阈值。 默认密码：sszn license要注册  关键词参考 #    批处理点数：脉冲数量，即拍照张数，或设定一次测量进行处理的轮廓数量；
+  3D显示间距：Y轴像素分辨率，用于显示点云图，一般设置成跟X轴像素分辨率相同（X轴像素分辨率可以查相机手册）；
+ 第2点备注，此处设置的Y轴像素分辨率，仅用于显示点云图时采用的参考值，不是实际调整出来的Y轴像素分辨率。
+   细化点数（即 触发间隔，或分频倍率），计算公式：X分辨率 / Y分辨率，取整；
+  3D显示间距 = 细化点数 * 脉冲当量；？？？有疑问？？？  扫描的物理实际距离 = 批处理点数 * 3D显示间距 ，单位mm；
+  使用流程 #    轮廓线校正：水平校正(可通过校正按钮自动校正，也可以通过选择两个区域拟合直线的方式手动校正)，高度校正（通过调整Z轴高度手动校正）；
+  查相机手册，获得X轴分辨率(即像素当量，或X轴数据间隔)；
+  借助刻度尺，halcon测量助手，得出Y轴分辨率。Y轴分辨率 = 物理长度 / 像素数。尽量让Y轴分辨率接近于X轴分辨率。（调整触发方式，和触发间隔）
+  借助标准块(高度精准)，得出Z轴分辨率。Z轴分辨率 = 标准块高度 / 轮廓高度(高度方向的像素数)，用于计算测量物体的实际高度。</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/</guid>
       <description>关键技术 #  3D测量适合测高度，X、Y方向的精度不高
+X轴，Y轴，Z轴 #  X轴：激光线指示方向；
+Y轴：物体运动方向；(与X轴垂直)
+Z轴：垂直高度方向。
 线激光和相机的角度 #  一般在10~60度，角度越大，精度越高。。。
 场合 #  拍摄反光较强的表面时，相机、激光都要与拍摄物有一定角度。
 Z方向分辨率 #  Z方向的分辨率 = X方向分辨率 * 常量(夹角决定)
@@ -465,9 +496,19 @@ Y方向 #  线激光传感器在机器人手臂上时，是时间频率拍照，
       <guid>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%9F%BA%E7%A1%80%E6%B5%8B%E9%87%8F/</guid>
       <description>基础测量 #  准备工作 #    调整相机的帧率、曝光时间、增益、ROI等参数，使实际帧率达到200以上；
   调整相机轴臂移动速度、触发模式(开)，使的X轴每移动指定距离(如5mm)时，相机的拍照图像张数基本固定(多次测量前后数量相差3张以内)。
-  X方向分辨率(像素单量) #  指的是X轴方向，每个像素代表的实际距离(一般单位是mm，或um)
-测量方法 #   用相机拍摄一段尺子(如10mm)； 在Halcon中使用测量助手 打开照片； 通过画直线，调整最小边缘幅度、平滑等参数，得出图像中某一长度(如10mm)对应的像素个数； X方向分辨率 = 物理距离 / 像素个数，单位 mm/pixel  Y方向分辨率(像素单量) #  指的是Y轴方向，每个像素代表的实际距离(一般单位是mm，或um)
-测量方法 #   相机开启触发模式； 让相机轴臂低速(保证帧率)移动指定距离(如5mm)，记录照片张数； Y方向分辨率 = 移动距离 / 照片张数，单位 mm/pixel  </description>
+  X方向分辨率(像素当量) #  指的是X轴方向(激光线指示方向)，每个像素代表的实际距离(一般单位是mm，或um)
+测量方法 #   用相机拍摄一段尺子(如10mm)； 在Halcon中使用测量助手 打开照片； 通过画直线，调整最小边缘幅度、平滑等参数，得出图像中某一长度(如10mm)对应的像素个数； X方向分辨率 = 物理距离 / 像素个数，单位 mm/pixel  Y方向分辨率(像素当量) #  指的是Y轴方向(物体运动方向)，每次拍照代表的实际距离(一般单位是mm，或um)，与拍照频率(帧率)有关。
+测量方法 #   相机开启触发模式； 让相机轴臂低速(保证帧率)移动指定距离(如5mm)，记录照片张数； Y方向分辨率 = 移动距离 / 照片张数，单位 mm/pixel  Z方向分辨率 #  物体实际高度 / 激光扫描出的高度
+片光法获取3D图像的流程 #  采集一系列图像并保存 #   总轮廓数量 = 扫描物体长度 / Y方向分辨率 分频倍率 = X方向分辨率 / Y方向分辨率，然后取整 有效轮廓数量(保存照片张数) = 总轮廓数量 / 分频倍率 使用该halcon程序保存一系列激光图像。  算子介绍 #  按操作顺序：</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E7%9B%B8%E5%85%B3%E8%AE%A1%E7%AE%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E7%9B%B8%E5%85%B3%E8%AE%A1%E7%AE%97/</guid>
+      <description>相关计算 #  计算高度差 #   使用高度图 选择两个不同区域，计算其灰度值 灰度值差既是高度差  计算平面度 #   取多个点(3个以上)，拟合平面 平面补正  计算体积 #  OCR识别 #  </description>
     </item>
     
     <item>
@@ -485,11 +526,67 @@ Y方向 #  线激光传感器在机器人手臂上时，是时间频率拍照，
     
     <item>
       <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E4%B9%9D%E7%82%B9%E6%A0%87%E5%AE%9A/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E4%B9%9D%E7%82%B9%E6%A0%87%E5%AE%9A/</guid>
+      <description>九点标定 #  将以像素为单位的坐标系，对应到物理坐标系的方法，即标定两个坐标系之间的关系。
+用途 #  通过相机引导机械手移动。（相机坐标系，机械手坐标系）
+计算仿射变换参数：
+hom_mat2d_to_affine_par
+常用的仿射变换：
+affine_trans_point_2d: 对二维点进行仿射变换，转到物理空间
+affine_trans_pixel: 对图像点进行仿射变换，在图像空间处理</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/</guid>
       <description>形态学 #   腐蚀 (erosion1, erosion_rectangle1, erosion_circle) 膨胀(dilation1, dilation_rectangle1, dilation_circle) 开运算(opening_*) 闭运算(closing_*)  描述 #   腐蚀：去除毛刺 开运算：先腐蚀再膨胀，作用是去除毛刺的同时，减少面积的丢失。  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E5%9C%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E5%9C%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E6%A4%AD%E5%9C%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E6%A4%AD%E5%9C%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E7%9B%B4%E7%BA%BF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E7%9B%B4%E7%BA%BF/</guid>
+      <description>拟合直线 #  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E7%9F%A9%E5%BD%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E7%9F%A9%E5%BD%A2/</guid>
+      <description>拟合矩形 #  算子 #  fit_rectangle2_contour_xld
+结构 #  fit_rectangle2_contour_xld(Contours : : Algorithm, MaxNumPoints, MaxClosureDist, ClippingEndPoints, Iterations, ClippingFactor : Row, Column, Phi, Length1, Length2, PointOrder)
+作用 #  根据给到的不规则的轮廓 Contours，通过某些算法 Algorithm（通常用&amp;rsquo;tukey&#39;），计算出近似于该轮廓的矩形；
+返回计算出的矩形的中心点坐标 Row, Column，旋转角度Phi，主轴的长的一半Length1，另一轴的长的一半Length2。
+ 主轴：Phi指示的方向为主轴。
+ 示例 #  dev_get_window (WindowHandle)read_image (Image1, &#39;printer_chip/printer_chip_01&#39;)* 缩小定义域：* draw_rectangle2 (WindowHandle, Row, Column, Phi, Length1, Length2)* gen_rectangle2 (Rectangle1, Row, Column, Phi, Length1, Length2)gen_rectangle2 (Rectangle1, 617.234, 469.039, -1.61717, 153.</description>
     </item>
     
     <item>
@@ -501,7 +598,34 @@ Y方向 #  线激光传感器在机器人手臂上时，是时间频率拍照，
       <description>基础知识 #  拖影 #  拖影由运动速度和曝光时间影响导致，速度越快，或曝光时间越长，拖影越明显。
 如何拍照，使照片教亮？ #   光源亮度调大 适当调大增益（但增益越大，噪点越多） 光圈调大（进入的光线会变多） 延长曝光时间（但会出现拖影）  相机电压 #  通用12V
 相机保护 #  相机信号输出时，加光耦保护
-使用触发的好处 #  占用带宽少。（触发方式常用 edge方式）</description>
+使用触发的好处 #  占用带宽少。（触发方式常用 edge方式）
+其他 #  放大倍率 = 传感器尺寸 / 视野
+焦距 f = mxWD(WD: 工作距离)
+远心镜头优点：景深大、分辨率好、远心度好、畸变小、平行光路
+FOV: 视场
+扩展环，又叫接圈，接在相机和镜头之间。通过增加像距，来减少物距，缩小视野。
+镜头选择：焦距在16mm以上
+低角度光源：led发射角与水平面成30°以内的夹角</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E8%B4%B4%E7%89%87%E6%9C%BA/%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E8%B4%B4%E7%89%87%E6%9C%BA/%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E4%BD%9C/</guid>
+      <description>初始化工作 #  初始化运动控制卡时，需要完成以下事项： #   打开运动控制器； 复位运动控制器； 加载配置文件； 清除每个轴的驱动器报警标志、跟随误差越线标志、限位触发标志； 打开每个轴的驱动器使能。  主要的运动控制参数 #   多个端口号：启动输入口、停止输入口、吸气输出口、LED光源输出口、激光输出口； X轴(机械臂运动轴)电机脉冲与编码器脉冲比；(电机转动一圈的脉冲数量 / 编码器转动一圈的脉冲数量) X、Y、Z、U轴的缩放、速度、加速度、复位方向； X轴激光、线扫扫描速度； 相机和运动控制卡通讯超时时间； 运动控制板卡配置文件及路径。  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E8%B4%B4%E7%89%87%E6%9C%BA/%E5%A4%8D%E4%BD%8D/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E8%B4%B4%E7%89%87%E6%9C%BA/%E5%A4%8D%E4%BD%8D/</guid>
+      <description>复位 #  让机器的轴运动到零点位置。
+为了能相对精确，需要运动4次：
+复位反方向走位短距离（防止超出限位）-&amp;gt;复位方向走位长距离-&amp;gt;位置清零-&amp;gt;复位反方向走位短距离-&amp;gt;慢速复位方向走位短距离-&amp;gt;位置清零-&amp;gt;复位成功</description>
     </item>
     
     <item>
@@ -511,6 +635,17 @@ Y方向 #  线激光传感器在机器人手臂上时，是时间频率拍照，
       
       <guid>http://halcon.lizhenguo.cn/readme/</guid>
       <description>halcon_content #  文章内容, markdown格式</description>
+    </item>
+    
+    <item>
+      <title>draw_rectangle2中的length1和length2区别</title>
+      <link>http://halcon.lizhenguo.cn/posts/draw_rectangle2%E4%B8%AD%E7%9A%84length1%E5%92%8Clength2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/draw_rectangle2%E4%B8%AD%E7%9A%84length1%E5%92%8Clength2/</guid>
+      <description>Length1 表示主半轴，即箭头指示方向，或angle角度方向。
+示例代码：
+gen_rectangle2 (Rectangle1, 300, 200, rad(45), 100, 20)示例图像：</description>
     </item>
     
   </channel>

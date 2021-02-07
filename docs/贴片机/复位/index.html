@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <meta name="generator" content="Hugo 0.79.1" />
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="复位 #  让机器的轴运动到零点位置。
+为了能相对精确，需要运动4次：
+复位反方向走位短距离（防止超出限位）-&gt;复位方向走位长距离-&gt;位置清零-&gt;复位反方向走位短距离-&gt;慢速复位方向走位短距离-&gt;位置清零-&gt;复位成功">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="复位 #  让机器的轴运动到零点位置。
+为了能相对精确，需要运动4次：
+复位反方向走位短距离（防止超出限位）-&gt;复位方向走位长距离-&gt;位置清零-&gt;复位反方向走位短距离-&gt;慢速复位方向走位短距离-&gt;位置清零-&gt;复位成功" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/%E8%B4%B4%E7%89%87%E6%9C%BA/%E5%A4%8D%E4%BD%8D/" />
+
+<title>复位 | Halcon学习</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
+<script defer src="/en.search.min.9acd3235417de1ec9515c37268e4a5a3f0458ff15cfc05f514ee2a981a90b750.js" integrity="sha256-ms0yNUF94eyVFcNyaOSlo/BFj/Fc/AX1FO4qmBqQt1A="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body dir=>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>Halcon学习</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-077e40a4208d81995b650752b8ffc1ab" class="toggle"  />
+    <label for="section-077e40a4208d81995b650752b8ffc1ab" class="flex justify-between">
+      <a  class="">图像处理</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/procedure/" class="">流程</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/" class="">常用标定</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-72c48fc215782e74a55f6b66f6577dcc" class="toggle"  />
+    <label for="section-72c48fc215782e74a55f6b66f6577dcc" class="flex justify-between">
+      <a  class="">相关算子</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/read_image/" class="">read_image</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/%E8%BF%9E%E9%80%9A%E6%80%A7%E6%93%8D%E4%BD%9Cconnection/" class="">连通性操作connection</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/%E7%89%B9%E5%BE%81%E7%9B%B4%E6%96%B9%E5%9B%BE/" class="">特征直方图</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/list_files/" class="">list_files</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/orientation/" class="">orientation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/select_shape/" class="">select_shape</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/image/operators/%E7%81%B0%E5%BA%A6%E7%9B%B4%E6%96%B9%E5%9B%BE/" class="">灰度直方图</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/" class="">基础算子(方法函数)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E7%AE%97%E5%AD%90/" class="">常用算子</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-c7167925f6f1379ea6d2133fe35b7232" class="toggle"  />
+    <label for="section-c7167925f6f1379ea6d2133fe35b7232" class="flex justify-between">
+      <a  class="">3D测量</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E4%B8%80%E4%BD%93%E5%BC%8F%E7%9B%B8%E6%9C%BA/" class="">一体式相机</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF/" class="">关键技术</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E5%9F%BA%E7%A1%80%E6%B5%8B%E9%87%8F/" class="">基础测量</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/3d%E6%B5%8B%E9%87%8F/%E7%9B%B8%E5%85%B3%E8%AE%A1%E7%AE%97/" class="">相关计算</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2a3387f7590a917b4736ac1b39897533" class="toggle"  />
+    <label for="section-2a3387f7590a917b4736ac1b39897533" class="flex justify-between">
+      <a  class="">硬件</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="">基础知识</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-acca4829c0d2c16d805af73b2b945be3" class="toggle" checked />
+    <label for="section-acca4829c0d2c16d805af73b2b945be3" class="flex justify-between">
+      <a  class="">贴片机</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E8%B4%B4%E7%89%87%E6%9C%BA/%E5%88%9D%E5%A7%8B%E5%8C%96%E5%B7%A5%E4%BD%9C/" class="">初始化工作</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E8%B4%B4%E7%89%87%E6%9C%BA/%E5%A4%8D%E4%BD%8D/" class=" active">复位</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/" class="">图像分割</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/blob/" class="">Blob</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%BC%82%E5%B8%B8/" class="">异常</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%87%A0%E4%BD%95%E5%AE%9A%E4%BD%8D/" class="">几何定位</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%9B%B8%E6%9C%BA%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86/" class="">相机图像采集</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%9B%BE%E5%83%8F%E9%A2%84%E5%A4%84%E7%90%86/" class="">图像预处理</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/" class="">硬件</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/" class="">常用标定</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2/" class="">仿射变换</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E6%B5%8B%E9%87%8F/" class="">测量</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-01a9abdd638ce3226538b97dbfe9e0d5" class="toggle"  />
+    <label for="section-01a9abdd638ce3226538b97dbfe9e0d5" class="flex justify-between">
+      <a  class="">示例</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1df064058a06fb92263a151f3ba689f8" class="toggle"  />
+    <label for="section-1df064058a06fb92263a151f3ba689f8" class="flex justify-between">
+      <a  class="">自定义函数</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/examples/custom/%E7%94%BB%E7%9B%B4%E7%BA%BF/" class="">画直线</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/examples/%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F/" class="">裁剪图像</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/examples/%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96/" class="">图像二值化</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-831861fa2ffa638ce1dfd6df02d79595" class="toggle"  />
+    <label for="section-831861fa2ffa638ce1dfd6df02d79595" class="flex justify-between">
+      <a  class="">C#联合编程</a>
+      <span>▾</span>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/halcon%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="">Halcon数据类型</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/hsmartwindow/" class="">hSmartWindow使用</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/visualstudio%E9%85%8D%E7%BD%AE/" class="">使用VisualStudio开发halcon的配置</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/csharp_combine/functions/" class="">常用设置</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E6%A8%A1%E6%9D%BF/" class="">模板</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E4%B9%9D%E7%82%B9%E6%A0%87%E5%AE%9A/" class="">九点标定</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E5%BD%A2%E6%80%81%E5%AD%A6/" class="">形态学</a>
+  
+
+        </li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E7%9B%B4%E7%BA%BF/" class="">拟合直线</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://halcon.lizhenguo.cn/docs/%E6%8B%9F%E5%90%88/%E6%8B%9F%E5%90%88%E7%9F%A9%E5%BD%A2/" class="">拟合矩形</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        常见问题
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>复位</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents"></nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="复位">
+  复位
+  <a class="anchor" href="#%e5%a4%8d%e4%bd%8d">#</a>
+</h1>
+<p>让机器的轴运动到零点位置。</p>
+<p>为了能相对精确，需要运动4次：</p>
+<p>复位反方向走位短距离（防止超出限位）-&gt;复位方向走位长距离-&gt;位置清零-&gt;复位反方向走位短距离-&gt;慢速复位方向走位短距离-&gt;位置清零-&gt;复位成功</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents"></nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

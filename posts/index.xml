@@ -6,7 +6,17 @@
     <description>Recent content in 常见问题 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>border_shape_models</title>
+      <link>http://halcon.lizhenguo.cn/posts/border_shape_models/</link>
+      <pubDate>Tue, 19 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/border_shape_models/</guid>
+      <description>形状模板可能与图像边缘相交，为了确保在这种情况下也能定位到，需要开启该功能：
+set_system(&#39;border_shape_models&#39;, &#39;true&#39;)</description>
+    </item>
+    
     <item>
       <title>Halcon描述有错误的算子</title>
       <link>http://halcon.lizhenguo.cn/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/</link>
@@ -81,6 +91,17 @@ MSDN参考连接</description>
       <guid>http://halcon.lizhenguo.cn/posts/relative_path/</guid>
       <description>好处 #  共享程序文件给他人时，不用严格按照原有的绝对路径存储图像，方便使用。
 位置 #  read_image可以将hdev文件所在目录，作为相对路径起始位置。</description>
+    </item>
+    
+    <item>
+      <title>draw_rectangle2中的length1和length2区别</title>
+      <link>http://halcon.lizhenguo.cn/posts/draw_rectangle2%E4%B8%AD%E7%9A%84length1%E5%92%8Clength2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/draw_rectangle2%E4%B8%AD%E7%9A%84length1%E5%92%8Clength2/</guid>
+      <description>Length1 表示主半轴，即箭头指示方向，或angle角度方向。
+示例代码：
+gen_rectangle2 (Rectangle1, 300, 200, rad(45), 100, 20)示例图像：</description>
     </item>
     
   </channel>
