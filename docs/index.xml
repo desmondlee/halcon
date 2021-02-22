@@ -142,22 +142,6 @@ set_framegrabber_param(AcqHandle, &amp;lsquo;Gain&amp;rsquo;, 3.0156)
     </item>
     
     <item>
-      <title>硬件</title>
-      <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/</guid>
-      <description>相机硬件 #    相机靶面尺寸 = 分辨率 * 像元尺寸
-  像元越大，成像效果越好
-  相机分辨率 * 最大帧率 &amp;lt;= 千兆网带宽
-  图像大小 * 相机稳定工作帧率 * 相机数量 &amp;lt;= 千兆网带宽
-  千兆网带宽：1000 / 8 = 125M
-  帧率 = 1 / 曝光
-  相机首选 ，CA, 600万像素；CE, 2000万像素(2000多人民币)；
-  </description>
-    </item>
-    
-    <item>
       <title>常用标定</title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>

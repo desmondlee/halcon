@@ -5,29 +5,31 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="基础知识 #  拖影 #  拖影由运动速度和曝光时间影响导致，速度越快，或曝光时间越长，拖影越明显。
-如何拍照，使照片教亮？ #   光源亮度调大 适当调大增益（但增益越大，噪点越多） 光圈调大（进入的光线会变多） 延长曝光时间（但会出现拖影）  相机电压 #  通用12V
-相机保护 #  相机信号输出时，加光耦保护
-使用触发的好处 #  占用带宽少。（触发方式常用 edge方式）
-其他 #  放大倍率 = 传感器尺寸 / 视野
-焦距 f = mxWD(WD: 工作距离)
-远心镜头优点：景深大、分辨率好、远心度好、畸变小、平行光路
-FOV: 视场
-扩展环，又叫接圈，接在相机和镜头之间。通过增加像距，来减少物距，缩小视野。
-镜头选择：焦距在16mm以上
-低角度光源：led发射角与水平面成30°以内的夹角">
+<meta name="description" content="基础知识 #  相机所需带宽计算： #  分辨率h * 分辨率w * 帧率
+注，以上公式单位是字节，转换成兆的话，要除以 （1024*1024）
+示例，某2000W分辨率的相机的具体分辨率是54723648，帧率是5.9fps， 则其所需带宽是 54723648*5.9/1024/1024 = 112兆
+千兆网带宽 #  常说的千兆网带宽，其单位是byte，转换成字节的话，要除以8 顾，常说的千兆网带宽，转换成常用的字节单位的话，其带宽是 1000兆/8 = 125兆
+相机帧率 #  相机帧率是指每秒拍照次数，单位是fps。其与分辨率决定了相机所需带宽。
+帧率可手动调节，通常，有效帧率设置在理论帧率的**80%**以内。
+相机选型 #  图像大小 * 相机稳定工作帧率 * 相机数量 ≤ 千兆网带宽
+靶面尺寸 #  相机靶面尺寸指的是靶面的对角线长度，1英寸约等于16mm(国际通用距离长度换算是25.4mm) 靶面尺寸的长、宽计算方式： 像元尺寸 * 分辨率w， 像元尺寸 * 分辨率h, 单位mm
+像元尺寸 #  像元尺寸越大，成像效果越好
+快门类型 #  全局global， 卷帘rolling。 全局可拍运动、静态图；卷帘只适合拍静态图。
+常用接口类型 #  GigE， USB3.0, CameraLink
+放大倍率 #  放大倍率m = 传感器尺寸 / 视野，或 m = h / H, m = w / W 。 其中h, w 是传感器靶面的高、宽；H, W 是视野的高、宽。">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
-<meta property="og:description" content="基础知识 #  拖影 #  拖影由运动速度和曝光时间影响导致，速度越快，或曝光时间越长，拖影越明显。
-如何拍照，使照片教亮？ #   光源亮度调大 适当调大增益（但增益越大，噪点越多） 光圈调大（进入的光线会变多） 延长曝光时间（但会出现拖影）  相机电压 #  通用12V
-相机保护 #  相机信号输出时，加光耦保护
-使用触发的好处 #  占用带宽少。（触发方式常用 edge方式）
-其他 #  放大倍率 = 传感器尺寸 / 视野
-焦距 f = mxWD(WD: 工作距离)
-远心镜头优点：景深大、分辨率好、远心度好、畸变小、平行光路
-FOV: 视场
-扩展环，又叫接圈，接在相机和镜头之间。通过增加像距，来减少物距，缩小视野。
-镜头选择：焦距在16mm以上
-低角度光源：led发射角与水平面成30°以内的夹角" />
+<meta property="og:description" content="基础知识 #  相机所需带宽计算： #  分辨率h * 分辨率w * 帧率
+注，以上公式单位是字节，转换成兆的话，要除以 （1024*1024）
+示例，某2000W分辨率的相机的具体分辨率是54723648，帧率是5.9fps， 则其所需带宽是 54723648*5.9/1024/1024 = 112兆
+千兆网带宽 #  常说的千兆网带宽，其单位是byte，转换成字节的话，要除以8 顾，常说的千兆网带宽，转换成常用的字节单位的话，其带宽是 1000兆/8 = 125兆
+相机帧率 #  相机帧率是指每秒拍照次数，单位是fps。其与分辨率决定了相机所需带宽。
+帧率可手动调节，通常，有效帧率设置在理论帧率的**80%**以内。
+相机选型 #  图像大小 * 相机稳定工作帧率 * 相机数量 ≤ 千兆网带宽
+靶面尺寸 #  相机靶面尺寸指的是靶面的对角线长度，1英寸约等于16mm(国际通用距离长度换算是25.4mm) 靶面尺寸的长、宽计算方式： 像元尺寸 * 分辨率w， 像元尺寸 * 分辨率h, 单位mm
+像元尺寸 #  像元尺寸越大，成像效果越好
+快门类型 #  全局global， 卷帘rolling。 全局可拍运动、静态图；卷帘只适合拍静态图。
+常用接口类型 #  GigE， USB3.0, CameraLink
+放大倍率 #  放大倍率m = 传感器尺寸 / 视野，或 m = h / H, m = w / W 。 其中h, w 是传感器靶面的高、宽；H, W 是视野的高、宽。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" />
 
@@ -35,7 +37,7 @@ FOV: 视场
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
-<script defer src="/en.search.min.9acd3235417de1ec9515c37268e4a5a3f0458ff15cfc05f514ee2a981a90b750.js" integrity="sha256-ms0yNUF94eyVFcNyaOSlo/BFj/Fc/AX1FO4qmBqQt1A="></script>
+<script defer src="/en.search.min.c75d20d748ea1841165624d8b4e0044474f1e95785e7f731518281be1f837564.js" integrity="sha256-x10g10jqGEEWViTYtOAERHTx6VeF5/cxUYKBvh&#43;DdWQ="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -509,19 +511,6 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/" class="">硬件</a>
-  
-
-        </li>
-      
-    
-      
-        <li>
-          
-  
-  
-
-  
     <a href="http://halcon.lizhenguo.cn/docs/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%AE%9A/" class="">常用标定</a>
   
 
@@ -842,12 +831,27 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#相机所需带宽计算">相机所需带宽计算：</a></li>
+    <li><a href="#千兆网带宽">千兆网带宽</a></li>
+    <li><a href="#相机帧率">相机帧率</a></li>
+    <li><a href="#相机选型">相机选型</a></li>
+    <li><a href="#靶面尺寸">靶面尺寸</a></li>
+    <li><a href="#像元尺寸">像元尺寸</a></li>
+    <li><a href="#快门类型">快门类型</a></li>
+    <li><a href="#常用接口类型">常用接口类型</a></li>
+    <li><a href="#放大倍率">放大倍率</a></li>
+    <li><a href="#焦距">焦距</a></li>
+    <li><a href="#景深">景深</a></li>
+    <li><a href="#接圈">接圈</a></li>
+    <li><a href="#镜头畸变">镜头畸变</a></li>
+    <li><a href="#镜头的靶面尺寸分辨率">镜头的靶面尺寸、分辨率</a></li>
     <li><a href="#拖影">拖影</a></li>
-    <li><a href="#如何拍照使照片教亮">如何拍照，使照片教亮？</a></li>
+    <li><a href="#如何拍照使照片较亮">如何拍照，使照片较亮？</a></li>
     <li><a href="#相机电压">相机电压</a></li>
     <li><a href="#相机保护">相机保护</a></li>
     <li><a href="#使用触发的好处">使用触发的好处</a></li>
     <li><a href="#其他">其他</a></li>
+    <li><a href="#相机型号参选">相机型号参选</a></li>
   </ul>
 </nav>
 
@@ -863,17 +867,99 @@ https://github.com/alex-shpak/hugo-book
   基础知识
   <a class="anchor" href="#%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86">#</a>
 </h1>
+<h2 id="相机所需带宽计算">
+  相机所需带宽计算：
+  <a class="anchor" href="#%e7%9b%b8%e6%9c%ba%e6%89%80%e9%9c%80%e5%b8%a6%e5%ae%bd%e8%ae%a1%e7%ae%97">#</a>
+</h2>
+<p>分辨率h * 分辨率w * 帧率</p>
+<p>注，以上公式单位是字节，转换成兆的话，要除以 （1024*1024）</p>
+<p>示例，某2000W分辨率的相机的具体分辨率是5472<em>3648，帧率是5.9fps，
+则其所需带宽是 5472</em>3648*5.9/1024/1024 = 112兆</p>
+<h2 id="千兆网带宽">
+  千兆网带宽
+  <a class="anchor" href="#%e5%8d%83%e5%85%86%e7%bd%91%e5%b8%a6%e5%ae%bd">#</a>
+</h2>
+<p>常说的千兆网带宽，其单位是byte，转换成字节的话，要除以8
+顾，常说的千兆网带宽，转换成常用的字节单位的话，其带宽是 1000兆/8 = 125兆</p>
+<h2 id="相机帧率">
+  相机帧率
+  <a class="anchor" href="#%e7%9b%b8%e6%9c%ba%e5%b8%a7%e7%8e%87">#</a>
+</h2>
+<p>相机帧率是指每秒拍照次数，单位是fps。其与分辨率决定了相机所需带宽。</p>
+<p>帧率可手动调节，通常，有效帧率设置在理论帧率的**80%**以内。</p>
+<h2 id="相机选型">
+  相机选型
+  <a class="anchor" href="#%e7%9b%b8%e6%9c%ba%e9%80%89%e5%9e%8b">#</a>
+</h2>
+<p>图像大小 * 相机稳定工作帧率 * 相机数量 ≤ 千兆网带宽</p>
+<h2 id="靶面尺寸">
+  靶面尺寸
+  <a class="anchor" href="#%e9%9d%b6%e9%9d%a2%e5%b0%ba%e5%af%b8">#</a>
+</h2>
+<p>相机靶面尺寸指的是靶面的对角线长度，1英寸约等于<strong>16mm</strong>(国际通用距离长度换算是25.4mm)
+靶面尺寸的长、宽计算方式： 像元尺寸 * 分辨率w， 像元尺寸 * 分辨率h, 单位mm</p>
+<h2 id="像元尺寸">
+  像元尺寸
+  <a class="anchor" href="#%e5%83%8f%e5%85%83%e5%b0%ba%e5%af%b8">#</a>
+</h2>
+<p>像元尺寸越大，成像效果越好</p>
+<h2 id="快门类型">
+  快门类型
+  <a class="anchor" href="#%e5%bf%ab%e9%97%a8%e7%b1%bb%e5%9e%8b">#</a>
+</h2>
+<p>全局global， 卷帘rolling。
+全局可拍运动、静态图；卷帘只适合拍静态图。</p>
+<h2 id="常用接口类型">
+  常用接口类型
+  <a class="anchor" href="#%e5%b8%b8%e7%94%a8%e6%8e%a5%e5%8f%a3%e7%b1%bb%e5%9e%8b">#</a>
+</h2>
+<p>GigE， USB3.0, CameraLink</p>
+<h2 id="放大倍率">
+  放大倍率
+  <a class="anchor" href="#%e6%94%be%e5%a4%a7%e5%80%8d%e7%8e%87">#</a>
+</h2>
+<p>放大倍率m = 传感器尺寸 / 视野，或 m = h / H, m = w / W 。
+其中h, w 是传感器靶面的高、宽；H, W 是视野的高、宽。</p>
+<h2 id="焦距">
+  焦距
+  <a class="anchor" href="#%e7%84%a6%e8%b7%9d">#</a>
+</h2>
+<p>焦距f = m * WD
+其中，WD是工作距离，即镜头下表面到拍摄物体的距离；m 是放大倍率</p>
+<h2 id="景深">
+  景深
+  <a class="anchor" href="#%e6%99%af%e6%b7%b1">#</a>
+</h2>
+<p>景深是能看清晰物体的范围。以焦点为界，分为上景深和下景深。
+通常说的景深 = 上景深 + 下景深
+光圈越大，景深越小；光圈越小，景深越大。</p>
+<h2 id="接圈">
+  接圈
+  <a class="anchor" href="#%e6%8e%a5%e5%9c%88">#</a>
+</h2>
+<p>又叫扩展环，接在相机和镜头之间。通过增加像距，来实现减少物距，缩小视野。
+作用：突破相机最小拍摄距离，可以拍到更近的物体。</p>
+<h2 id="镜头畸变">
+  镜头畸变
+  <a class="anchor" href="#%e9%95%9c%e5%a4%b4%e7%95%b8%e5%8f%98">#</a>
+</h2>
+<p>根据经验，镜头焦距小于16mm时，畸变较大，所以尽量选焦距大于<strong>16mm</strong>的镜头。</p>
+<h2 id="镜头的靶面尺寸分辨率">
+  镜头的靶面尺寸、分辨率
+  <a class="anchor" href="#%e9%95%9c%e5%a4%b4%e7%9a%84%e9%9d%b6%e9%9d%a2%e5%b0%ba%e5%af%b8%e5%88%86%e8%be%a8%e7%8e%87">#</a>
+</h2>
+<p>镜头的靶面尺寸、分辨率是相对于相机而言的，选择镜头时，这两个数值要大于相机的靶面尺寸、分辨率。</p>
 <h2 id="拖影">
   拖影
   <a class="anchor" href="#%e6%8b%96%e5%bd%b1">#</a>
 </h2>
 <p>拖影由<strong>运动速度</strong>和<strong>曝光时间</strong>影响导致，速度越快，或曝光时间越长，拖影越明显。</p>
-<h2 id="如何拍照使照片教亮">
-  如何拍照，使照片教亮？
-  <a class="anchor" href="#%e5%a6%82%e4%bd%95%e6%8b%8d%e7%85%a7%e4%bd%bf%e7%85%a7%e7%89%87%e6%95%99%e4%ba%ae">#</a>
+<h2 id="如何拍照使照片较亮">
+  如何拍照，使照片较亮？
+  <a class="anchor" href="#%e5%a6%82%e4%bd%95%e6%8b%8d%e7%85%a7%e4%bd%bf%e7%85%a7%e7%89%87%e8%be%83%e4%ba%ae">#</a>
 </h2>
 <ol>
-<li>光源亮度调大</li>
+<li>光源亮度调大（ps, 频闪光源比普通光源亮）</li>
 <li>适当调大增益（但增益越大，噪点越多）</li>
 <li>光圈调大（进入的光线会变多）</li>
 <li>延长曝光时间（但会出现拖影）</li>
@@ -897,13 +983,15 @@ https://github.com/alex-shpak/hugo-book
   其他
   <a class="anchor" href="#%e5%85%b6%e4%bb%96">#</a>
 </h2>
-<p>放大倍率 = 传感器尺寸 / 视野</p>
-<p>焦距 f = mxWD(WD: 工作距离)</p>
 <p>远心镜头优点：景深大、分辨率好、远心度好、畸变小、平行光路</p>
 <p>FOV: 视场</p>
-<p>扩展环，又叫接圈，接在相机和镜头之间。通过增加像距，来减少物距，缩小视野。</p>
-<p>镜头选择：焦距在16mm以上</p>
 <p>低角度光源：led发射角与水平面成30°以内的夹角</p>
+<h2 id="相机型号参选">
+  相机型号参选
+  <a class="anchor" href="#%e7%9b%b8%e6%9c%ba%e5%9e%8b%e5%8f%b7%e5%8f%82%e9%80%89">#</a>
+</h2>
+<p>MV-CA060-11GM, MV-CA050-10GM, MV-CA013-20GM
+MV-CE013-50GM, MV-CE013050GC, MV-CE100-30GM, MV-CE200-10GM, MV-CE200-10GC</p>
 </article>
  
       
@@ -938,12 +1026,27 @@ https://github.com/alex-shpak/hugo-book
       
   <nav id="TableOfContents">
   <ul>
+    <li><a href="#相机所需带宽计算">相机所需带宽计算：</a></li>
+    <li><a href="#千兆网带宽">千兆网带宽</a></li>
+    <li><a href="#相机帧率">相机帧率</a></li>
+    <li><a href="#相机选型">相机选型</a></li>
+    <li><a href="#靶面尺寸">靶面尺寸</a></li>
+    <li><a href="#像元尺寸">像元尺寸</a></li>
+    <li><a href="#快门类型">快门类型</a></li>
+    <li><a href="#常用接口类型">常用接口类型</a></li>
+    <li><a href="#放大倍率">放大倍率</a></li>
+    <li><a href="#焦距">焦距</a></li>
+    <li><a href="#景深">景深</a></li>
+    <li><a href="#接圈">接圈</a></li>
+    <li><a href="#镜头畸变">镜头畸变</a></li>
+    <li><a href="#镜头的靶面尺寸分辨率">镜头的靶面尺寸、分辨率</a></li>
     <li><a href="#拖影">拖影</a></li>
-    <li><a href="#如何拍照使照片教亮">如何拍照，使照片教亮？</a></li>
+    <li><a href="#如何拍照使照片较亮">如何拍照，使照片较亮？</a></li>
     <li><a href="#相机电压">相机电压</a></li>
     <li><a href="#相机保护">相机保护</a></li>
     <li><a href="#使用触发的好处">使用触发的好处</a></li>
     <li><a href="#其他">其他</a></li>
+    <li><a href="#相机型号参选">相机型号参选</a></li>
   </ul>
 </nav>
 
