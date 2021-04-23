@@ -13,7 +13,7 @@
       <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/posts/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90/</guid>
-      <description>技术学习要点推荐 #  软件开发-C# #  1. 控件使用(Button, TextBox, Label, tableLayoutPanel等) #  2. 文件读写 #  图象算法-Halcon #  1. 读取图象文件 #  2. blob分析 #  3. 几何定位 #  4. 形态学处理 #  5. 仿射变换 #  6. 尺寸测量 #  7. 连接相机 #  图象标注软件使用-LabelImg #   软件的安装 矩形框标注，新增、修改框的大小、编辑分类标签  数据库-Sqlite/Mysql #  1. 数据库连接 #  2. 增删改查 #  库、表、列 主键、索引
+      <description>软件开发-C# #  1. 控件使用(Button, TextBox, Label, tableLayoutPanel等) #  2. 文件读写 #  图象算法-Halcon #  1. 读取图象文件 #  2. blob分析 #  3. 几何定位 #  4. 形态学处理 #  5. 仿射变换 #  6. 尺寸测量 #  7. 连接相机 #  图象标注软件使用-LabelImg #   软件的安装 矩形框标注，新增、修改框的大小、编辑分类标签  数据库-Sqlite/Mysql #  1. 数据库连接 #  2. 增删改查 #  库、表、列 主键、索引
 进阶-软件开发-Python #  进阶-图象算法-OpenCV #  可以用Python语言开发 内容类似Halcon</description>
     </item>
     
