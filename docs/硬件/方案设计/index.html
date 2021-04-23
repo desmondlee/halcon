@@ -5,18 +5,31 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="官方" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/tags/%E5%AE%98%E6%96%B9/" />
-<meta property="og:updated_time" content="2021-01-08T00:00:00+00:00" />
-<title>官方 | Halcon学习</title>
+<meta name="description" content="方案设计 #  系统精度 #  做测量项目时，系统精度一般是公差带的0.1 ~ 0.2
+做引导贴合项目时，系统精度一般是公差带的0.2 ~ 0.3
+公差带 #  公差带 = 上公差 - 下公差
+软件重复性经验值 #  2 ~ 4 个像素点
+测量项目-计算像素当量 #  系统精度 = 软件重复性经验值 * 像素当量
+其中，系统精度 = 公差带 * [0.1 ~ 0.2]，公差带值由客户提供
+例，测量硬币直径时，若公差为±0.1mm(即公差带为0.2)，系统精度相对于公差带的系数取 0.2，软件重复性值为4个像素点，则像素当量 = ((0.1 &#43; 0.1) * 0.2) / 4= 0.01 ，单位 mm/pixel。
+检测项目-计算像素当量 #   一维码：基于灰度投影，最小条纹 ≥ 1.5 pixel 二维码：基本单元用 3 ~ 6 个pixel以上表征 OCR/OCV：最窄笔画≥ 3pixel，建议 5 ~ 7pixel以上 缺陷/划痕检测：最窄 ≥ 5pixel 色差：对比度＞ 20灰度值  选镜头 #  远心镜头 #   放大倍率 兼容靶面尺寸 工作距离 景深  注，放大倍率 = 传感器尺寸 / 视野">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="方案设计 #  系统精度 #  做测量项目时，系统精度一般是公差带的0.1 ~ 0.2
+做引导贴合项目时，系统精度一般是公差带的0.2 ~ 0.3
+公差带 #  公差带 = 上公差 - 下公差
+软件重复性经验值 #  2 ~ 4 个像素点
+测量项目-计算像素当量 #  系统精度 = 软件重复性经验值 * 像素当量
+其中，系统精度 = 公差带 * [0.1 ~ 0.2]，公差带值由客户提供
+例，测量硬币直径时，若公差为±0.1mm(即公差带为0.2)，系统精度相对于公差带的系数取 0.2，软件重复性值为4个像素点，则像素当量 = ((0.1 &#43; 0.1) * 0.2) / 4= 0.01 ，单位 mm/pixel。
+检测项目-计算像素当量 #   一维码：基于灰度投影，最小条纹 ≥ 1.5 pixel 二维码：基本单元用 3 ~ 6 个pixel以上表征 OCR/OCV：最窄笔画≥ 3pixel，建议 5 ~ 7pixel以上 缺陷/划痕检测：最窄 ≥ 5pixel 色差：对比度＞ 20灰度值  选镜头 #  远心镜头 #   放大倍率 兼容靶面尺寸 工作距离 景深  注，放大倍率 = 传感器尺寸 / 视野" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1/" />
+
+<title>方案设计 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
 <script defer src="/en.search.min.c1cce6c30a9118f2d322e4aefc7789a2ed47c1133898b80977306e35424cb7be.js" integrity="sha256-wczmwwqRGPLTIuSu/HeJou1HwRM4mLgJdzBuNUJMt74="></script>
-<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/tags/%E5%AE%98%E6%96%B9/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -329,7 +342,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-2a3387f7590a917b4736ac1b39897533" class="toggle"  />
+    <input type="checkbox" id="section-2a3387f7590a917b4736ac1b39897533" class="toggle" checked />
     <label for="section-2a3387f7590a917b4736ac1b39897533" class="flex justify-between">
       <a  class="">硬件</a>
       <span>▾</span>
@@ -372,7 +385,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1/" class="">方案设计</a>
+    <a href="http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1/" class=" active">方案设计</a>
   
 
         </li>
@@ -847,7 +860,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>官方</strong>
+  <strong>方案设计</strong>
 
   <label for="toc-control">
     
@@ -860,72 +873,30 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#系统精度">系统精度</a></li>
+    <li><a href="#公差带">公差带</a></li>
+    <li><a href="#软件重复性经验值">软件重复性经验值</a></li>
+    <li><a href="#测量项目-计算像素当量">测量项目-计算像素当量</a></li>
+    <li><a href="#检测项目-计算像素当量">检测项目-计算像素当量</a></li>
+  </ul>
+
+  <ul>
+    <li>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#远心镜头">远心镜头</a></li>
+        <li><a href="#fa镜头">FA镜头</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
+  </ul>
+
+  <ul>
+    <li>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
+        <li><a href="#多相机拼接">多相机拼接</a></li>
       </ul>
     </li>
-    
-  
   </ul>
 </nav>
 
@@ -937,39 +908,82 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/">Halcon描述有错误的算子</a>
-    </h2>
-    
-  <h5>January 8, 2021</h5>
-
-
-
-  
-
-  
-  <div>
-    
-      <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>, 
-      <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-  </div>
-  
-
-
-    <p>1. hom_mat2d_translate #  定义： hom_mat2d_translate( : : HomMat2D, Tx, Ty : HomMat2DTranslate)
-错误：Tx, Ty反了，应该是hom_mat2d_translate( : : HomMat2D, Ty, Tx : HomMat2DTranslate)
-2. affine_trans_point_2d #  定义：affine_trans_point_2d( : : HomMat2D, Px, Py : Qx, Qy)
-错误：Px, Py反了，Qx, Qy反了，应该是affine_trans_point_2d( : : HomMat2D, Py, Px : Qy, Qx)	
-综上，Halcon算子中，总是先用y坐标(Row)， 再用x坐标(Column)
-    </p>
-  </article>
-  
-
-  
-
-
+  <article class="markdown"><h1 id="方案设计">
+  方案设计
+  <a class="anchor" href="#%e6%96%b9%e6%a1%88%e8%ae%be%e8%ae%a1">#</a>
+</h1>
+<h2 id="系统精度">
+  系统精度
+  <a class="anchor" href="#%e7%b3%bb%e7%bb%9f%e7%b2%be%e5%ba%a6">#</a>
+</h2>
+<p>做测量项目时，系统精度一般是公差带的0.1 ~ 0.2</p>
+<p>做引导贴合项目时，系统精度一般是公差带的0.2 ~ 0.3</p>
+<h2 id="公差带">
+  公差带
+  <a class="anchor" href="#%e5%85%ac%e5%b7%ae%e5%b8%a6">#</a>
+</h2>
+<p>公差带  = 上公差 - 下公差</p>
+<h2 id="软件重复性经验值">
+  软件重复性经验值
+  <a class="anchor" href="#%e8%bd%af%e4%bb%b6%e9%87%8d%e5%a4%8d%e6%80%a7%e7%bb%8f%e9%aa%8c%e5%80%bc">#</a>
+</h2>
+<p>2 ~ 4 个像素点</p>
+<h2 id="测量项目-计算像素当量">
+  测量项目-计算像素当量
+  <a class="anchor" href="#%e6%b5%8b%e9%87%8f%e9%a1%b9%e7%9b%ae-%e8%ae%a1%e7%ae%97%e5%83%8f%e7%b4%a0%e5%bd%93%e9%87%8f">#</a>
+</h2>
+<p>系统精度  = 软件重复性经验值 * 像素当量</p>
+<p>其中，系统精度  = 公差带 * [0.1 ~ 0.2]，公差带值由客户提供</p>
+<p>例，测量硬币直径时，若公差为±0.1mm(即公差带为0.2)，系统精度相对于公差带的系数取 0.2，软件重复性值为4个像素点，则像素当量 = ((0.1 + 0.1) * 0.2) / 4= 0.01 ，单位 mm/pixel。</p>
+<h2 id="检测项目-计算像素当量">
+  检测项目-计算像素当量
+  <a class="anchor" href="#%e6%a3%80%e6%b5%8b%e9%a1%b9%e7%9b%ae-%e8%ae%a1%e7%ae%97%e5%83%8f%e7%b4%a0%e5%bd%93%e9%87%8f">#</a>
+</h2>
+<ul>
+<li>一维码：基于灰度投影，最小条纹 ≥ 1.5 pixel</li>
+<li>二维码：基本单元用 3 ~ 6 个pixel以上表征</li>
+<li>OCR/OCV：最窄笔画≥ 3pixel，建议 5 ~ 7pixel以上</li>
+<li>缺陷/划痕检测：最窄 ≥ 5pixel</li>
+<li>色差：对比度＞ 20灰度值</li>
+</ul>
+<h1 id="选镜头">
+  选镜头
+  <a class="anchor" href="#%e9%80%89%e9%95%9c%e5%a4%b4">#</a>
+</h1>
+<h3 id="远心镜头">
+  远心镜头
+  <a class="anchor" href="#%e8%bf%9c%e5%bf%83%e9%95%9c%e5%a4%b4">#</a>
+</h3>
+<ol>
+<li>放大倍率</li>
+<li>兼容靶面尺寸</li>
+<li>工作距离</li>
+<li>景深</li>
+</ol>
+<p>注，放大倍率 = 传感器尺寸 / 视野</p>
+<h3 id="fa镜头">
+  FA镜头
+  <a class="anchor" href="#fa%e9%95%9c%e5%a4%b4">#</a>
+</h3>
+<ol>
+<li>放大倍率</li>
+<li>工作距离</li>
+<li>焦距 = 放大倍率 * 工作距离，根据焦距差镜头手册选镜头</li>
+</ol>
+<h1 id="选相机">
+  选相机
+  <a class="anchor" href="#%e9%80%89%e7%9b%b8%e6%9c%ba">#</a>
+</h1>
+<h3 id="多相机拼接">
+  多相机拼接
+  <a class="anchor" href="#%e5%a4%9a%e7%9b%b8%e6%9c%ba%e6%8b%bc%e6%8e%a5">#</a>
+</h3>
+<ol>
+<li>根据视野大小、像素当量，计算出相机分辨率，除以单个相机的分辨率，向上取整，即可得到相机个数；</li>
+<li>多个相机并排放置拍照（相邻相机的视野会有重叠）；</li>
+<li>使用一个大于视野范围的标定板（棋盘格、圆点类型等）（每个相机要保证能拍到标定板上最少9个特征点，否则精度不高）；</li>
+</ol>
+</article>
  
       
 
@@ -989,6 +1003,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -997,72 +1015,30 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#系统精度">系统精度</a></li>
+    <li><a href="#公差带">公差带</a></li>
+    <li><a href="#软件重复性经验值">软件重复性经验值</a></li>
+    <li><a href="#测量项目-计算像素当量">测量项目-计算像素当量</a></li>
+    <li><a href="#检测项目-计算像素当量">检测项目-计算像素当量</a></li>
+  </ul>
+
+  <ul>
+    <li>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#远心镜头">远心镜头</a></li>
+        <li><a href="#fa镜头">FA镜头</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
+  </ul>
+
+  <ul>
+    <li>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
+        <li><a href="#多相机拼接">多相机拼接</a></li>
       </ul>
     </li>
-    
-  
   </ul>
 </nav>
 

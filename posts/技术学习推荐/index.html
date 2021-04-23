@@ -5,18 +5,20 @@
   <meta name="generator" content="Hugo 0.79.1" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="官方" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://halcon.lizhenguo.cn/tags/%E5%AE%98%E6%96%B9/" />
-<meta property="og:updated_time" content="2021-01-08T00:00:00+00:00" />
-<title>官方 | Halcon学习</title>
+<meta name="description" content="技术学习要点推荐 #  软件开发-C# #  1. 控件使用(Button, TextBox, Label, tableLayoutPanel等) #  2. 文件读写 #  图象算法-Halcon #  1. 读取图象文件 #  2. blob分析 #  3. 几何定位 #  4. 形态学处理 #  5. 仿射变换 #  6. 尺寸测量 #  7. 连接相机 #  图象标注软件使用-LabelImg #   软件的安装 矩形框标注，新增、修改框的大小、编辑分类标签  数据库-Sqlite/Mysql #  1. 数据库连接 #  2. 增删改查 #  库、表、列 主键、索引
+进阶-软件开发-Python #  进阶-图象算法-OpenCV #  可以用Python语言开发 内容类似Halcon">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="技术学习要点推荐" />
+<meta property="og:description" content="技术学习要点推荐 #  软件开发-C# #  1. 控件使用(Button, TextBox, Label, tableLayoutPanel等) #  2. 文件读写 #  图象算法-Halcon #  1. 读取图象文件 #  2. blob分析 #  3. 几何定位 #  4. 形态学处理 #  5. 仿射变换 #  6. 尺寸测量 #  7. 连接相机 #  图象标注软件使用-LabelImg #   软件的安装 矩形框标注，新增、修改框的大小、编辑分类标签  数据库-Sqlite/Mysql #  1. 数据库连接 #  2. 增删改查 #  库、表、列 主键、索引
+进阶-软件开发-Python #  进阶-图象算法-OpenCV #  可以用Python语言开发 内容类似Halcon" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://halcon.lizhenguo.cn/posts/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90/" />
+<meta property="article:published_time" content="2021-04-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-04-22T00:00:00+00:00" />
+<title>技术学习要点推荐 | Halcon学习</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.134b70e5316650a530cb42e4e8630b2a01d532bebfc0337028211175336e4806.css" integrity="sha256-E0tw5TFmUKUwy0Lk6GMLKgHVMr6/wDNwKCERdTNuSAY=">
 <script defer src="/en.search.min.c1cce6c30a9118f2d322e4aefc7789a2ed47c1133898b80977306e35424cb7be.js" integrity="sha256-wczmwwqRGPLTIuSu/HeJou1HwRM4mLgJdzBuNUJMt74="></script>
-<link rel="alternate" type="application/rss+xml" href="http://halcon.lizhenguo.cn/tags/%E5%AE%98%E6%96%B9/index.xml" title="Halcon学习" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -847,7 +849,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>官方</strong>
+  <strong>技术学习要点推荐</strong>
 
   <label for="toc-control">
     
@@ -860,72 +862,37 @@ https://github.com/alex-shpak/hugo-book
   
   <aside class="hidden clearfix">
     
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#软件开发-c">软件开发-C#</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#1-控件使用button-textbox-label-tablelayoutpanel等">1. 控件使用(Button, TextBox, Label, tableLayoutPanel等)</a></li>
+        <li><a href="#2-文件读写">2. 文件读写</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
+    <li><a href="#图象算法-halcon">图象算法-Halcon</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
+        <li><a href="#1-读取图象文件">1. 读取图象文件</a></li>
+        <li><a href="#2-blob分析">2. blob分析</a></li>
+        <li><a href="#3-几何定位">3. 几何定位</a></li>
+        <li><a href="#4-形态学处理">4. 形态学处理</a></li>
+        <li><a href="#5-仿射变换">5. 仿射变换</a></li>
+        <li><a href="#6-尺寸测量">6. 尺寸测量</a></li>
+        <li><a href="#7-连接相机">7. 连接相机</a></li>
       </ul>
     </li>
-    
-  
+    <li><a href="#图象标注软件使用-labelimg">图象标注软件使用-LabelImg</a></li>
+    <li><a href="#数据库-sqlitemysql">数据库-Sqlite/Mysql</a>
+      <ul>
+        <li><a href="#1-数据库连接">1. 数据库连接</a></li>
+        <li><a href="#2-增删改查">2. 增删改查</a></li>
+      </ul>
+    </li>
+    <li><a href="#进阶-软件开发-python">进阶-软件开发-Python</a></li>
+    <li><a href="#进阶-图象算法-opencv">进阶-图象算法-OpenCV</a></li>
+    <li><a href="#进阶-图形界面开发-qt">进阶-图形界面开发-QT</a></li>
+    <li><a href="#进阶-图象标注软件使用-labelme">进阶-图象标注软件使用-Labelme</a></li>
+    <li><a href="#附录">附录</a></li>
   </ul>
 </nav>
 
@@ -937,39 +904,128 @@ https://github.com/alex-shpak/hugo-book
 
       
       
+<article class="markdown">
+  <h1>
+    <a href="/posts/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90/">技术学习要点推荐</a>
+  </h1>
   
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/halcon%E6%8F%8F%E8%BF%B0%E6%9C%89%E9%94%99%E8%AF%AF%E7%9A%84%E7%AE%97%E5%AD%90/">Halcon描述有错误的算子</a>
-    </h2>
-    
-  <h5>January 8, 2021</h5>
+  <h5>April 22, 2021</h5>
 
 
 
-  
-
-  
-  <div>
-    
-      <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>, 
-      <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-  </div>
-  
-
-
-    <p>1. hom_mat2d_translate #  定义： hom_mat2d_translate( : : HomMat2D, Tx, Ty : HomMat2DTranslate)
-错误：Tx, Ty反了，应该是hom_mat2d_translate( : : HomMat2D, Ty, Tx : HomMat2DTranslate)
-2. affine_trans_point_2d #  定义：affine_trans_point_2d( : : HomMat2D, Px, Py : Qx, Qy)
-错误：Px, Py反了，Qx, Qy反了，应该是affine_trans_point_2d( : : HomMat2D, Py, Px : Qy, Qx)	
-综上，Halcon算子中，总是先用y坐标(Row)， 再用x坐标(Column)
-    </p>
-  </article>
   
 
   
 
 
+  <p><h1 id="技术学习要点推荐">
+  技术学习要点推荐
+  <a class="anchor" href="#%e6%8a%80%e6%9c%af%e5%ad%a6%e4%b9%a0%e8%a6%81%e7%82%b9%e6%8e%a8%e8%8d%90">#</a>
+</h1>
+<h2 id="软件开发-c">
+  软件开发-C#
+  <a class="anchor" href="#%e8%bd%af%e4%bb%b6%e5%bc%80%e5%8f%91-c">#</a>
+</h2>
+<h3 id="1-控件使用button-textbox-label-tablelayoutpanel等">
+  1. 控件使用(Button, TextBox, Label, tableLayoutPanel等)
+  <a class="anchor" href="#1-%e6%8e%a7%e4%bb%b6%e4%bd%bf%e7%94%a8button-textbox-label-tablelayoutpanel%e7%ad%89">#</a>
+</h3>
+<h3 id="2-文件读写">
+  2. 文件读写
+  <a class="anchor" href="#2-%e6%96%87%e4%bb%b6%e8%af%bb%e5%86%99">#</a>
+</h3>
+<h2 id="图象算法-halcon">
+  图象算法-Halcon
+  <a class="anchor" href="#%e5%9b%be%e8%b1%a1%e7%ae%97%e6%b3%95-halcon">#</a>
+</h2>
+<h3 id="1-读取图象文件">
+  1. 读取图象文件
+  <a class="anchor" href="#1-%e8%af%bb%e5%8f%96%e5%9b%be%e8%b1%a1%e6%96%87%e4%bb%b6">#</a>
+</h3>
+<h3 id="2-blob分析">
+  2. blob分析
+  <a class="anchor" href="#2-blob%e5%88%86%e6%9e%90">#</a>
+</h3>
+<h3 id="3-几何定位">
+  3. 几何定位
+  <a class="anchor" href="#3-%e5%87%a0%e4%bd%95%e5%ae%9a%e4%bd%8d">#</a>
+</h3>
+<h3 id="4-形态学处理">
+  4. 形态学处理
+  <a class="anchor" href="#4-%e5%bd%a2%e6%80%81%e5%ad%a6%e5%a4%84%e7%90%86">#</a>
+</h3>
+<h3 id="5-仿射变换">
+  5. 仿射变换
+  <a class="anchor" href="#5-%e4%bb%bf%e5%b0%84%e5%8f%98%e6%8d%a2">#</a>
+</h3>
+<h3 id="6-尺寸测量">
+  6. 尺寸测量
+  <a class="anchor" href="#6-%e5%b0%ba%e5%af%b8%e6%b5%8b%e9%87%8f">#</a>
+</h3>
+<h3 id="7-连接相机">
+  7. 连接相机
+  <a class="anchor" href="#7-%e8%bf%9e%e6%8e%a5%e7%9b%b8%e6%9c%ba">#</a>
+</h3>
+<h2 id="图象标注软件使用-labelimg">
+  图象标注软件使用-LabelImg
+  <a class="anchor" href="#%e5%9b%be%e8%b1%a1%e6%a0%87%e6%b3%a8%e8%bd%af%e4%bb%b6%e4%bd%bf%e7%94%a8-labelimg">#</a>
+</h2>
+<ol>
+<li>软件的安装</li>
+<li>矩形框标注，新增、修改框的大小、编辑分类标签</li>
+</ol>
+<h2 id="数据库-sqlitemysql">
+  数据库-Sqlite/Mysql
+  <a class="anchor" href="#%e6%95%b0%e6%8d%ae%e5%ba%93-sqlitemysql">#</a>
+</h2>
+<h3 id="1-数据库连接">
+  1. 数据库连接
+  <a class="anchor" href="#1-%e6%95%b0%e6%8d%ae%e5%ba%93%e8%bf%9e%e6%8e%a5">#</a>
+</h3>
+<h3 id="2-增删改查">
+  2. 增删改查
+  <a class="anchor" href="#2-%e5%a2%9e%e5%88%a0%e6%94%b9%e6%9f%a5">#</a>
+</h3>
+<p>库、表、列
+主键、索引</p>
+<h2 id="进阶-软件开发-python">
+  进阶-软件开发-Python
+  <a class="anchor" href="#%e8%bf%9b%e9%98%b6-%e8%bd%af%e4%bb%b6%e5%bc%80%e5%8f%91-python">#</a>
+</h2>
+<h2 id="进阶-图象算法-opencv">
+  进阶-图象算法-OpenCV
+  <a class="anchor" href="#%e8%bf%9b%e9%98%b6-%e5%9b%be%e8%b1%a1%e7%ae%97%e6%b3%95-opencv">#</a>
+</h2>
+<p>可以用Python语言开发
+内容类似Halcon</p>
+<h2 id="进阶-图形界面开发-qt">
+  进阶-图形界面开发-QT
+  <a class="anchor" href="#%e8%bf%9b%e9%98%b6-%e5%9b%be%e5%bd%a2%e7%95%8c%e9%9d%a2%e5%bc%80%e5%8f%91-qt">#</a>
+</h2>
+<h2 id="进阶-图象标注软件使用-labelme">
+  进阶-图象标注软件使用-Labelme
+  <a class="anchor" href="#%e8%bf%9b%e9%98%b6-%e5%9b%be%e8%b1%a1%e6%a0%87%e6%b3%a8%e8%bd%af%e4%bb%b6%e4%bd%bf%e7%94%a8-labelme">#</a>
+</h2>
+<ol>
+<li>软件的安装 (需要安装python环境)</li>
+<li>多边形等其他形状的标注，新增、修改，编辑分类</li>
+</ol>
+<h2 id="附录">
+  附录
+  <a class="anchor" href="#%e9%99%84%e5%bd%95">#</a>
+</h2>
+<ol>
+<li>图书资料下载：待补充</li>
+<li>学习笔记：http://halcon.lizhenguo.cn</li>
+<li>学习网站：
+<ol>
+<li>菜鸟教程：https://www.runoob.com/csharp/csharp-tutorial.html</li>
+<li>网易：https://study.163.com</li>
+</ol>
+</li>
+</ol>
+</p>
+</article>
  
       
 
@@ -989,6 +1045,10 @@ https://github.com/alex-shpak/hugo-book
 
       
   
+  <div class="book-comments">
+
+</div>
+  
  
 
       <label for="menu-control" class="hidden book-menu-overlay"></label>
@@ -997,72 +1057,37 @@ https://github.com/alex-shpak/hugo-book
     
     <aside class="book-toc">
       
-  <nav>
+  <nav id="TableOfContents">
   <ul>
-  
-    
-    <li class="book-section-flat">
-      <strong>Categories</strong>
+    <li><a href="#软件开发-c">软件开发-C#</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/tips/">tips</a>
-          <span>2</span>
-        </li>
-      
+        <li><a href="#1-控件使用button-textbox-label-tablelayoutpanel等">1. 控件使用(Button, TextBox, Label, tableLayoutPanel等)</a></li>
+        <li><a href="#2-文件读写">2. 文件读写</a></li>
       </ul>
     </li>
-    
-  
-    
-    <li class="book-section-flat">
-      <strong>Tags</strong>
+    <li><a href="#图象算法-halcon">图象算法-Halcon</a>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%AE%98%E6%96%B9/">官方</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E6%9C%89%E8%AF%AF/">有误</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/thread/">thread</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E7%BA%BF%E7%A8%8B/">线程</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/tips/">tips</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/windows/">Windows</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
-          <span>1</span>
-        </li>
-      
+        <li><a href="#1-读取图象文件">1. 读取图象文件</a></li>
+        <li><a href="#2-blob分析">2. blob分析</a></li>
+        <li><a href="#3-几何定位">3. 几何定位</a></li>
+        <li><a href="#4-形态学处理">4. 形态学处理</a></li>
+        <li><a href="#5-仿射变换">5. 仿射变换</a></li>
+        <li><a href="#6-尺寸测量">6. 尺寸测量</a></li>
+        <li><a href="#7-连接相机">7. 连接相机</a></li>
       </ul>
     </li>
-    
-  
+    <li><a href="#图象标注软件使用-labelimg">图象标注软件使用-LabelImg</a></li>
+    <li><a href="#数据库-sqlitemysql">数据库-Sqlite/Mysql</a>
+      <ul>
+        <li><a href="#1-数据库连接">1. 数据库连接</a></li>
+        <li><a href="#2-增删改查">2. 增删改查</a></li>
+      </ul>
+    </li>
+    <li><a href="#进阶-软件开发-python">进阶-软件开发-Python</a></li>
+    <li><a href="#进阶-图象算法-opencv">进阶-图象算法-OpenCV</a></li>
+    <li><a href="#进阶-图形界面开发-qt">进阶-图形界面开发-QT</a></li>
+    <li><a href="#进阶-图象标注软件使用-labelme">进阶-图象标注软件使用-Labelme</a></li>
+    <li><a href="#附录">附录</a></li>
   </ul>
 </nav>
 

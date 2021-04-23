@@ -6,7 +6,7 @@
     <description>Recent content in 图像处理 on Halcon学习</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://halcon.lizhenguo.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>基础算子(方法函数)</title>
       <link>http://halcon.lizhenguo.cn/docs/%E5%9F%BA%E7%A1%80%E7%AE%97%E5%AD%90%E6%96%B9%E6%B3%95%E5%87%BD%E6%95%B0/</link>
@@ -153,6 +153,16 @@ var_threshold #  基于结构元素，使用局部均值和标准偏差分析分
 1）对于一些应用来说，无法通过一个全局阈值进行分割：图像的背景是非均匀的；
 2）物体在局部范围内通常比背景亮些或暗些。
  </description>
+    </item>
+    
+    <item>
+      <title>技术学习要点推荐</title>
+      <link>http://halcon.lizhenguo.cn/posts/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90/</link>
+      <pubDate>Thu, 22 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/posts/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E6%8E%A8%E8%8D%90/</guid>
+      <description>技术学习要点推荐 #  软件开发-C# #  1. 控件使用(Button, TextBox, Label, tableLayoutPanel等) #  2. 文件读写 #  图象算法-Halcon #  1. 读取图象文件 #  2. blob分析 #  3. 几何定位 #  4. 形态学处理 #  5. 仿射变换 #  6. 尺寸测量 #  7. 连接相机 #  图象标注软件使用-LabelImg #   软件的安装 矩形框标注，新增、修改框的大小、编辑分类标签  数据库-Sqlite/Mysql #  1. 数据库连接 #  2. 增删改查 #  库、表、列 主键、索引
+进阶-软件开发-Python #  进阶-图象算法-OpenCV #  可以用Python语言开发 内容类似Halcon</description>
     </item>
     
     <item>
@@ -575,22 +585,70 @@ affine_trans_pixel: 对图像点进行仿射变换，在图像空间处理</desc
     
     <item>
       <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%85%89%E6%BA%90/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%85%89%E6%BA%90/</guid>
+      <description>光源 #  漫射板 #  作用：增大光源发射角，增加光照均匀性。
+背光打光 #  背光打光时，光源要距物体有一定距离，否则因为光源的漫反射板作用，物体边缘会消失一小部分。</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
       <description>基础知识 #  相机所需带宽计算： #  分辨率h * 分辨率w * 帧率
 注，以上公式单位是字节，转换成兆的话，要除以 （1024*1024）
-示例，某2000W分辨率的相机的具体分辨率是54723648，帧率是5.9fps， 则其所需带宽是 54723648*5.9/1024/1024 = 112兆
-千兆网带宽 #  常说的千兆网带宽，其单位是byte，转换成字节的话，要除以8 顾，常说的千兆网带宽，转换成常用的字节单位的话，其带宽是 1000兆/8 = 125兆
+示例，某2000W分辨率的相机的具体分辨率是5472 * 3648，帧率是5.9fps，
+则其所需带宽是 5472*3648*5.9/1024/1024 = 112兆
+千兆网带宽 #  常说的千兆网带宽，其单位是byte，转换成字节的话，要除以8。
+顾，常说的千兆网带宽，转换成常用的字节单位的话，其带宽是 1000兆/8 = 125兆
 相机帧率 #  相机帧率是指每秒拍照次数，单位是fps。其与分辨率决定了相机所需带宽。
 帧率可手动调节，通常，有效帧率设置在理论帧率的**80%**以内。
 相机选型 #  图像大小 * 相机稳定工作帧率 * 相机数量 ≤ 千兆网带宽
-靶面尺寸 #  相机靶面尺寸指的是靶面的对角线长度，1英寸约等于16mm(国际通用距离长度换算是25.4mm) 靶面尺寸的长、宽计算方式： 像元尺寸 * 分辨率w， 像元尺寸 * 分辨率h, 单位mm
+靶面尺寸 #  相机靶面尺寸指的是靶面的对角线长度，1英寸约等于16mm(国际通用距离长度换算是25.4mm)
+靶面尺寸的长、宽计算方式： 像元尺寸 * 分辨率w， 像元尺寸 * 分辨率h, 单位mm
 像元尺寸 #  像元尺寸越大，成像效果越好
-快门类型 #  全局global， 卷帘rolling。 全局可拍运动、静态图；卷帘只适合拍静态图。
-常用接口类型 #  GigE， USB3.0, CameraLink
-放大倍率 #  放大倍率m = 传感器尺寸 / 视野，或 m = h / H, m = w / W 。 其中h, w 是传感器靶面的高、宽；H, W 是视野的高、宽。</description>
+快门类型 #  全局global， 卷帘rolling。
+全局可拍运动、静态图；卷帘只适合拍静态图。
+常用接口类型 #  GigE， USB3.0, CameraLink</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1/</guid>
+      <description>方案设计 #  系统精度 #  做测量项目时，系统精度一般是公差带的0.1 ~ 0.2
+做引导贴合项目时，系统精度一般是公差带的0.2 ~ 0.3
+公差带 #  公差带 = 上公差 - 下公差
+软件重复性经验值 #  2 ~ 4 个像素点
+测量项目-计算像素当量 #  系统精度 = 软件重复性经验值 * 像素当量
+其中，系统精度 = 公差带 * [0.1 ~ 0.2]，公差带值由客户提供
+例，测量硬币直径时，若公差为±0.1mm(即公差带为0.2)，系统精度相对于公差带的系数取 0.2，软件重复性值为4个像素点，则像素当量 = ((0.1 + 0.1) * 0.2) / 4= 0.01 ，单位 mm/pixel。
+检测项目-计算像素当量 #   一维码：基于灰度投影，最小条纹 ≥ 1.5 pixel 二维码：基本单元用 3 ~ 6 个pixel以上表征 OCR/OCV：最窄笔画≥ 3pixel，建议 5 ~ 7pixel以上 缺陷/划痕检测：最窄 ≥ 5pixel 色差：对比度＞ 20灰度值  选镜头 #  远心镜头 #   放大倍率 兼容靶面尺寸 工作距离 景深  注，放大倍率 = 传感器尺寸 / 视野</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E7%9B%B8%E6%9C%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E7%9B%B8%E6%9C%BA/</guid>
+      <description>相机 #  全局相机 #  海康：CA系列
+卷帘相机 #  海康：CE系列</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E9%95%9C%E5%A4%B4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://halcon.lizhenguo.cn/docs/%E7%A1%AC%E4%BB%B6/%E9%95%9C%E5%A4%B4/</guid>
+      <description>镜头 #  </description>
     </item>
     
     <item>
